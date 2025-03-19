@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    background-color: #f4f3f9;
+}
+
+.header-effect {
+    display: none;
+}
+
+.hearder-effect1:hover .header-effect,
+.hearder-effect1.active .header-effect {
+display: block; 
+}
+
+.download-button-custom {
+    display: none; 
+    background-color: #0cb49a !important; 
+    color: white !important; 
+    border: none !important; 
+    border-radius: 0.25rem; 
+}
+
+.add-button-custom {
+    background-color: #434e88 !important; 
+    color: white !important; 
+    border: none !important; 
+    border-radius: 5px;
+}
+
+.bulk-upload-button-custom {
+    background-color: #ebc27a !important;
+    color: white !important; 
+    border: none !important; 
+    border-radius: 5px;
+}
+
+.notes-section {
+    font-size: 12px;
+  }
+
+  .note-background {
+    background-color: #fff8e6;
+    color: #7f6c3a;
+  } 
+
+  #uploadButton {
+    background-color: #f0ad4e;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  #uploadButton:hover {
+    background-color: #eea236;
+  }
+
+
+th {
+    color: gray !important;
+    background-color: #f2f6f9 !important;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+
+td {
+    font-size: 12px !important;
+    font-weight: 300;
+}
+
+
+.modal-content {
+  width: 120%;
+  /* Adjust width as needed */
+  margin: auto;
+}
+/* .modal-form-small {
+  font-size: 14px;
+} */
+
+
+.checkout-btn{
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  margin-left: 15px;
+  border: 1px solid #ff0303;
+  height: 30px;
+  margin: 10px;
+}
+
+.checkin-btn {
+  font-size: 12 px;
+  color: black;
+  margin-right: 15px;
+  font-weight: bold;
+
+}
