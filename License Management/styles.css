@@ -44,16 +44,13 @@ display: block;
     color: #7f6c3a;
   } 
 
-  #uploadButton {
+  #uploadButton1 {
     background-color: #f0ad4e;
     color: white;
     cursor: pointer;
     font-size: 12px;
   }
   
-  #uploadButton:hover {
-    background-color: #eea236;
-  }
 
 
 th {
@@ -97,3 +94,6 @@ td {
   font-weight: bold;
 
 }
+
+.error-message {
+  display: none; }
