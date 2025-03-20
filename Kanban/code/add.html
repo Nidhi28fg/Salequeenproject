@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Add</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .high {
+            background-color: red;
+            color: white;
+        }
+        .medium {
+            background-color: orange;
+            color: white;
+        }
+        .low {
+            background-color: green;
+            color: white;
+        }
+        .in-progress {
+            background-color: lightgreen;
+            color: black;
+        }
+        .progressed {
+            background-color: lightblue;
+            color: black;
+        }
+        .modal-header {
+            background-color: #007bff;
+            color: white;
+        }
+        .modal-footer {
+            background-color: #f7f7f7;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+        }
+        .required::before {
+            content: '* ';
+            color: red;
+        }
+        .modal-footer>:not(:first-child) {
+            margin-left: .25rem;
+            margin-right: -19px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="modal fade show" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="eventModalLabel" aria-hidden="true" style="display: block;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="eventModalLabel">Add Event</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="eventForm">
+                        <div class="form-group">
+                            <label for="eventName" class="required">Event Name:</label>
+                            <input type="text" class="form-control" id="eventName" name="eventName">
+                            <span class="error-message" id="eventNameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class="required">Description:</label>
+                            <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                            <span class="error-message" id="descriptionError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="priority">Priority Level:</label>
+                            <select class="form-control" id="priority" name="priority">
+                                <option value="high">High</option>
+                                <option value="medium">Medium</option>
+                                <option value="low">Low</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status:</label>
+                            <select class="form-control" id="status" name="status">
+                                <option value="in-progress">In Progress</option>
+                                <option value="progressed">Progressed</option>
+                            </select>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input type="submit" class="btn btn-primary" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById("eventForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let isValid = true;
+
+            const eventName = document.getElementById("eventName").value;
+            const description = document.getElementById("description").value;
+
+            // Reset error messages
+            document.getElementById("eventNameError").textContent = "";
+            document.getElementById("descriptionError").textContent = "";
+
+            // Validate event name
+            if (eventName.trim() === "") {
+                document.getElementById("eventNameError").textContent = "Enter event name";
+                isValid = false;
+            }
+
+            // Validate description
+            if (description.trim() === "") {
+                document.getElementById("descriptionError").textContent = "Enter description";
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Hide the modal after submission
+                $('#eventModal').modal('hide');
+
+                // Redirect to the main page
+                window.location.href = "index.html";
+            }
+        });
+
+        // Automatically open the modal when the page loads
+        $(document).ready(function() {
+            $('#eventModal').modal('show');
+        });
+    </script>
+</body>
+</html>

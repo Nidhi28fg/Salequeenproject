@@ -1,0 +1,2040 @@
+<!DOCTYPE html>
+<html lang="en" data-topbar-color="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- meterial design webfont -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css"
+        integrity="sha512-/k658G6UsCvbkGRB3vPXpsPHgWeduJwiWGPCGS14IQw3xpr63AEMdA8nMYG2gmYkXitQxDTn6iiK/2fD4T87qA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans&display=swap" rel="stylesheet">
+
+    <title>Kanban Board | Ubold - Responsive Bootstrap 5 Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Theme Config Js -->
+    <script src="../assets/assets/js/head.js"></script>
+
+    <!-- Bootstrap css -->
+    <link href="../assets/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap-icon  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- App css -->
+    <link href="../assets/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- -----style.css---- -->
+
+    <link href="../assets/assets/css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- Icons css -->
+    <!-- <link href="../assets/assets/css/icons.min.css" rel="stylesheet" type="text/css" /> -->
+
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+        <div class="content">
+            <!-- Start Content-->
+            <div class="container-fluid">
+
+                <!-- start page title -->
+                <div class="reduce-top-bottom">
+                    <div class="">
+                        <div class="page-title-box">
+
+                            <h4 class="page-title">Kanban Board</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+
+                <div class="scrolling-wrapper row flex-row flex-nowrap vh-100">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dropdown float-end">
+                                    <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="mdi mdi-dots-vertical m-0 text-muted h3"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a class="dropdown-item" href="#">Edit</a>
+                                        <a class="dropdown-item" href="#">Delete</a>
+                                        <a class="dropdown-item" href="#">Add Members</a>
+                                        <a class="dropdown-item" href="#">Add Due Date</a>
+                                        <a class="dropdown-item MakeListMode" id="mode1">List Mode</a>
+                                    </div>
+                                </div> <!-- end dropdown -->
+
+                                <!-- Plus icon and counter -->
+                                <div class="plus-icon-container float-end">
+                                    <!-- <i class="bi bi-plus-circle" id="plusIcon"></i> -->
+                                    <span id="counter">0</span>
+                                </div>
+                                
+                                <h4 class="header-title">Upcoming</h4>
+                                <p class="sub-header make-title-dot-overflow">
+                                    Your awesome text Your awesome
+                                </p>
+                                <input type="text" placeholder="Search..." class="search-box">
+                                <style>
+                                    .search-box {
+                                        margin: 5px 0;
+                                        width: 100%;
+                                        padding: 10px;
+                                        box-sizing: border-box;
+                                        font-weight: normal;
+                                        font-size: 16px;
+                                        font-family: Arial, sans-serif;
+                                    }
+                                </style>
+                                <div class="">
+                                    <div id="listContainer" class=""></div>
+                                </div>
+                                <div class="list-container d-none">
+
+                                    <div class="shadow-lg rounded p-1 mb-1">
+                                        <div class="d-flex align-items-center input-icon-container">
+                                            <input type="text" class="w-100 h-100 input-class listInput" id="title1">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <ul class="sortable-list tasklist card-container list-unstyled listoftitle"
+                                    id="upcoming1">
+
+
+
+                                    <li id="task1" class="border border-success make-min-height">
+                                        <!-- expand icon -->
+                                        <div class="w-100 d-flex justify-content-end mb-2">
+                                            <a class="text-dark icon-link" href="#" onclick="showPopup()">
+                                                <i class="bi bi-arrows-angle-expand"></i>
+                                            </a>
+                                        </div>
+
+                                        <!-- Popup content -->
+                                        <div id="popup" class="cover">
+                                            <div class="contents">
+                                                <h1>Contents</h1>
+                                                <span class="close" onclick="closePopup()">Close</span>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class=" reduce-margin-top-23">
+                                            <div class="d-flex mb-2">
+                                                <span class="badge bg-soft-danger text-danger float-start ">High</span>
+                                                <span class="badge bg-soft-info text-success  float-start ms-2">In
+                                                    Progress</span>
+                                            </div>
+
+                                            <div class="d-flex justify-content-end ">
+                                                <div class="reduce-margin-right-16">
+                                                    <div class="avatar-group margin-right-2">
+
+                                                        <div class="avatar">
+                                                            <img src="https://pixinvent.com/materialize-material-design-admin-template/app-assets/images/user/12.jpg"
+                                                                data-bs-toggle="tooltip" title="Person 1" />
+
+                                                        </div>
+
+                                                        <div class="avatar">
+                                                            <img src="https://htmlstream.com/preview/unify-v2.6.2/assets/img-temp/400x450/img5.jpg"
+                                                                data-bs-toggle="tooltip" title="Person 2" />
+                                                        </div>
+
+                                                        <div class="avatar">
+                                                            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                                                data-bs-toggle="tooltip" title="Person 3" />
+                                                        </div>
+
+                                                        <div class="avatar">
+                                                            <img src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/04/a0004213/img/basic/a0004213_main.jpg?20200710184501&q=80&rw=750&rh=536"
+                                                                data-bs-toggle="tooltip" title="Person 4" />
+                                                        </div>
+
+                                                        <div class="avatar">
+                                                            <img src="https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/768/2018/08/glasses-american-man-20s-hipster.jpg"
+                                                                data-bs-toggle="tooltip" title="Person 5" />
+                                                        </div>
+
+                                                    </div>
+                                                    <div
+                                                        class="d-flex gap-1 align-items-center justify-content-end reduce-margin-bottom-10">
+                                                        <div class="form-check mx-2">
+                                                            <input class="form-check-input" type="checkbox" value="">
+                                                        </div>
+                                                        <!-- Star icon -->
+                                                        <div class="make-position-related">
+                                                            <input id="star2" class="star " type="checkbox"
+                                                                title="bookmark page" checked>
+                                                        </div>
+
+                                                        <div class="">
+                                                            <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                                0</small>
+                                                        </div>
+                                                        <!-- Bookmark icon -->
+                                                        <div class="">
+                                                            <div id="log">
+                                                                <button type="button"
+                                                                    class="pp-bookmark-btn btn btn-default btn-lg pull-right bookmark-btn"
+                                                                    data-context="investor" data-context-action="view"
+                                                                    data-context-id="7" onclick="toggleBookmark(this)">
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class=" d-flex justify-content-end">
+                                                        <p class="font-13 mx-1"><i class="mdi mdi-calendar"></i>
+                                                            Oct 16,
+                                                            2018</p>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="clearfix"></div>
+                                        <h5 class="mt-0 reduce-ma reduce-margin-top-119" data-toggle="tooltip"
+                                            data-placement="top" title="Tooltip Main Title">
+                                            <i class="fs-3 text-muted bi bi-grip-vertical make-cursoer-pointer"></i>
+                                            <a href="javascript: void(0);" class="text-dark make-title-dot-overflow">iOS
+                                                App home
+                                                page </a>
+                                        </h5>
+
+
+                                        <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                            class="w-50 reduce-margin-top-8 make-dot-overflow title">There are msdfany
+                                            variations
+                                            of passages of
+                                            Lorem Ipsum
+                                        </p>
+                                        <div class="clearfix reduce-margin-bottom-20"></div>
+
+                                    </li>
+
+                                    <li id="task2" class="border border-success make-min-height-other-li">
+                                        <span class="badge bg-soft-success text-success float-end">Low</span>
+                                        <h5 class="mt-0"><a href="javascript: void(0);" data-toggle="tooltip"
+                                                data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark make-title-dot-overflow">Topnav
+                                                layout
+                                                design</a></h5>
+
+
+                                        <div class="d-flex justify-content-between">
+                                            <p data-toggle="tooltip " data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 reduce-margin-top-8 make-dot-overflow title">Many desktop
+                                                publishing packages loerem fds sd fsd fsdf sdf
+                                                and
+                                            </p>
+                                            <div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input mx-1" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+                                                </div>
+                                                <p class="font-13 mt-1 mb-0"><i class="mdi mdi-calendar"></i> Nov
+                                                    22,
+                                                    2018</p>
+
+                                            </div>
+                                        </div>
+                                        <div class="clearfix reduce-margin-bottom-10"></div>
+
+                                    </li>
+                                    <li id="task3" class="border border-success make-min-height-other-li">
+                                        <span class="badge rounded-pill bg-danger float-end">High</span>
+                                        <h5 class="mt-0"><a href="javascript: void(0);" data-toggle="tooltip"
+                                                data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark make-title-dot-overflow">Invite
+                                                user to
+                                                a project</a></h5>
+
+                                        <div class="d-flex justify-content-between">
+                                            <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 reduce-margin-top-8 make-dot-overflow title">If you are going
+                                                to
+                                                use a passage of
+                                                Lorem
+                                                Ipsum.</p>
+                                            <div>
+                                                <div class="form-check ">
+                                                    <input class="form-check-input mx-1" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+                                                </div>
+
+                                                <div>
+                                                    <p class="font-13 "><i class="mdi mdi-calendar"></i> Oct 15,
+                                                        2018</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix reduce-margin-bottom-20"></div>
+
+                                    </li>
+                                    <li class="task-info border border-success make-min-height-other-li" id="task4">
+                                        <span class="badge bg-soft-warning text-warning float-end">Medium</span>
+                                        <h5 class="mt-0"><a href="javascript: void(0);" data-toggle="tooltip"
+                                                data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark make-title-dot-overflow">Write
+                                                a
+                                                release note</a></h5>
+
+                                        <div class="d-flex justify-content-between">
+                                            <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 reduce-margin-top-8 make-dot-overflow title">There are many
+                                                variations of passages
+
+                                            </p>
+                                            <div>
+                                                <div class="form-check ">
+                                                    <input class="mx-1 form-check-input" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+                                                </div>
+                                                <p class="font-13 mt-1 mb-0"><i class="mdi mdi-calendar"></i> Dec
+                                                    03,
+                                                    2018</p>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix reduce-margin-bottom-20"></div>
+
+                                    </li>
+
+
+                                </ul>
+                                <a href="add.html" href="javascript: void(0);" onclick="appendNew(1,document.getElementById('title1').value,document.getElementById('title1'),1)"
+                                    class="mt-1 btn btn-primary w-100 waves-effect waves-light"><i
+                                        class="mdi mdi-plus-circle"></i> Add New</a>
+                            
+                            </div>
+                        </div>
+                    </div>                
+                    <!-- end col -->
+                    <!-- seccond column -->
+                    <div class="col-lg-3 col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dropdown float-end">
+                                    <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="mdi mdi-dots-vertical m-0 text-muted h3"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a class="dropdown-item" href="#">Edit</a>
+                                        <a class="dropdown-item" href="#">Delete</a>
+                                        <a class="dropdown-item" href="#">Add Members</a>
+                                        <a class="dropdown-item" href="#">Add Due Date</a>
+                                        <a class="dropdown-item MakeListMode" id="mode2">List Mode</a>
+                                    </div>
+                                </div> <!-- end dropdown -->
+
+                                <!-- Plus icon and counter -->
+                                <div class="plus-icon-container float-end">
+                                    <!-- <i class="bi bi-plus-circle" id="plusIcon"></i> -->
+                                    <span id="counter">0</span>
+                                </div>
+
+                                <h4 class="header-title">Upcoming</h4>
+                                <p class="sub-header make-title-dot-overflow">
+                                    Your awesome text Your awesome
+                                </p>
+                                
+
+
+                                <div class="">
+                                    <div id="listContainer" class=""></div>
+                                </div>
+                                <div class="list-container d-none">
+
+                                    <div class="shadow-lg rounded p-1 mb-1">
+                                        <div class="d-flex align-items-center input-icon-container">
+                                            <input type="text" class="w-100 h-100 input-class listInput" id="title2">
+                                            
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <ul class="sortable-list tasklist card-container list-unstyled listoftitle"
+                                    id="upcoming2">
+
+
+
+                                    <li id="task1" class="border border-success make-min-height">
+                                        <!-- expand icon -->
+                                        <div class="w-100 d-flex justify-content-end mb-2">
+                                            <a class="text-dark icon-link" href="#" onclick="showPopup()">
+                                                <i class="bi bi-arrows-angle-expand"></i>
+                                            </a>
+                                        </div>
+
+                                        <!-- Popup content -->
+                                        <div id="popup" class="cover">
+                                            <div class="contents">
+                                                <h1>Contents</h1>
+                                                <span class="close" onclick="closePopup()">Close</span>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class=" reduce-margin-top-23">
+                                            <div class="d-flex mb-2">
+                                                <span class="badge bg-soft-danger text-danger float-start ">High</span>
+                                                <span class="badge bg-soft-info text-success  float-start ms-2">In
+                                                    Progress</span>
+                                            </div>
+
+                                            <div class="d-flex justify-content-end ">
+                                                <div class="reduce-margin-right-16">
+                                                    <div class="avatar-group margin-right-2">
+
+                                                        <div class="avatar">
+                                                            <img src="https://pixinvent.com/materialize-material-design-admin-template/app-assets/images/user/12.jpg"
+                                                                data-bs-toggle="tooltip" title="Person 1" />
+
+                                                        </div>
+
+                                                        <div class="avatar">
+                                                            <img src="https://htmlstream.com/preview/unify-v2.6.2/assets/img-temp/400x450/img5.jpg"
+                                                                data-bs-toggle="tooltip" title="Person 2" />
+                                                        </div>
+
+                                                        <div class="avatar">
+                                                            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                                                data-bs-toggle="tooltip" title="Person 3" />
+                                                        </div>
+
+                                                        <div class="avatar">
+                                                            <img src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/04/a0004213/img/basic/a0004213_main.jpg?20200710184501&q=80&rw=750&rh=536"
+                                                                data-bs-toggle="tooltip" title="Person 4" />
+                                                        </div>
+
+                                                        <div class="avatar">
+                                                            <img src="https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/768/2018/08/glasses-american-man-20s-hipster.jpg"
+                                                                data-bs-toggle="tooltip" title="Person 5" />
+                                                        </div>
+
+                                                    </div>
+                                                    <div
+                                                        class="d-flex gap-1 align-items-center justify-content-end reduce-margin-bottom-10">
+                                                        <div class="form-check mx-2">
+                                                            <input class="form-check-input" type="checkbox" value="">
+                                                        </div>
+                                                        <!-- Star icon -->
+                                                        <div class="make-position-related">
+                                                            <input id="star2" class="star " type="checkbox"
+                                                                title="bookmark page" checked>
+                                                        </div>
+
+                                                        <div class="">
+                                                            <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                                0</small>
+                                                        </div>
+                                                        <!-- Bookmark icon -->
+                                                        <div class="">
+                                                            <div id="log">
+                                                                <button type="button"
+                                                                    class="pp-bookmark-btn btn btn-default btn-lg pull-right bookmark-btn"
+                                                                    data-context="investor" data-context-action="view"
+                                                                    data-context-id="7" onclick="toggleBookmark(this)">
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class=" d-flex justify-content-end">
+                                                        <p class="font-13 mx-1"><i class="mdi mdi-calendar"></i>
+                                                            Oct 16,
+                                                            2018</p>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="clearfix"></div>
+                                        <h5 class="mt-0 reduce-ma reduce-margin-top-119" data-toggle="tooltip"
+                                            data-placement="top" title="Tooltip Main Title">
+                                            <i class="fs-3 text-muted bi bi-grip-vertical make-cursoer-pointer"></i>
+                                            <a href="javascript: void(0);" class="text-dark make-title-dot-overflow">iOS
+                                                App home
+                                                page </a>
+                                        </h5>
+
+
+                                        <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                            class="w-50 reduce-margin-top-8 make-dot-overflow title">There are msdfany
+                                            variations
+                                            of passages of
+                                            Lorem Ipsum
+                                        </p>
+                                        <div class="clearfix reduce-margin-bottom-20"></div>
+
+                                    </li>
+
+                                    <li id="task2" class="border border-success make-min-height-other-li">
+                                        <span class="badge bg-soft-success text-success float-end">Low</span>
+                                        <h5 class="mt-0"><a href="javascript: void(0);" data-toggle="tooltip"
+                                                data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark make-title-dot-overflow">Topnav
+                                                layout
+                                                design</a></h5>
+
+
+                                        <div class="d-flex justify-content-between">
+                                            <p data-toggle="tooltip " data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 reduce-margin-top-8 make-dot-overflow title">Many desktop
+                                                publishing packages loerem fds sd fsd fsdf sdf
+                                                and
+                                            </p>
+                                            <div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input mx-1" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+                                                </div>
+                                                <p class="font-13 mt-1 mb-0"><i class="mdi mdi-calendar"></i> Nov
+                                                    22,
+                                                    2018</p>
+
+                                            </div>
+                                        </div>
+                                        <div class="clearfix reduce-margin-bottom-10"></div>
+
+                                    </li>
+                                    <li id="task3" class="border border-success make-min-height-other-li">
+                                        <span class="badge rounded-pill bg-danger float-end">High</span>
+                                        <h5 class="mt-0"><a href="javascript: void(0);" data-toggle="tooltip"
+                                                data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark make-title-dot-overflow">Invite
+                                                user to
+                                                a project</a></h5>
+
+                                        <div class="d-flex justify-content-between">
+                                            <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 reduce-margin-top-8 make-dot-overflow title">If you are going
+                                                to
+                                                use a passage of
+                                                Lorem
+                                                Ipsum.</p>
+                                            <div>
+                                                <div class="form-check ">
+                                                    <input class="form-check-input mx-1" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+                                                </div>
+
+                                                <div>
+                                                    <p class="font-13 "><i class="mdi mdi-calendar"></i> Oct 15,
+                                                        2018</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix reduce-margin-bottom-20"></div>
+
+                                    </li>
+                                    <li class="task-info border border-success make-min-height-other-li" id="task4">
+                                        <span class="badge bg-soft-warning text-warning float-end">Medium</span>
+                                        <h5 class="mt-0"><a href="javascript: void(0);" data-toggle="tooltip"
+                                                data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark make-title-dot-overflow">Write
+                                                a
+                                                release note</a></h5>
+
+                                        <div class="d-flex justify-content-between">
+                                            <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 reduce-margin-top-8 make-dot-overflow title">There are many
+                                                variations of passages
+
+                                            </p>
+                                            <div>
+                                                <div class="form-check ">
+                                                    <input class="mx-1 form-check-input" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+                                                </div>
+                                                <p class="font-13 mt-1 mb-0"><i class="mdi mdi-calendar"></i> Dec
+                                                    03,
+                                                    2018</p>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix reduce-margin-bottom-20"></div>
+
+                                    </li>
+
+
+                                </ul>
+                                <div id="mode2_container"></div>
+                                <a href="javascript: void(0);" onclick="appendNew(2,document.getElementById('title2').value,document.getElementById('title2'),1)"
+                                    class="mt-1 btn btn-primary w-100 waves-effect waves-light"><i
+                                        class="mdi mdi-plus-circle"></i> Add New</a>
+                                       
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3rd column -->
+                    <div class="col-lg-3 col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dropdown float-end">
+                                    <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="mdi mdi-dots-vertical m-0 text-muted h3"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a class="dropdown-item" href="#">Edit</a>
+                                        <a class="dropdown-item" href="#">Delete</a>
+                                        <a class="dropdown-item" href="#">Add Members</a>
+                                        <a class="dropdown-item" href="#">Add Due Date</a>
+                                        <a class="dropdown-item MakeListMode" id="mode3">List Mode</a>
+                                    </div>
+                                </div> <!-- end dropdown -->
+
+                                <!-- Plus icon and counter -->
+                                <div class="plus-icon-container float-end">
+                                    <!-- <i class="bi bi-plus-circle" id="plusIcon"></i> -->
+                                    <span id="counter">0</span>
+                                </div>
+
+                                <h4 class="header-title">Upcoming</h4>
+                                <p class="sub-header make-title-dot-overflow">
+                                    Your awesome text Your awesome
+                                    <input type="text" placeholder="Search..." class="search-box">
+                                </p>
+                                
+
+
+                                <div class="">
+                                    <div id="listContainer" class=""></div>
+                                </div>
+                                <div class="list-container d-none">
+
+                                    <div class="shadow-lg rounded p-1 mb-1">
+                                        <div class="d-flex align-items-center input-icon-container">
+                                            <input type="text" class="w-100 h-100 input-class listInput" id="title3">
+                                            
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <ul class="sortable-list tasklist card-container list-unstyled listoftitle"
+                                    id="upcoming3">
+
+
+
+                                    <li id="task1" class="border border-success make-min-height">
+                                        <!-- expand icon -->
+                                        <div class="w-100 d-flex justify-content-end mb-2">
+                                            <a class="text-dark icon-link" href="#" onclick="showPopup()">
+                                                <i class="bi bi-arrows-angle-expand"></i>
+                                            </a>
+                                        </div>
+
+                                        <!-- Popup content -->
+                                        <div id="popup" class="cover">
+                                            <div class="contents">
+                                                <h1>Contents</h1>
+                                                <span class="close" onclick="closePopup()">Close</span>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class=" reduce-margin-top-23">
+                                            <div class="d-flex mb-2">
+                                                <span class="badge bg-soft-danger text-danger float-start ">High</span>
+                                                <span class="badge bg-soft-info text-success  float-start ms-2">In
+                                                    Progress</span>
+                                            </div>
+
+                                            <div class="d-flex justify-content-end ">
+                                                <div class="reduce-margin-right-16">
+                                                    <div class="avatar-group margin-right-2">
+
+                                                        <div class="avatar">
+                                                            <img src="https://pixinvent.com/materialize-material-design-admin-template/app-assets/images/user/12.jpg"
+                                                                data-bs-toggle="tooltip" title="Person 1" />
+
+                                                        </div>
+
+                                                        <div class="avatar">
+                                                            <img src="https://htmlstream.com/preview/unify-v2.6.2/assets/img-temp/400x450/img5.jpg"
+                                                                data-bs-toggle="tooltip" title="Person 2" />
+                                                        </div>
+
+                                                        <div class="avatar">
+                                                            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                                                data-bs-toggle="tooltip" title="Person 3" />
+                                                        </div>
+
+                                                        <div class="avatar">
+                                                            <img src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/04/a0004213/img/basic/a0004213_main.jpg?20200710184501&q=80&rw=750&rh=536"
+                                                                data-bs-toggle="tooltip" title="Person 4" />
+                                                        </div>
+
+                                                        <div class="avatar">
+                                                            <img src="https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/768/2018/08/glasses-american-man-20s-hipster.jpg"
+                                                                data-bs-toggle="tooltip" title="Person 5" />
+                                                        </div>
+
+                                                    </div>
+                                                    <div
+                                                        class="d-flex gap-1 align-items-center justify-content-end reduce-margin-bottom-10">
+                                                        <div class="form-check mx-2">
+                                                            <input class="form-check-input" type="checkbox" value="">
+                                                        </div>
+                                                        <!-- Star icon -->
+                                                        <div class="make-position-related">
+                                                            <input id="star2" class="star " type="checkbox"
+                                                                title="bookmark page" checked>
+                                                        </div>
+
+                                                        <div class="">
+                                                            <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                                0</small>
+                                                        </div>
+                                                        <!-- Bookmark icon -->
+                                                        <div class="">
+                                                            <div id="log">
+                                                                <button type="button"
+                                                                    class="pp-bookmark-btn btn btn-default btn-lg pull-right bookmark-btn"
+                                                                    data-context="investor" data-context-action="view"
+                                                                    data-context-id="7" onclick="toggleBookmark(this)">
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class=" d-flex justify-content-end">
+                                                        <p class="font-13 mx-1"><i class="mdi mdi-calendar"></i>
+                                                            Oct 16,
+                                                            2018</p>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="clearfix"></div>
+                                        <h5 class="mt-0 reduce-ma reduce-margin-top-119" data-toggle="tooltip"
+                                            data-placement="top" title="Tooltip Main Title">
+                                            <i class="fs-3 text-muted bi bi-grip-vertical make-cursoer-pointer"></i>
+                                            <a href="javascript: void(0);" class="text-dark make-title-dot-overflow">iOS
+                                                App home
+                                                page </a>
+                                        </h5>
+
+
+                                        <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                            class="w-50 reduce-margin-top-8 make-dot-overflow title">There are msdfany
+                                            variations
+                                            of passages of
+                                            Lorem Ipsum
+                                        </p>
+                                        <div class="clearfix reduce-margin-bottom-20"></div>
+
+                                    </li>
+
+                                    <li id="task2" class="border border-success make-min-height-other-li">
+                                        <span class="badge bg-soft-success text-success float-end">Low</span>
+                                        <h5 class="mt-0"><a href="javascript: void(0);" data-toggle="tooltip"
+                                                data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark make-title-dot-overflow">Topnav
+                                                layout
+                                                design</a></h5>
+
+
+                                        <div class="d-flex justify-content-between">
+                                            <p data-toggle="tooltip " data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 reduce-margin-top-8 make-dot-overflow title">Many desktop
+                                                publishing packages loerem fds sd fsd fsdf sdf
+                                                and
+                                            </p>
+                                            <div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input mx-1" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+                                                </div>
+                                                <p class="font-13 mt-1 mb-0"><i class="mdi mdi-calendar"></i> Nov
+                                                    22,
+                                                    2018</p>
+
+                                            </div>
+                                        </div>
+                                        <div class="clearfix reduce-margin-bottom-10"></div>
+
+                                    </li>
+                                    <li id="task3" class="border border-success make-min-height-other-li">
+                                        <span class="badge rounded-pill bg-danger float-end">High</span>
+                                        <h5 class="mt-0"><a href="javascript: void(0);" data-toggle="tooltip"
+                                                data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark make-title-dot-overflow">Invite
+                                                user to
+                                                a project</a></h5>
+
+                                        <div class="d-flex justify-content-between">
+                                            <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 reduce-margin-top-8 make-dot-overflow title">If you are going
+                                                to
+                                                use a passage of
+                                                Lorem
+                                                Ipsum.</p>
+                                            <div>
+                                                <div class="form-check ">
+                                                    <input class="form-check-input mx-1" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+                                                </div>
+
+                                                <div>
+                                                    <p class="font-13 "><i class="mdi mdi-calendar"></i> Oct 15,
+                                                        2018</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix reduce-margin-bottom-20"></div>
+
+                                    </li>
+                                    <li class="task-info border border-success make-min-height-other-li" id="task4">
+                                        <span class="badge bg-soft-warning text-warning float-end">Medium</span>
+                                        <h5 class="mt-0"><a href="javascript: void(0);" data-toggle="tooltip"
+                                                data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark make-title-dot-overflow">Write
+                                                a
+                                                release note</a></h5>
+
+                                        <div class="d-flex justify-content-between">
+                                            <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 reduce-margin-top-8 make-dot-overflow title">There are many
+                                                variations of passages
+
+                                            </p>
+                                            <div>
+                                                <div class="form-check ">
+                                                    <input class="mx-1 form-check-input" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+                                                </div>
+                                                <p class="font-13 mt-1 mb-0"><i class="mdi mdi-calendar"></i> Dec
+                                                    03,
+                                                    2018</p>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix reduce-margin-bottom-20"></div>
+
+                                    </li>
+
+
+                                </ul>   <div id="mode3_container"></div>
+                                <a href="javascript: void(0);" onclick="appendNew(3,document.getElementById('title3').value,document.getElementById('title3'),1)"
+                                    class="mt-1 btn btn-primary w-100 waves-effect waves-light"><i
+                                        class="mdi mdi-plus-circle"></i> Add New</a>
+                                     
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4th  -->
+                    <div class="col-lg-3 col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dropdown float-end">
+                                    <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="mdi mdi-dots-vertical m-0 text-muted h3"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a class="dropdown-item" href="#">Edit</a>
+                                        <a class="dropdown-item" href="#">Delete</a>
+                                        <a class="dropdown-item" href="#">Add Members</a>
+                                        <a class="dropdown-item" href="#">Add Due Date</a>
+                                        <a class="dropdown-item MakeListMode" id="mode4">List Mode</a>
+                                    </div>
+                                </div> <!-- end dropdown -->
+
+                                <!-- Plus icon and counter -->
+                                <div class="plus-icon-container float-end">
+                                    <!-- <i class="bi bi-plus-circle" id="plusIcon"></i> -->
+                                    <span id="counter">0</span>
+                                </div>
+
+                                <h4 class="header-title">Upcoming</h4>
+                                <p class="sub-header make-title-dot-overflow">
+                                    Your awesome text Your awesome
+                                </p>
+
+
+
+                                <div class="">
+                                    <div id="listContainer" class=""></div>
+                                </div>
+                                <div class="list-container d-none">
+
+                                    <div class="shadow-lg rounded p-1 mb-1">
+                                        <div class="d-flex align-items-center input-icon-container">
+                                            <input type="text" class="w-100 h-100 input-class listInput" id="title4">
+                                            
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <ul class="sortable-list tasklist card-container list-unstyled listoftitle"
+                                    id="upcoming4">
+
+
+
+                                    <li id="task1" class="border border-success make-min-height">
+                                        <!-- expand icon -->
+                                        <div class="w-100 d-flex justify-content-end mb-2">
+                                            <a class="text-dark icon-link" href="#" onclick="showPopup()">
+                                                <i class="bi bi-arrows-angle-expand"></i>
+                                            </a>
+                                        </div>
+
+                                        <!-- Popup content -->
+                                        <div id="popup" class="cover">
+                                            <div class="contents">
+                                                <h1>Contents</h1>
+                                                <span class="close" onclick="closePopup()">Close</span>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class=" reduce-margin-top-23">
+                                            <div class="d-flex mb-2">
+                                                <span class="badge bg-soft-danger text-danger float-start ">High</span>
+                                                <span class="badge bg-soft-info text-success  float-start ms-2">In
+                                                    Progress</span>
+                                            </div>
+
+                                            <div class="d-flex justify-content-end ">
+                                                <div class="reduce-margin-right-16">
+                                                    <div class="avatar-group margin-right-2">
+
+                                                        <div class="avatar">
+                                                            <img src="https://pixinvent.com/materialize-material-design-admin-template/app-assets/images/user/12.jpg"
+                                                                data-bs-toggle="tooltip" title="Person 1" />
+
+                                                        </div>
+
+                                                        <div class="avatar">
+                                                            <img src="https://htmlstream.com/preview/unify-v2.6.2/assets/img-temp/400x450/img5.jpg"
+                                                                data-bs-toggle="tooltip" title="Person 2" />
+                                                        </div>
+
+                                                        <div class="avatar">
+                                                            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                                                data-bs-toggle="tooltip" title="Person 3" />
+                                                        </div>
+
+                                                        <div class="avatar">
+                                                            <img src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/04/a0004213/img/basic/a0004213_main.jpg?20200710184501&q=80&rw=750&rh=536"
+                                                                data-bs-toggle="tooltip" title="Person 4" />
+                                                        </div>
+
+                                                        <div class="avatar">
+                                                            <img src="https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/768/2018/08/glasses-american-man-20s-hipster.jpg"
+                                                                data-bs-toggle="tooltip" title="Person 5" />
+                                                        </div>
+
+                                                    </div>
+                                                    <div
+                                                        class="d-flex gap-1 align-items-center justify-content-end reduce-margin-bottom-10">
+                                                        <div class="form-check mx-2">
+                                                            <input class="form-check-input" type="checkbox" value="">
+                                                        </div>
+                                                        <!-- Star icon -->
+                                                        <div class="make-position-related">
+                                                            <input id="star2" class="star " type="checkbox"
+                                                                title="bookmark page" checked>
+                                                        </div>
+
+                                                        <div class="">
+                                                            <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                                0</small>
+                                                        </div>
+                                                        <!-- Bookmark icon -->
+                                                        <div class="">
+                                                            <div id="log">
+                                                                <button type="button"
+                                                                    class="pp-bookmark-btn btn btn-default btn-lg pull-right bookmark-btn"
+                                                                    data-context="investor" data-context-action="view"
+                                                                    data-context-id="7" onclick="toggleBookmark(this)">
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class=" d-flex justify-content-end">
+                                                        <p class="font-13 mx-1"><i class="mdi mdi-calendar"></i>
+                                                            Oct 16,
+                                                            2018</p>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="clearfix"></div>
+                                        <h5 class="mt-0 reduce-ma reduce-margin-top-119" data-toggle="tooltip"
+                                            data-placement="top" title="Tooltip Main Title">
+                                            <i class="fs-3 text-muted bi bi-grip-vertical make-cursoer-pointer"></i>
+                                            <a href="javascript: void(0);" class="text-dark make-title-dot-overflow">iOS
+                                                App home
+                                                page </a>
+                                        </h5>
+
+
+                                        <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                            class="w-50 reduce-margin-top-8 make-dot-overflow title">There are msdfany
+                                            variations
+                                            of passages of
+                                            Lorem Ipsum
+                                        </p>
+                                        <div class="clearfix reduce-margin-bottom-20"></div>
+
+                                    </li>
+
+                                    <li id="task2" class="border border-success make-min-height-other-li">
+                                        <span class="badge bg-soft-success text-success float-end">Low</span>
+                                        <h5 class="mt-0"><a href="javascript: void(0);" data-toggle="tooltip"
+                                                data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark make-title-dot-overflow">Topnav
+                                                layout
+                                                design</a></h5>
+
+
+                                        <div class="d-flex justify-content-between">
+                                            <p data-toggle="tooltip " data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 reduce-margin-top-8 make-dot-overflow title">Many desktop
+                                                publishing packages loerem fds sd fsd fsdf sdf
+                                                and
+                                            </p>
+                                            <div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input mx-1" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+                                                </div>
+                                                <p class="font-13 mt-1 mb-0"><i class="mdi mdi-calendar"></i> Nov
+                                                    22,
+                                                    2018</p>
+
+                                            </div>
+                                        </div>
+                                        <div class="clearfix reduce-margin-bottom-10"></div>
+
+                                    </li>
+                                    <li id="task3" class="border border-success make-min-height-other-li">
+                                        <span class="badge rounded-pill bg-danger float-end">High</span>
+                                        <h5 class="mt-0"><a href="javascript: void(0);" data-toggle="tooltip"
+                                                data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark make-title-dot-overflow">Invite
+                                                user to
+                                                a project</a></h5>
+
+                                        <div class="d-flex justify-content-between">
+                                            <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 reduce-margin-top-8 make-dot-overflow title">If you are going
+                                                to
+                                                use a passage of
+                                                Lorem
+                                                Ipsum.</p>
+                                            <div>
+                                                <div class="form-check ">
+                                                    <input class="form-check-input mx-1" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+                                                </div>
+
+                                                <div>
+                                                    <p class="font-13 "><i class="mdi mdi-calendar"></i> Oct 15,
+                                                        2018</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix reduce-margin-bottom-20"></div>
+
+                                    </li>
+                                    <li class="task-info border border-success make-min-height-other-li" id="task4">
+                                        <span class="badge bg-soft-warning text-warning float-end">Medium</span>
+                                        <h5 class="mt-0"><a href="javascript: void(0);" data-toggle="tooltip"
+                                                data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark make-title-dot-overflow">Write
+                                                a
+                                                release note</a></h5>
+
+                                        <div class="d-flex justify-content-between">
+                                            <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 reduce-margin-top-8 make-dot-overflow title">There are many
+                                                variations of passages
+
+                                            </p>
+                                            <div>
+                                                <div class="form-check ">
+                                                    <input class="mx-1 form-check-input" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+                                                </div>
+                                                <p class="font-13 mt-1 mb-0"><i class="mdi mdi-calendar"></i> Dec
+                                                    03,
+                                                    2018</p>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix reduce-margin-bottom-20"></div>
+
+                                    </li>
+
+
+                                </ul> <div id="mode4_container"></div>
+                                <a href="javascript: void(0);" onclick="appendNew(4,document.getElementById('title4').value,document.getElementById('title4'),1)"
+                                    class="mt-1 btn btn-primary w-100 waves-effect waves-light"><i
+                                        class="mdi mdi-plus-circle"></i> Add New</a>
+                                       
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5th -->
+                    <div class="col-lg-3 col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dropdown float-end">
+                                    <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="mdi mdi-dots-vertical m-0 text-muted h3"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a class="dropdown-item" href="#">Edit</a>
+                                        <a class="dropdown-item" href="#">Delete</a>
+                                        <a class="dropdown-item" href="#">Add Members</a>
+                                        <a class="dropdown-item" href="#">Add Due Date</a>
+                                        <a class="dropdown-item MakeListMode" id="mode5">List Mode</a>
+                                    </div>
+                                </div> <!-- end dropdown -->
+
+                                <!-- Plus icon and counter -->
+                                <div class="plus-icon-container float-end">
+                                    <!-- <i class="bi bi-plus-circle" id="plusIcon"></i> -->
+                                    <span id="counter">0</span>
+                                </div>
+
+                                <h4 class="header-title">Upcoming</h4>
+                                <p class="sub-header make-title-dot-overflow">
+                                    Your awesome text Your awesome
+                                </p>
+
+
+                                <div class="">
+                                    <div id="listContainer" class=""></div>
+                                </div>
+                                <div class="list-container d-none">
+
+                                    <div class="shadow-lg rounded p-1 mb-1">
+                                        <div class="d-flex align-items-center input-icon-container">
+                                            <input type="text" class="w-100 h-100 input-class listInput" id="title5">
+                                            
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <ul class="sortable-list tasklist card-container list-unstyled listoftitle"
+                                    id="upcoming5">
+
+
+
+                                    <li id="task1" class="border border-success make-min-height">
+                                        <!-- expand icon -->
+                                        <div class="w-100 d-flex justify-content-end mb-2">
+                                            <a class="text-dark icon-link" href="#" onclick="showPopup()">
+                                                <i class="bi bi-arrows-angle-expand"></i>
+                                            </a>
+                                        </div>
+
+                                        <!-- Popup content -->
+                                        <div id="popup" class="cover">
+                                            <div class="contents">
+                                                <h1>Contents</h1>
+                                                <span class="close" onclick="closePopup()">Close</span>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class=" reduce-margin-top-23">
+                                            <div class="d-flex mb-2">
+                                                <span class="badge bg-soft-danger text-danger float-start ">High</span>
+                                                <span class="badge bg-soft-info text-success  float-start ms-2">In
+                                                    Progress</span>
+                                            </div>
+
+                                            <div class="d-flex justify-content-end ">
+                                                <div class="reduce-margin-right-16">
+                                                    <div class="avatar-group margin-right-2">
+
+                                                        <div class="avatar">
+                                                            <img src="https://pixinvent.com/materialize-material-design-admin-template/app-assets/images/user/12.jpg"
+                                                                data-bs-toggle="tooltip" title="Person 1" />
+
+                                                        </div>
+
+                                                        <div class="avatar">
+                                                            <img src="https://htmlstream.com/preview/unify-v2.6.2/assets/img-temp/400x450/img5.jpg"
+                                                                data-bs-toggle="tooltip" title="Person 2" />
+                                                        </div>
+
+                                                        <div class="avatar">
+                                                            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                                                data-bs-toggle="tooltip" title="Person 3" />
+                                                        </div>
+
+                                                        <div class="avatar">
+                                                            <img src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/04/a0004213/img/basic/a0004213_main.jpg?20200710184501&q=80&rw=750&rh=536"
+                                                                data-bs-toggle="tooltip" title="Person 4" />
+                                                        </div>
+
+                                                        <div class="avatar">
+                                                            <img src="https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/768/2018/08/glasses-american-man-20s-hipster.jpg"
+                                                                data-bs-toggle="tooltip" title="Person 5" />
+                                                        </div>
+
+                                                    </div>
+                                                    <div
+                                                        class="d-flex gap-1 align-items-center justify-content-end reduce-margin-bottom-10">
+                                                        <div class="form-check mx-2">
+                                                            <input class="form-check-input" type="checkbox" value="">
+                                                        </div>
+                                                        <!-- Star icon -->
+                                                        <div class="make-position-related">
+                                                            <input id="star2" class="star " type="checkbox"
+                                                                title="bookmark page" checked>
+                                                        </div>
+
+                                                        <div class="">
+                                                            <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                                0</small>
+                                                        </div>
+                                                        <!-- Bookmark icon -->
+                                                        <div class="">
+                                                            <div id="log">
+                                                                <button type="button"
+                                                                    class="pp-bookmark-btn btn btn-default btn-lg pull-right bookmark-btn"
+                                                                    data-context="investor" data-context-action="view"
+                                                                    data-context-id="7" onclick="toggleBookmark(this)">
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class=" d-flex justify-content-end">
+                                                        <p class="font-13 mx-1"><i class="mdi mdi-calendar"></i>
+                                                            Oct 16,
+                                                            2018</p>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="clearfix"></div>
+                                        <h5 class="mt-0 reduce-ma reduce-margin-top-119" data-toggle="tooltip"
+                                            data-placement="top" title="Tooltip Main Title">
+                                            <i class="fs-3 text-muted bi bi-grip-vertical make-cursoer-pointer"></i>
+                                            <a href="javascript: void(0);" class="text-dark make-title-dot-overflow">iOS
+                                                App home
+                                                page </a>
+                                        </h5>
+
+
+                                        <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                            class="w-50 reduce-margin-top-8 make-dot-overflow title">There are msdfany
+                                            variations
+                                            of passages of
+                                            Lorem Ipsum
+                                        </p>
+                                        <div class="clearfix reduce-margin-bottom-20"></div>
+
+                                    </li>
+
+                                    <li id="task2" class="border border-success make-min-height-other-li">
+                                        <span class="badge bg-soft-success text-success float-end">Low</span>
+                                        <h5 class="mt-0"><a href="javascript: void(0);" data-toggle="tooltip"
+                                                data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark make-title-dot-overflow">Topnav
+                                                layout
+                                                design</a></h5>
+
+
+                                        <div class="d-flex justify-content-between">
+                                            <p data-toggle="tooltip " data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 reduce-margin-top-8 make-dot-overflow title">Many desktop
+                                                publishing packages loerem fds sd fsd fsdf sdf
+                                                and
+                                            </p>
+                                            <div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input mx-1" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+                                                </div>
+                                                <p class="font-13 mt-1 mb-0"><i class="mdi mdi-calendar"></i> Nov
+                                                    22,
+                                                    2018</p>
+
+                                            </div>
+                                        </div>
+                                        <div class="clearfix reduce-margin-bottom-10"></div>
+
+                                    </li>
+                                    <li id="task3" class="border border-success make-min-height-other-li">
+                                        <span class="badge rounded-pill bg-danger float-end">High</span>
+                                        <h5 class="mt-0"><a href="javascript: void(0);" data-toggle="tooltip"
+                                                data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark make-title-dot-overflow">Invite
+                                                user to
+                                                a project</a></h5>
+
+                                        <div class="d-flex justify-content-between">
+                                            <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 reduce-margin-top-8 make-dot-overflow title">If you are going
+                                                to
+                                                use a passage of
+                                                Lorem
+                                                Ipsum.</p>
+                                            <div>
+                                                <div class="form-check ">
+                                                    <input class="form-check-input mx-1" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+                                                </div>
+
+                                                <div>
+                                                    <p class="font-13 "><i class="mdi mdi-calendar"></i> Oct 15,
+                                                        2018</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix reduce-margin-bottom-20"></div>
+
+                                    </li>
+                                    <li class="task-info border border-success make-min-height-other-li" id="task4">
+                                        <span class="badge bg-soft-warning text-warning float-end">Medium</span>
+                                        <h5 class="mt-0"><a href="javascript: void(0);" data-toggle="tooltip"
+                                                data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark make-title-dot-overflow">Write
+                                                a
+                                                release note</a></h5>
+
+                                        <div class="d-flex justify-content-between">
+                                            <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 reduce-margin-top-8 make-dot-overflow title">There are many
+                                                variations of passages
+
+                                            </p>
+                                            <div>
+                                                <div class="form-check ">
+                                                    <input class="mx-1 form-check-input" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+                                                </div>
+                                                <p class="font-13 mt-1 mb-0"><i class="mdi mdi-calendar"></i> Dec
+                                                    03,
+                                                    2018</p>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix reduce-margin-bottom-20"></div>
+
+                                    </li>
+
+
+                                </ul> 
+                                <div id="mode5_container"></div>
+                                <a href="javascript: void(0);" onclick="appendNew(5,document.getElementById('title5').value,document.getElementById('title5'),1)" class="mt-1 btn btn-primary w-100 waves-effect waves-light"><i class="mdi mdi-plus-circle"></i> Add New</a>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dropdown float-end">
+                                    <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="mdi mdi-dots-vertical m-0 text-muted h3"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a class="dropdown-item" href="#">Edit</a>
+                                        <a class="dropdown-item" href="#">Delete</a>
+                                        <a class="dropdown-item" href="#">Add Members</a>
+                                        <a class="dropdown-item" href="#">Add Due Date</a>
+                                        <a class="dropdown-item MakeListMode" data-bs-dismiss="dropdown-toggle"id="mode6">List
+                                            Mode</a>
+                                    </div>
+                                </div> <!-- end dropdown -->
+
+                                <h4 class="header-title">In Progress</h4>
+                                <p class="sub-header">
+                                    Your awesome text
+                                </p>
+                                <div class="list-container d-none">
+                                    <div class="shadow-lg rounded p-1 mb-1">
+                                        <div class="d-flex align-items-center input-icon-container">
+                                            <input type="text" class="w-100 h-100 input-class listInput" id="title6">
+                                            
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <ul class="card-container sortable-list tasklist list-unstyled" id="upcoming6">
+
+                                    <li id="task6" class="border border-warning ">
+                                        <span class="badge bg-soft-warning text-warning float-end">Medium</span>
+                                        <h5 class="mt-0 make-title-dot-overflow"><a href="javascript: void(0);"
+                                                data-toggle="tooltip" data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark">Enable
+                                                analytics tracking</a></h5>
+
+                                        <div class="d-flex justify-content-between reduce-margin-top-8">
+                                            <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 make-dot-overflow title">It has roots in a piece of classical
+                                                Latin literature from
+                                                45
+                                                BC.</p>
+                                            <div>
+                                                <div class="form-check ">
+                                                    <input class="form-check-input mx-1" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+
+                                                </div>
+                                                <p class="font-13 m-0"><i class="mdi mdi-calendar"></i> Sep
+                                                    18,
+                                                    2018</p>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix reduce-margin-bottom-10"></div>
+                                    </li>
+                                    <li class="task-info border border-warning" id="task7">
+                                        <span class="badge bg-soft-danger text-danger float-end">High</span>
+                                        <h5 class="mt-0 make-title-dot-overflow"><a href="javascript: void(0);"
+                                                data-toggle="tooltip" data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark make-title-dot-overflow">Kanban
+                                                board dsfs dsf
+                                                design</a></h5>
+
+                                        <div class="d-flex justify-content-between reduce-margin-top-8">
+                                            <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 make-dot-overflow title">All the Lorem Ipsum generators on the
+                                                Internet tend to
+                                                repeat
+                                                predefined.</p>
+                                            <div>
+                                                <div class="form-check ">
+                                                    <input class="form-check-input mx-1" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+
+                                                </div>
+                                                <p class="font-13 m-0"><i class="mdi mdi-calendar"></i> Oct 30,
+                                                    2018</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="clearfix reduce-margin-top-16"></div>
+
+                                    </li>
+                                    <li class="task-danger border border-warning" id="task8">
+                                        <span class="badge bg-soft-success text-success float-end">Low</span>
+                                        <h5 class="mt-0 make-title-dot-overflow"><a href="javascript: void(0);"
+                                                data-toggle="tooltip" data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark">Code
+                                                HTML
+                                                email template</a></h5>
+
+                                        <div class="d-flex justify-content-between reduce-margin-top-8">
+                                            <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 make-dot-overflow title">There are many variations of passages
+                                                of
+                                                Lorem Ipsum</p>
+                                            <div>
+                                                <div class="form-check ">
+                                                    <input class="form-check-input mx-1" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+
+                                                </div>
+                                                <p class="font-13 m-0"><i class="mdi mdi-calendar"></i> Nov 23,
+                                                    2018</p>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix reduce-margin-top-16"></div>
+
+
+
+                                    </li>
+
+
+
+
+                                </ul><div id="mode6_container"></div>
+                                <a href="javascript: void(0);" onclick="appendNew(6,document.getElementById('title6').value,document.getElementById('title6'),1)"
+                                    class="mt-1 btn btn-primary w-100 waves-effect waves-light"><i
+                                        class="mdi mdi-plus-circle"></i> Add New</a>
+                                        
+                            </div>
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+                    <div class="col-lg-3 col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dropdown float-end">
+                                    <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="mdi mdi-dots-vertical m-0 text-muted h3"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a class="dropdown-item" href="#">Edit</a>
+                                        <a class="dropdown-item" href="#">Delete</a>
+                                        <a class="dropdown-item" href="#">Add Members</a>
+                                        <a class="dropdown-item" href="#">Add Due Date</a>
+                                        <a class="dropdown-item MakeListMode" data-bs-dismiss="dropdown-toggle" id="mode7">List
+                                            Mode</a>
+                                    </div>
+                                </div> <!-- end dropdown -->
+
+                                <h4 class="header-title">In Progress</h4>
+                                <p class="sub-header">
+                                    Your awesome text
+                                </p>
+                                <div class="list-container d-none">
+
+                                    <div class="shadow-lg rounded p-1 mb-1">
+                                        <div class="d-flex align-items-center input-icon-container">
+                                            <input type="text" class="w-100 h-100 input-class listInput" id="title7">
+                                            
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <ul class="card-container sortable-list tasklist list-unstyled " id="upcoming7">
+
+
+
+                                    <li id="task6" class="border border-warning ">
+                                        <span class="badge bg-soft-warning text-warning float-end">Medium</span>
+                                        <h5 class="mt-0 make-title-dot-overflow"><a href="javascript: void(0);"
+                                                data-toggle="tooltip" data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark">Enable
+                                                analytics tracking</a></h5>
+
+                                        <div class="d-flex justify-content-between reduce-margin-top-8">
+                                            <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 make-dot-overflow title">It has roots in a piece of classical
+                                                Latin literature from
+                                                45
+                                                BC.</p>
+                                            <div>
+                                                <div class="form-check ">
+                                                    <input class="form-check-input mx-1" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+
+                                                </div>
+                                                <p class="font-13 m-0"><i class="mdi mdi-calendar"></i> Sep
+                                                    18,
+                                                    2018</p>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix reduce-margin-bottom-10"></div>
+                                    </li>
+                                    <li class="task-info border border-warning" id="task7">
+                                        <span class="badge bg-soft-danger text-danger float-end">High</span>
+                                        <h5 class="mt-0 make-title-dot-overflow"><a href="javascript: void(0);"
+                                                data-toggle="tooltip" data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark make-title-dot-overflow">Kanban
+                                                board dsfs dsf
+                                                design</a></h5>
+
+                                        <div class="d-flex justify-content-between reduce-margin-top-8">
+                                            <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 make-dot-overflow title">All the Lorem Ipsum generators on the
+                                                Internet tend to
+                                                repeat
+                                                predefined.</p>
+                                            <div>
+                                                <div class="form-check ">
+                                                    <input class="form-check-input mx-1" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+
+                                                </div>
+                                                <p class="font-13 m-0"><i class="mdi mdi-calendar"></i> Oct 30,
+                                                    2018</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="clearfix reduce-margin-top-16"></div>
+
+                                    </li>
+                                    <li class="task-danger border border-warning" id="task8">
+                                        <span class="badge bg-soft-success text-success float-end">Low</span>
+                                        <h5 class="mt-0 make-title-dot-overflow"><a href="javascript: void(0);"
+                                                data-toggle="tooltip" data-placement="top" title="Tooltip Main Title"
+                                                class="text-dark">Code
+                                                HTML
+                                                email template</a></h5>
+
+                                        <div class="d-flex justify-content-between reduce-margin-top-8">
+                                            <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title"
+                                                class="w-50 make-dot-overflow title">There are many variations of passages
+                                                of
+                                                Lorem Ipsum</p>
+                                            <div>
+                                                <div class="form-check ">
+                                                    <input class="form-check-input mx-1" type="checkbox" value="">
+                                                    <a href="#"></a><small><i class="fa fa-comments"></i>
+                                                        0</small>
+
+                                                </div>
+                                                <p class="font-13 m-0"><i class="mdi mdi-calendar"></i> Nov 23,
+                                                    2018</p>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix reduce-margin-top-16"></div>
+
+
+
+                                    </li>
+
+
+
+
+                                </ul><div id="mode7_container"></div>
+                                <a href="javascript: void(0);" onclick="appendNew(7,document.getElementById('title7').value,document.getElementById('title7'),1)"
+                                    class="mt-1 btn btn-primary w-100 waves-effect waves-light"><i
+                                        class="mdi mdi-plus-circle"></i> Add New</a>
+                                        
+                            </div>
+                        </div> <!-- end card -->
+                    </div><!-- end col -->
+
+                </div>
+                <!-- end row -->
+
+            </div> <!-- container -->
+
+        </div> <!-- content -->
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+    <!-- List Mode script  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sortablejs/1.14.0/Sortable.min.js"></script>
+    <script>
+    
+        function getAllListBtn() {
+            const allListModeBtn = document.querySelectorAll(".MakeListMode");
+            const allCardContainer = document.querySelectorAll(".card-container");
+            const allListContainer = document.querySelectorAll(".list-container");
+            const allListInputs = document.querySelectorAll(".listInput");
+    
+            allListModeBtn.forEach((btn, i) => {
+                btn.addEventListener('click', () => {
+                    allListContainer[i].classList.toggle("d-none");
+                    allCardContainer[i].classList.toggle("d-none");
+    
+                    const CheckText = btn.innerText;
+                    const mode_id = btn.getAttribute('id');
+                    const container = document.getElementById(`${mode_id}_container`);
+                    const id = mode_id.replace("mode", "");
+                    const upcoming = document.getElementById(`upcoming${id}`);
+                    const liElements = upcoming.getElementsByTagName('li');
+                    let join = '';
+    
+                    if (CheckText === "List Mode") {
+                        btn.innerText = "Card Mode";
+                        Array.from(liElements).forEach((li, index) => {
+                            const subHeaders = li.getElementsByClassName('make-title-dot-overflow');
+                            if (subHeaders.length > 0) {
+                                const h1 = subHeaders[0].innerText;
+                                join += `
+                                    <div class="shadow-lg rounded p-1 my-1 draggable-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input mt-3" type="checkbox">
+                                        </div>
+                                        <div class="d-flex align-items-center input-icon-container ms-3">
+                                            <input type="text" class="w-100 h-100 input-class listInput" readonly value="${h1}" data-index="${index}" data-id="${id}" ondblclick="changetoeditable(this)" ontouchstart="handleTouch(this)" oninput="changeContent(this,${i},${id})">
+                                        </div>
+                                    </div>`;
+                            } else {
+                                console.log("No element with class 'make-title-dot-overflow' found in this <li>.");
+                            }
+                        });
+                        container.innerHTML = join;
+                        container.style.display = 'block';
+                        container.style.maxHeight = "350px";
+                        container.style.overflowY = "auto";
+container.style.overflowX = "hidden";
+    
+                        // Initialize draggable functionality
+                        Sortable.create(container, {
+                            animation: 150,
+                            onEnd: (evt) => {
+                                console.log('Element moved:', evt);
+                            }
+                        });
+                    } else {
+                        btn.innerText = "List Mode";
+                        container.style.display = 'none';
+                    }
+                });
+            });
+    
+            document.addEventListener('change', (e) => {
+                if (e.target && e.target.type === 'checkbox') {
+                    const checkbox = e.target;
+                    const item = checkbox.closest('.draggable-item');
+                    if (checkbox.checked) {
+                        item.style.display = 'none';
+                    } else {
+                        item.style.display = 'block';
+                    }
+                }
+            });
+        }
+    
+    
+        function changetoeditable(element) {
+            const container = element.closest('.input-icon-container');
+            const idsa = element.closest('.card-body').querySelector('.tasklist');
+            const input = container.querySelector('input');
+            let focusOut = false;
+
+            if (input) {
+                input.removeAttribute('readonly');
+                input.focus();
+                input.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter') {
+                        input.setAttribute('readonly', true);
+                        const id = idsa.getAttribute('id').replace('upcoming', "");
+                        appendNew(id, input.value,input,2);
+                    }
+                });
+            }
+        }
+        let lastTap = 0;
+        const doubleTapDelay = 300;
+        function handleTouch(element) {
+            const currentTime = new Date().getTime();
+            const tapLength = currentTime - lastTap;
+
+            if (tapLength < doubleTapDelay && tapLength > 0) {
+                changetoeditable(element);
+            }
+
+            lastTap = currentTime;
+        }
+    
+        getAllListBtn();
+    </script>
+    
+    <!-- Vendor js -->
+    <script src="../assets/assets/js/vendor.min.js"></script>
+
+    <!-- App js -->
+    <script src="../assets/assets/js/app.min.js"></script>
+
+    <script src="../assets/assets/js/sortable.min.js"></script>
+
+    <!-- Init -->
+    <script src="../assets/assets/js/kanban.init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+        integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+</body>
+<!-- Add this script to your HTML file -->
+<script>
+    function changeContent(cur,i,id)
+    {
+        upcoming = document.getElementById('upcoming'+id);
+        liElements = upcoming.getElementsByTagName('li');
+        // Get the count of <li> elements
+        count = liElements.length;
+        let subHeaders = liElements[i].getElementsByClassName('make-title-dot-overflow');
+        if (subHeaders.length > 0) {
+            h1 = subHeaders[0].innerText = cur.value; // Access the first element in the collection
+        }
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get all elements with the class "mdi-dots-vertical"
+        var dotsIcons = document.querySelectorAll('.mdi-dots-vertical');
+
+        // Add click event listeners to all dots icons
+        dotsIcons.forEach(function (dotsIcon) {
+            dotsIcon.addEventListener('click', function (event) {
+                // Prevent the default behavior of the link
+                event.preventDefault();
+
+                // Get the closest dropdown menu relative to the clicked dots icon
+                var dropdownMenu = dotsIcon.closest('.dropdown').querySelector('.dropdown-menu');
+
+                // Toggle the visibility of the dropdown menu
+                dropdownMenu.classList.toggle('show');
+            });
+        });
+
+        // Close the dropdown menus if the user clicks outside of them
+        document.addEventListener('click', function (event) {
+            dotsIcons.forEach(function (dotsIcon) {
+                var dropdownMenu = dotsIcon.closest('.dropdown').querySelector('.dropdown-menu');
+
+                if (!event.target.matches('.mdi-dots-vertical') && !event.target.closest('.dropdown')) {
+                    // If the click is outside the dots icon and the dropdown menu, close the dropdown
+                    dropdownMenu.classList.remove('show');
+                }
+            });
+        });
+    });
+</script>
+<script>
+</script>
+
+<!-- Bookmark -->
+<script>
+    function toggleBookmark(button) {
+        // Toggle the 'active' class on the button
+        button.classList.toggle('active');
+    }
+</script>
+<!-- expand icon -->
+<script>
+    $ = function (id) {
+        return document.getElementById(id);
+    }
+
+    var show = function (id) {
+        $(id).style.display = 'block';
+    }
+    var hide = function (id) {
+        $(id).style.display = 'none';
+    }
+</script>
+
+<!-- popup -->
+
+<script>
+    document.querySelectorAll('.tasklist li').forEach(item => {
+    item.addEventListener('dragstart', function () {
+        // Add the dragging class when the drag starts
+        item.classList.add('dragging');
+    });
+
+    item.addEventListener('dragend', function () {
+        // Remove the dragging class when the drag ends
+        item.classList.remove('dragging');
+    });
+});
+    function showPopup() {
+        // Show the popup
+        document.getElementById('popup').style.display = 'flex';
+    }
+
+    function closePopup() {
+        // Close the popup
+        document.getElementById('popup').style.display = 'none';
+    }
+
+    // Close the popup if the overlay or close button is clicked
+    document.getElementById('popup').addEventListener('click', function (e) {
+        if (e.target === this) {
+            closePopup();
+        }
+    });
+
+let draggedElement = null;
+
+function handleDragStart(event) {
+    draggedElement = event.target;
+    event.dataTransfer.effectAllowed = 'move';
+    event.dataTransfer.setData('text/html', event.target.outerHTML);
+    event.target.classList.add('dragging');
+}
+
+function handleDragOver(event) {
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'move';
+}
+
+function handleDrop(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (draggedElement !== this) {
+        this.parentNode.removeChild(draggedElement);
+        const dropHTML = event.dataTransfer.getData('text/html');
+        this.insertAdjacentHTML('beforebegin', dropHTML);
+        const droppedElement = this.previousSibling;
+        addDragAndDropHandlers(droppedElement);
+    }
+}
+
+function handleDragEnd(event) {
+    event.target.classList.remove('dragging');
+    draggedElement = null;
+}
+
+function addDragAndDropHandlers(element) {
+    element.addEventListener('dragstart', handleDragStart);
+    element.addEventListener('dragover', handleDragOver);
+    element.addEventListener('drop', handleDrop);
+    element.addEventListener('dragend', handleDragEnd);
+}
+function appendNew(a, value, inputElement,type) {
+    if(value!='')
+    {
+// Title is now the value from the input
+title = value;
+    if(type==1)
+    {
+        value = value;
+        inputElement.value='';
+    }else{
+        value = '';
+    }
+    // The HTML that will be appended in the list (`appendHTML`)
+    let appendHTML = `
+        <li class="task-danger border border-warning" id="task8">
+            <span class="badge bg-soft-success text-success float-end">Low</span>
+            <h5 class="mt-0 make-title-dot-overflow">
+                <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Tooltip Main Title" class="text-dark make-title-dot-overflow">${title}</a>
+            </h5>
+            <div class="d-flex justify-content-between reduce-margin-top-8">
+                <p data-toggle="tooltip" data-placement="top" title="Tooltip Sub Title" class="w-50 make-dot-overflow title">There are many variations of passages of Lorem Ipsum</p>
+                <div>
+                    <div class="form-check">
+                        <input class="form-check-input mx-1" type="checkbox" value="">
+                        <a href="#"></a>
+                        <small><i class="fa fa-comments"></i>0</small>
+                    </div>
+                    <p class="font-13 m-0"><i class="mdi mdi-calendar"></i> Nov 23, 2018</p>
+                </div>
+            </div>
+            <div class="clearfix reduce-margin-top-16"></div>
+        </li>
+    `;
+
+    // Append the above `appendHTML` to the specific container
+    let container = document.getElementById('upcoming' + a);  
+    let tempDiv = document.createElement('div');
+    tempDiv.innerHTML = appendHTML.trim();
+    let newElement = tempDiv.firstElementChild;
+    container.appendChild(newElement);
+
+    // Handle the join variable that should be appended next to the triggering input
+    let liElements = container.getElementsByTagName('li');
+    let i = liElements.length - 1;
+    let index;
+
+if (inputElement.hasAttribute("data-index")) {
+    index = parseInt(inputElement.getAttribute("data-index"), 10);  // Convert to integer
+    index++;  // Increment the index
+} else {
+    index = i + 1;  // Fallback to the new index based on `i`
+}
+    let join = `
+        <div class="shadow-lg rounded p-1 my-1 draggable-item">
+            <div class="form-check">
+                <input class="form-check-input mt-3" type="checkbox">
+            </div>
+            <div class="d-flex align-items-center input-icon-container ms-3">
+                <input type="text" class="w-100 h-100 input-class listInput newAppend" data-index="${index}" data-id="${a}" 
+                ondblclick="changetoeditable(this)" 
+                oninput="changeContent(this, ${i}, ${a})" value="${value}">
+            </div>
+        </div>
+    `;
+
+    // Convert the `join` string to an element and insert it after the input
+    let joinDiv = document.createElement('div');
+    joinDiv.innerHTML = join.trim();
+    let joinElement = joinDiv.firstElementChild;
+
+    if (joinElement) {
+        if(type==1)
+        {
+            cn = document.getElementById('mode'+a+'_container');
+            cn.innerHTML+= join;
+        }else{
+            inputElement.parentElement.parentElement.insertAdjacentElement('afterend', joinElement);
+        }
+
+        // Focus on the new input inside the appended element
+        setTimeout(() => {
+            let appendedInput = joinElement.querySelector('.listInput');
+            if (appendedInput) {
+                appendedInput.focus();
+            }
+        }, 10);
+    } else {
+        console.error("Failed to create a valid DOM element.");
+    }
+    var inputs_a = document.querySelectorAll('.newAppend');
+    function handleEnterKey(event,id,input) {
+        if (event.key === 'Enter') {
+            appendNew(id, input.value,input,2);
+        }
+    }
+    inputs_a.forEach(input => {
+        id = input.getAttribute("data-id");
+        input.addEventListener('keydown', (event) => handleEnterKey(event, id,input));
+    });
+    }
+}
+</script>
+
+</html>

@@ -1,0 +1,398 @@
+body {
+  font-family: "Martel Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Martel Sans", sans-serif;
+}
+.Edit-Icon.hide-icon {
+  visibility: hidden !important;
+}
+.input-class {
+  outline: none !important;
+  border: none !important;
+  background-color: initial;
+}
+
+.scrolling-wrapper {
+  overflow-x: auto;
+  padding-top: 30px;
+  padding-bottom: 70px;
+  border: 1px solid #ccc;
+  /* Border style and color */
+  padding: 1px 0;
+  /* Optional: Add padding for better appearance */
+  margin: -8px;
+}
+.make-cursoer-pointer {
+  padding: 7% 0 25% 0;
+  cursor: pointer;
+}
+
+.scrolling-wrapper .col-lg-3 {
+  padding: 3px 2px;
+  /* Adjust the value as needed */
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* Add scrollbar if content overflows */
+}
+.make-scrolable-div {
+  height: 110px;
+  overflow: auto;
+}
+.make-scrolable-div::-webkit-scrollbar-thumb {
+  background-color: rgb(161, 161, 169);
+  width: 5px;
+}
+.make-scrolable-div::-webkit-scrollbar {
+  width: 5px;
+}
+.scrolling-wrapper .col-lg-3::-webkit-scrollbar {
+  width: 5px;
+  /* background-color: red; */
+}
+.scrolling-wrapper .col-lg-3::-webkit-scrollbar-thumb {
+  background-color: rgb(161, 161, 169);
+  width: 5px;
+}
+.card-body {
+  border: 1px solid #ccc;
+  padding: 7px 10px !important;
+}
+
+.flex-nowrap {
+  flex-wrap: wrap !important;
+}
+.scrolling-wrapper .col-lg-3 {
+  /* height: 549px; */
+}
+/* Exclude .flex-nowrap style on desktop (screen width greater than or equal to 992px) */
+@media (min-width: 992px) {
+  .flex-nowrap {
+    flex-wrap: nowrap !important;
+  }
+  .scrolling-wrapper .col-lg-3 {
+    width: 20% !important;
+  }
+}
+
+/* Apply styles only on desktop (screen width greater than or equal to 992px) */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .card-block {
+    height: 250px;
+    background-color: #fff;
+    border: none;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 20px 50px hsla(240%, 43%, 40%, 0.35);
+    transition: all 0.2s ease-in-out !important;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 30px 70px hsla(240%, 43%, 40%, 0.5);
+    }
+  }
+}
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+  .scrolling-wrapper .col-lg-3 {
+    /* height: 79vh; */
+  }
+}
+.star {
+  visibility: hidden;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--ct-border-color);
+  font-size: 30px;
+}
+
+.star:before {
+  content: "\2605";
+  position: absolute;
+  visibility: visible;
+}
+
+.star:checked:before {
+  content: "\2606";
+  position: absolute;
+}
+
+/* bookmark icon */
+/*
+/* hide default button and show contents only */
+button {
+  -webkit-appearance: none;
+  outline: none;
+  border: 0;
+  background: transparent;
+}
+
+/*
+f097 fa-bookmark-o
+f02e fa-bookmark
+*/
+.pp-bookmark-btn:focus,
+.pp-bookmark-btn:active {
+  outline: none;
+  border: none;
+  border-color: none;
+}
+
+button.active::before {
+  content: "\f02e";
+  font-family: FontAwesome;
+  color: rgb(60, 235, 12);
+}
+
+button::before {
+  content: "\f097";
+  font-family: FontAwesome;
+  color: red;
+}
+
+/*
+https://dusted.codes/making-font-awesome-awesome-using-icons-without-i-tags
+*/
+/*
+plus icon
+*/
+#plusIcon {
+  color: rgb(22, 22, 22);
+}
+
+/* Style for the counter */
+#counter {
+  color: rgb(157, 157, 160);
+  margin-right: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  padding: 5px;
+  margin-left: 5px;
+}
+
+/* expand icon */
+.bi-arrows-angle-expand {
+  color: gray;
+}
+
+.fs-3 {
+  font-size: 1.875rem;
+}
+
+.text-muted {
+  color: gray;
+}
+
+.bi.bi-grip-vertical {
+  /* position: absolute; */
+  margin-left: -22px;
+}
+
+/* -popup- */
+.cover {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: none;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.contents {
+  width: 60%;
+  max-width: 500px;
+  background: #f1f1f1;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  z-index: 1001;
+}
+
+.close {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 15px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+  z-index: 1002;
+}
+.reduce-margin-top {
+  margin-top: -31px !important;
+}
+.reduce-margin-top-8 {
+  margin-top: -8px;
+  font-size: 13px !important;
+}
+.reduce-margin-top-23 {
+  margin-top: -23px !important;
+}
+.reduce-margin-top-18 {
+  margin-top: -18px;
+}
+.reduce-margin-top-16 {
+  margin-top: -16px;
+}
+.reduce-margin-bottom-10 {
+  margin-bottom: -10px !important;
+}
+.reduce-top-bottom {
+  margin-bottom: -19px !important;
+  margin-top: -13px;
+}
+.header-title {
+  margin: 0 !important;
+}
+.tasklist li {
+  padding: 3px 15px !important;
+  margin-bottom: 6px !important;
+}
+.sub-header {
+  margin-bottom: 4px !important;
+  font-size: 13px !important;
+}
+.make-position-related {
+  position: relative;
+}
+
+/* start alignment  */
+.star:before {
+  left: -11px;
+  top: -10px;
+}
+.make-min-height {
+  min-height: 125px !important;
+}
+.make-min-height-other-li {
+  min-height: 81px;
+}
+.make-dot-overflow {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  line-height: 18px;
+}
+.make-title-dot-overflow {
+  overflow: hidden !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 1 !important; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  line-height: 17px;
+}
+.bookmark-btn {
+  padding: 5px;
+}
+.star:checked:before {
+  left: -11px;
+  top: -10px;
+}
+.reduce-margin-top-119 {
+  margin-top: -137px !important;
+}
+.reduce-margin-bottom-20 {
+  margin-bottom: -20px;
+}
+.reduce-margin-right-16 {
+  margin-right: -16px !important;
+}
+
+/* Responsive styles for mobile view */
+@media (max-width: 600px) {
+  .contents {
+    width: 90%;
+  }
+}
+
+/* --hover effect for div- */
+.tasklist li:hover {
+  background-color: #e1e4e796;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+/* ============================= avatar css==================================== */
+/* ============================= avatar css==================================== */
+.avatar-group {
+  display: flex;
+  position: relative;
+  top: 9px;
+  left: 34px;
+  width: 142px !important;
+
+  &.rtl {
+    direction: rtl;
+
+    .avatar:hover:not(:last-of-type) {
+      transform: translate(10px);
+    }
+  }
+
+  .avatar {
+    margin-left: -14px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+    &:hover:not(:last-of-type) {
+      transform: translate(-10px);
+    }
+  }
+
+  .hidden-avatars {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3px;
+    margin-right: 23px;
+    background-color: #2c303a;
+    color: #fff;
+  }
+}
+
+.avatar {
+  width: 33px;
+  height: 33px;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  background-color: #dadcdf;
+  /* border: 1px solid #f6f8fe; */
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+.margin-right-2 {
+  /* margin-right: 5px; */
+}
+.dragging {
+  border: 4px solid #574bbc !important;
+  cursor: grabbing;
+  background-color: white !important;
+  transform: scale(1.1);
+}
