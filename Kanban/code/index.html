@@ -56,9 +56,8 @@
                 <!-- start page title -->
                 <div class="reduce-top-bottom">
                     <div class="">
-                        <div class="page-title-box">
-
-                            <h4 class="page-title">Kanban Board</h4>
+                        <div class="page-title-box d-flex justify-content-between">
+                            <h4 class="page-title">Kanban Board</h4>          <button id="mainListModeBtn">List Mode</button>
                         </div>
                     </div>
                 </div>
@@ -119,9 +118,6 @@
 
                                 <ul class="sortable-list tasklist card-container list-unstyled listoftitle"
                                     id="upcoming1">
-
-
-
                                     <li id="task1" class="border border-success make-min-height">
                                         <!-- expand icon -->
                                         <div class="w-100 d-flex justify-content-end mb-2">
@@ -231,8 +227,7 @@
                                             of passages of
                                             Lorem Ipsum
                                         </p>
-                                        <div class="clearfix reduce-margin-bottom-20"></div>
-
+                                        <div class="clearfix reduce-margin-bottom-20"></div>                                    
                                     </li>
 
                                     <li id="task2" class="border border-success make-min-height-other-li">
@@ -326,10 +321,15 @@
                                     </li>
 
 
-                                </ul>
-                                <a href="add.html" href="javascript: void(0);" onclick="appendNew(1,document.getElementById('title1').value,document.getElementById('title1'),1)"
+                                </ul> 
+                                
+                                <!-- <a href="add.html" href="javascript: void(0);" onclick="appendNew(1,document.getElementById('title1').value,document.getElementById('title1'),1)"
                                     class="mt-1 btn btn-primary w-100 waves-effect waves-light"><i
-                                        class="mdi mdi-plus-circle"></i> Add New</a>
+                                        class="mdi mdi-plus-circle"></i> Add New</a> -->
+
+                                <a href="javascript: void(0);" onclick="handleAddBtn(1)"
+                                        class="mt-1 btn btn-primary w-100 waves-effect waves-light"><i
+                                            class="mdi mdi-plus-circle"></i> Add New</a>
                             
                             </div>
                         </div>
@@ -374,7 +374,6 @@
                                     <div class="shadow-lg rounded p-1 mb-1">
                                         <div class="d-flex align-items-center input-icon-container">
                                             <input type="text" class="w-100 h-100 input-class listInput" id="title2">
-                                            
                                         </div>
                                     </div>
 
@@ -382,9 +381,6 @@
 
                                 <ul class="sortable-list tasklist card-container list-unstyled listoftitle"
                                     id="upcoming2">
-
-
-
                                     <li id="task1" class="border border-success make-min-height">
                                         <!-- expand icon -->
                                         <div class="w-100 d-flex justify-content-end mb-2">
@@ -591,9 +587,9 @@
 
                                 </ul>
                                 <div id="mode2_container"></div>
-                                <a href="javascript: void(0);" onclick="appendNew(2,document.getElementById('title2').value,document.getElementById('title2'),1)"
+                                <a href="javascript: void(0);" onclick="handleAddBtn(2)"
                                     class="mt-1 btn btn-primary w-100 waves-effect waves-light"><i
-                                        class="mdi mdi-plus-circle"></i> Add New</a>
+                                        class="mdi mdi-plus-circle"></i> Add New www</a>
                                        
                             </div>
                         </div>
@@ -854,7 +850,7 @@
 
 
                                 </ul>   <div id="mode3_container"></div>
-                                <a href="javascript: void(0);" onclick="appendNew(3,document.getElementById('title3').value,document.getElementById('title3'),1)"
+                                <a href="javascript: void(0);" onclick="handleAddBtn(3)"
                                     class="mt-1 btn btn-primary w-100 waves-effect waves-light"><i
                                         class="mdi mdi-plus-circle"></i> Add New</a>
                                      
@@ -879,7 +875,7 @@
                                     </div>
                                 </div> <!-- end dropdown -->
 
-                                <!-- Plus icon and counter -->
+                                <!-- Plus icon and counter -->`
                                 <div class="plus-icon-container float-end">
                                     <!-- <i class="bi bi-plus-circle" id="plusIcon"></i> -->
                                     <span id="counter">0</span>
@@ -1548,9 +1544,6 @@
 
                                 </div>
                                 <ul class="card-container sortable-list tasklist list-unstyled " id="upcoming7">
-
-
-
                                     <li id="task6" class="border border-warning ">
                                         <span class="badge bg-soft-warning text-warning float-end">Medium</span>
                                         <h5 class="mt-0 make-title-dot-overflow"><a href="javascript: void(0);"
@@ -1649,8 +1642,10 @@
                             </div>
                         </div> <!-- end card -->
                     </div><!-- end col -->
-
+                    <div id="mode8_container"></div>
+                
                 </div>
+                
                 <!-- end row -->
 
             </div> <!-- container -->
@@ -1664,6 +1659,8 @@
     <!-- List Mode script  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sortablejs/1.14.0/Sortable.min.js"></script>
     <script>
+
+        
     
         function getAllListBtn() {
             const allListModeBtn = document.querySelectorAll(".MakeListMode");
@@ -1769,8 +1766,23 @@ container.style.overflowX = "hidden";
         }
     
         getAllListBtn();
-    </script>
-    
+
+    document.addEventListener("DOMContentLoaded", () => {
+    // Select all List Mode buttons
+    const allListModeBtns = document.querySelectorAll(".MakeListMode");
+
+    // Select the main List Mode button
+    const mainListModeBtn = document.getElementById("mainListModeBtn");
+
+    if (mainListModeBtn) {
+        mainListModeBtn.addEventListener("click", () => {
+            allListModeBtns.forEach(btn => btn.click());
+        });
+    }
+});
+</script>    
+<script src="script.js"></script>
+
     <!-- Vendor js -->
     <script src="../assets/assets/js/vendor.min.js"></script>
 
@@ -1781,6 +1793,9 @@ container.style.overflowX = "hidden";
 
     <!-- Init -->
     <script src="../assets/assets/js/kanban.init.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
         integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -1795,6 +1810,7 @@ container.style.overflowX = "hidden";
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </body>
 <!-- Add this script to your HTML file -->
