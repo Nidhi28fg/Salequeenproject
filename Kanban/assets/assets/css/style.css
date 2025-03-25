@@ -68,9 +68,7 @@ h6 {
 .flex-nowrap {
   flex-wrap: wrap !important;
 }
-.scrolling-wrapper .col-lg-3 {
-  /* height: 549px; */
-}
+
 /* Exclude .flex-nowrap style on desktop (screen width greater than or equal to 992px) */
 @media (min-width: 992px) {
   .flex-nowrap {
@@ -101,9 +99,7 @@ h6 {
 @media (max-width: 992px) {
 }
 @media (max-width: 768px) {
-  .scrolling-wrapper .col-lg-3 {
-    /* height: 79vh; */
-  }
+  
 }
 .star {
   visibility: hidden;
@@ -387,12 +383,43 @@ plus icon
     height: 100%;
   }
 }
-.margin-right-2 {
-  /* margin-right: 5px; */
-}
+
 .dragging {
   border: 4px solid #574bbc !important;
   cursor: grabbing;
   background-color: white !important;
   transform: scale(1.1);
+}
+
+
+
+.form-switch .form-check-input {
+  width: 3em; /* Adjust width */
+  height: 1.5em; /* Adjust height */
+  background-color: #f40909; /* Default background color */
+  border: none;
+  border-radius: 1.5em; /* Make it rounded */
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.form-switch .form-check-input:checked {
+  background-color: #21f344; /* Color when checked */
+}
+
+.form-switch .form-check-input::after {
+  content: "";
+  width: 1.3em; /* Adjust the circle size */
+  height: 1.3em; /* Adjust the circle size */
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.1em;
+  left: 0.1em;
+  transition: transform 0.3s ease;
+}
+
+.form-switch .form-check-input:checked::after {
+  transform: translateX(1.5em); /* Move the circle when checked */
 }
