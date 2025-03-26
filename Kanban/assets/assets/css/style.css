@@ -36,10 +36,8 @@ h6 {
 
 .scrolling-wrapper .col-lg-3 {
   padding: 3px 2px;
-  /* Adjust the value as needed */
   overflow-y: auto;
   overflow-x: hidden;
-  /* Add scrollbar if content overflows */
 }
 .make-scrolable-div {
   height: 110px;
@@ -68,6 +66,7 @@ h6 {
 .flex-nowrap {
   flex-wrap: wrap !important;
 }
+
 
 /* Exclude .flex-nowrap style on desktop (screen width greater than or equal to 992px) */
 @media (min-width: 992px) {
@@ -423,3 +422,54 @@ plus icon
 .form-switch .form-check-input:checked::after {
   transform: translateX(1.5em); /* Move the circle when checked */
 }
+
+        .high {
+            background-color: red;
+            color: white;
+        }
+        .medium {
+            background-color: orange;
+            color: white;
+        }
+        .low {
+            background-color: green;
+            color: white;
+        }
+        .in-progress {
+            background-color: lightgreen;
+            color: black;
+        }
+        .progressed {
+            background-color: lightblue;
+            color: black;
+        }
+        .modal-header {
+            background-color: #007bff;
+            color: white;
+        }
+        .modal-footer {
+            background-color: #f7f7f7;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+        }
+        .required::before {
+            content: '* ';
+            color: red;
+        }
+        .modal-footer>:not(:first-child) {
+            margin-left: .25rem;
+            margin-right: -19px !important;
+        }
+    
+
+        

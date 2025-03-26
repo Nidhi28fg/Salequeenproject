@@ -43,13 +43,14 @@
     <!-- Icons css -->
     <!-- <link href="../assets/assets/css/icons.min.css" rel="stylesheet" type="text/css" /> -->
 
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"> -->
 </head>
 
 <body>
 
     <!-- Begin page -->
-    <div id="wrapper">
-        <div class="content">
+    <div id="wrapper" >
+        <div class="content ">
             <!-- Start Content-->
             <div class="container-fluid">
 
@@ -57,7 +58,9 @@
                 <div class="reduce-top-bottom">
                     <div class="">
                         <div class="page-title-box d-flex justify-content-between">
-                            <h4 class="page-title">Kanban Board</h4>          <button id="mainListModeBtn">List Mode</button>
+                            <h4 class="page-title">Kanban Board</h4><div class="form-check form-switch" id="mainListModeBtn" style="padding-top: 30px;">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                              </div>
                         </div>
                     </div>
                 </div>
@@ -212,7 +215,7 @@
                                         </div>
 
                                         <div class="clearfix"></div>
-                                        <h5 class="mt-0 reduce-ma reduce-margin-top-119" data-toggle="tooltip"
+                                        <h5 class="mt-0 reduce-ma reduce-margin-top-119 out-container" data-toggle="tooltip"
                                             data-placement="top" title="Tooltip Main Title">
                                             <i class="fs-3 text-muted bi bi-grip-vertical make-cursoer-pointer"></i>
                                             <a href="javascript: void(0);" class="text-dark make-title-dot-overflow">iOS
@@ -324,8 +327,7 @@
                                 </ul> 
                                
                                 <div id="mode1_container"></div>
-                                <a href="javascript: void(0);" onclick="handleAddBtn(1)"
-                                        class="mt-1 btn btn-primary w-100 waves-effect waves-light"><i
+                                <a href="javascript: void(0);" onclick="handleAddBtn(1)" id="addNewLink" class="mt-1 btn btn-primary w-100 waves-effect waves-light"><i
                                             class="mdi mdi-plus-circle"></i> Add New</a>
                             
                             </div>
@@ -584,7 +586,7 @@
 
                                 </ul>
                                 <div id="mode2_container"></div>
-                                <a href="javascript: void(0);" onclick="handleAddBtn(2)"
+                                <a href="javascript: void(0);" onclick="handleAddBtn(2)" id="addNewButton"
                                     class="mt-1 btn btn-primary w-100 waves-effect waves-light"><i
                                         class="mdi mdi-plus-circle"></i> Add New </a>
                                        
@@ -872,7 +874,7 @@
                                     </div>
                                 </div> <!-- end dropdown -->
 
-                                <!-- Plus icon and counter -->`
+                                <!-- Plus icon and counter -->
                                 <div class="plus-icon-container float-end">
                                     <!-- <i class="bi bi-plus-circle" id="plusIcon"></i> -->
                                     <span id="counter">0</span>
@@ -1312,7 +1314,7 @@
                                         <span class="badge rounded-pill bg-danger float-end">High</span>
                                         <h5 class="mt-0"><a href="javascript: void(0);" data-toggle="tooltip"
                                                 data-placement="top" title="Tooltip Main Title"
-                                                class="text-dark make-title-dot-overflow">Invite
+                                                class="text-dark make-title-dot-overflow" >Invite
                                                 user to
                                                 a project</a></h5>
 

@@ -1,3 +1,11 @@
+
+ document.getElementById('addNewLink').addEventListener('click', function(event) {
+  event.preventDefault(); 
+  window.location.href = "add.html?showModal=true";
+});
+
+
+
 function makeSubHeaderEditable(element) {
   const subHeader = element; 
   const originalText = subHeader.innerText;

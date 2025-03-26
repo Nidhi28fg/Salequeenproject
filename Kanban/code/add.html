@@ -93,7 +93,7 @@
                             </select>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal"  id="closeAndNavigate" >Close</button>
                             <input type="submit" class="btn btn-primary" value="Submit">
                         </div>
                     </form>
@@ -106,6 +106,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
+
+document.getElementById('closeAndNavigate').addEventListener('click', function() {
+  window.location.href = "index.html"; // Navigate to index.html
+});
+
         document.getElementById("eventForm").addEventListener("submit", function(event) {
             event.preventDefault();
             let isValid = true;
@@ -142,6 +147,14 @@
         $(document).ready(function() {
             $('#eventModal').modal('show');
         });
+
+
+
+        
+
+
+
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
