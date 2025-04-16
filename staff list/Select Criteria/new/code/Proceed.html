@@ -1,0 +1,120 @@
+<link rel="stylesheet" href="newstyle05_07.css">
+<form id="form" action="">
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="form-group" app-field-wrapper="Staff_Name">
+                <label for="Staff_Name" class="control-label lable_mar">Staff Name</label>
+                <input type="text" id="Staff Name" name="Staff_Name" class="form-control input_height" value=""
+                    placeholder="Enter Staff Name" >
+            </div>
+        </div>
+
+        
+
+        <div class="col-md-4">
+            <div class="form-group" app-field-wrapper="Payment_Amount">
+                <label for="Payment_Amount" class="control-label lable_mar">Payment Amount ($)</label>
+                <input type="number" id="Payment_Amount" name="Payment_Amount" class="form-control input_height" value=""
+                    placeholder="Enter Payment Amount ($)" >
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group" app-field-wrapper="Month_Year">
+                <label for="Month_Year" class="control-label lable_mar">Month - Year</label>
+                <input type="text" id="Month_Year" name="Month - Year" class="form-control input_height" value=""
+                    placeholder="Enter Month - Year" >
+            </div>
+        </div>
+    </div>
+
+    <div class="row"> 
+        <div class="col-md-4">
+            <div class="form-group input_up" app-field-wrapper="Payment_Mode">
+                <label for="Payment_Mode" class="control-label lable_mar"> <small class="req text-danger">* </small>Payment Mode
+                    </label>
+                <div class=" dropdown-with-icon dropdownalignment">
+                    <select id="Payment_Mode" name="Payment_Mode" class="selectpicker " data-width="100%"
+                        data-none-selected-text="Select Payment Mode" data-live-search="true" tabindex="-98">
+                        <option value=""></option>
+                        <option value="4">Cash</option>
+                        <option value="5">Cheque</option>
+                        <option value="13">Transfer To Bank Account</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group input_up" app-field-wrapper="Payment_Date">
+                <label for="Payment_Date" class="control-label lable_mar">
+                    <small class="req text-danger">* </small>Payment Date</label>
+                <input type="date" id="Payment_Date" name="Payment_Date" class="form-control input_height" value="" placeholder="Enter Seats" >
+            </div>
+        </div>
+      
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group" app-field-wrapper="description">
+                <label for="description" class="control-label lable_mar">Note</label>
+                <textarea id="description" name="description" class="form-control note_pro" rows="4"
+                    placeholder="Enter Note"></textarea>
+            </div>
+        </div>
+    </div>
+   
+ 
+    <div class="row " >
+        <div class="col-md-12 blkftr ali_bottommargforsave save_close">
+            <div class="modal-footer taskfooter paddingright19px gap-2">
+                <button type="button" class="taskclose1 me-0" data-bs-dismiss="modal">CLOSE</button>
+
+                <button type="submit" class="tasksave1">Save</button>
+
+            </div>
+        </div>
+    </div>
+</form>
+
+<!--   show date picker  -->
+
+<script>
+    document.getElementById('Payment_Date').addEventListener('click', () => {
+        if ('showPicker' in HTMLInputElement.prototype) {
+            document.getElementById('Payment_Date').showPicker();
+        }
+    })
+
+</script>
+
+
+
+
+<!-- save btn script -->
+<script>
+    $(document).ready(function () {
+        $('#form').formValidation({
+            framework: 'bootstrap',
+            fields: {
+                Payment_Mode: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Select Payment Mode'
+                        }
+                    }
+                },
+                Payment_Date: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Select Payment Date'
+                        }
+                    }
+                },
+             
+            }
+        })
+
+    });
+</script>

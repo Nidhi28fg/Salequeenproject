@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add</title>
+    <link rel="stylesheet" href="../../new/Code/styless.css"/>
+   
+</head>
+<div id="tab1" class="tabcontent2" style="display:block">
+    <form id="form">
+        <div class="row">
+            <!-- Column 1: Software Name -->
+            <div class="col-md-4">
+                <!-- <div class="purchasegrp purch-drop"> -->
+                <label for="unitname" class="purchaseinfo mb-0 abcd42"><span class=" aster">* </span>Vendor</label>
+                <div class="purchasegrp">
+                    <div class=" dropdown-with-icon dropdownalignment abcd15">
+                        <select class="selectpicker form-control" name="c_name" multiple data-actions-box="true"
+                            data-live-search="true" title="Select vendor">
+                            <option value="36" data-subtext="">Apple Inc</option>
+                            <option value="38" data-subtext="">Samsung</option>
+                            <option value="41" data-subtext="">Adobe</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- Category name -->
+            <div class="col-md-4">
+                <div class="purchasegrp mb-3 "> <!-- Added 'mb-3' here -->
+                    <label id="seats11"class="purchaseinfo-ab mb-0 abcd37"><span class="aster">* </span>Seats</label>
+                    <input type="text"  placeholder="Enter Seats" class="form-control purchaseselects  mb-3 abcd41" name="seat_name" spellcheck="true">
+                    <!-- Added 'mb-3' to the input -->
+                </div>
+            </div>
+            
+            <!-- Seats -->
+            <div class="col-md-4">
+                <!-- <div class="purchasegrp purch-drop"> -->
+                <label for="unitname" class="purchaseinfo mb-0 abcd43"><span class=" aster">* </span>Expense Category</label>
+                <div class="purchasegrp">
+                    <div class=" dropdown-with-icon dropdownalignment abcd17">
+                        <select class="selectpicker form-control " name="c_name" multiple data-actions-box="true"
+                            data-live-search="true" title="Select Expense Category">
+                            <option value="36" data-subtext="">Apple Inc</option>
+                            <option value="38" data-subtext="">Samsung</option>
+                            <option value="41" data-subtext="">Adobe</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Manufacturer -->
+        <div id="manuf"  class="row">
+            <div class="col-md-4">
+                <div class="purchasegrp">
+                    <label class="purchaseinfo mb-0 abcd28">Expense Date</label>
+                    <input type="date" id="purchase date" name="purdate" class="form-control purchaseselects abcd18 ">
+                </div>
+            </div>
+            <!-- Licensed to name -->
+            <div class="col-md-4">
+                <div class="purchasegrps">
+                    <label for="unitname" class="purchaseinfo mb-0">Amount
+                    </label>
+                    <input type="text" placeholder="Enter Amount" class="form-control purchaseselects abcd20"
+                        name="ln_name" spellcheck="true">
+                </div>
+            </div>
+            <!-- Licensed to email -->
+            <div class="col-md-4">
+                <div class="purchasegrps">
+                    <label for="unitname" class="purchaseinfo mb-0">Customer
+                    </label>
+                    <input type="email" placeholder="Select Customer" class="form-control purchaseselects abcd21" 
+                        name="le_name" spellcheck="true">
+                </div>
+            </div>
+        </div>
+         <!-- Order name -->
+        <div class="row">
+            <div class="col-md-4">
+            <label for="tags" class="purchaseinfo mb-0"><span class="aster">* </span>currency</label>
+                <div class="purchasegrps ">
+                    <div class=" dropdown-with-icon dropdownalignment abcd22">
+                        <select class="selectpicker form-control" name="sup_name" multiple data-actions-box="true"
+                            data-live-search="true" title="Select Currency">
+                            <option value="0">Auer,Wizok</option>
+                            <option value="2">Shivang Gupta</option>
+                            <option value="1">Kemmer group</option>
+                            <option value="3">mohammad</option>
+                            <option value="4">Madson Byrd</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- Supplier -->
+            <div id="sup" class="col-md-4">
+                <label for="tags" class="purchaseinfo mb-0"><span class="aster">* </span>Tax 1</label>
+                <div class="purchasegrps ">
+                    <div class=" dropdown-with-icon dropdownalignment abcd23">
+                        <select class="selectpicker form-control" name="sup_name" multiple data-actions-box="true"
+                            data-live-search="true" title="Enter Tax1">
+                            <option value="0">Auer,Wizok</option>
+                            <option value="2">Shivang Gupta</option>
+                            <option value="1">Kemmer group</option>
+                            <option value="3">mohammad</option>
+                            <option value="4">Madson Byrd</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- Purchase order number -->
+            <div class="col-md-4">
+                <label for="tags" class="purchaseinfo mb-0 "><span class="aster">* </span>Tax 2</label>
+                <div class="purchasegrps ">
+                    <div class=" dropdown-with-icon dropdownalignment abcd24">
+                        <select class="selectpicker form-control" name="sup_name" multiple data-actions-box="true"
+                            data-live-search="true" title="Enter Tax2">
+                            <option value="0">Auer,Wizok</option>
+                            <option value="2">Shivang Gupta</option>
+                            <option value="1">Kemmer group</option>
+                            <option value="3">mohammad</option>
+                            <option value="4">Madson Byrd</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Purchase cost -->
+        <div class="row">
+            <div class="col-md-4">
+            <label for="tags" class="purchaseinfo mb-0">Payment Mode</label>
+            <div class="purchasegrps ">
+                <div class=" dropdown-with-icon dropdownalignment abcd25">
+                    <select class="selectpicker form-control" name="sup_name" multiple data-actions-box="true"
+                        data-live-search="true" title="Enter Payment Mode">
+                        <option value="0">Auer,Wizok</option>
+                        <option value="2">Shivang Gupta</option>
+                        <option value="1">Kemmer group</option>
+                        <option value="3">mohammad</option>
+                        <option value="4">Madson Byrd</option>
+                    </select>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-4">
+                <div class="purchasegrps">
+                    <label for="unitname" class="purchaseinfo mb-0">Reference
+                    </label>
+                    <input type="text" placeholder="Enter Reference" class="form-control purchaseselects abcd26"
+                        name="ln_name" spellcheck="true">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="tags" class="purchaseinfo mb-0">Payment Mode</label>
+            <div class="purchasegrps ">
+                <div class=" dropdown-with-icon dropdownalignment abcd27">
+                    <select class="selectpicker form-control" name="sup_name" multiple data-actions-box="true"
+                        data-live-search="true" title="Enter Payment Mode">
+                        <option value="0">Auer,Wizok</option>
+                        <option value="2">Shivang Gupta</option>
+                        <option value="1">Kemmer group</option>
+                        <option value="3">mohammad</option>
+                        <option value="4">Madson Byrd</option>
+                    </select>
+                </div>
+            </div>
+            </div>
+             
+            
+        </div>
+        <!-- Product key -->
+        
+            <div class="row">
+                <!-- Drag and Drop Section -->
+                <div class="col-md-6 abcd44">
+                    <div class="purchasegrp">
+                        
+                        <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
+                        <div class="overlay" id="overlay">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                            Drop your files here...
+                            <span class="corner-symbol symbole-top-left">L</span>
+                            <span class="corner-symbol symbole-bottom-left">L</span>
+                            <span class="corner-symbol symbole-top-right">L</span>
+                            <span class="corner-symbol symbole-bottom-right">L</span>
+                        </div>
+                        <div class="upload-files-container">
+                            <div class="drag-file-area">
+                                <span class="material-icons-outlined upload-icon"> file_upload </span>
+                                <h3 class="dynamic-message graycolor">Drag & drop any file here</h3>
+                                <label class="label">
+                                    <span class="browse-files">
+                                        <input type="file" class="default-file-input">
+                                        <span class="graycolor">or</span><br>
+                                        <span>
+                                            <span class="browse-files-text">browse file</span><br>
+                                            <span id="newMessageError">[]</span>
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                            <span class="cannot-upload-message">
+                                <span class="material-icons-outlined">error</span> Please select a file first
+                                <span class="material-icons-outlined cancel-alert-button">cancel</span>
+                            </span>
+                            <div class="file-block">
+                                <div class="file-info">
+                                    <span class="material-icons-outlined file-icon">description</span>
+                                    <span class="file-name"> </span>
+                                    <span class="file-size badge rounded-pill"></span>
+                                </div>
+                                <span class="material-icons remove-file-icon">delete</span>
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             <!-- Notes -->
+            <div class="col-md-6">
+                <div class="purchasegrps1">
+                    <label for="unitname" class="emailpro mb-2 abcd32">Note</label>
+                    <textarea class="textdesc abcd30" placeholder="    Enter Note" rows="2" name="note"></textarea>
+                </div>
+            </div>
+        </div>
+        <!-- Close and save btn -->
+        <div class="modal-footer taskfooter closebutton2 abcd36">
+            <button type="button" class="taskclose1 mr-0" data-bs-dismiss="modal">CLOSE</button>
+            <div class="button_su abcd13">
+                <span class="su_button_circle">
+                </span>
+        
+                <button type="submit" class=" tasksave1 ms-0 abcd31 ">
+                    <span class="button_text_container  ">
+                        SAVE
+                    </span>
+                </button>
+            </div>
+         </div>
+
+    </form>
+
+     <!--form validation script-->
+     <script>
+        $(document).ready(function () {
+            $('#form').formValidation({
+                framework: 'bootstrap',
+                fields: {
+                    s_name: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Enter Software Name'
+                            }
+                        }
+                    },
+                    c_name: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Select Category Name'
+                            }
+                        }
+                    },
+                    seat_name: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Enter seats'
+                            }
+                        }
+                    },
+                    manu: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Select Manufacturer'
+                            }
+                        }
+                    },
+                    sup_name: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Select supplier'
+                            }
+                        }
+                    },
+                    ln_name: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Enter Licnsed to name'
+                            }
+                        }
+                    },
+                    le_name: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Enter Licensed to email'
+                            }
+                        }
+                    },
+                    sp_name: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Enter selling price'
+                            }
+                        }
+                    },
+                    Order_name: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Enter Order name'
+                            }
+                        }
+                    },
+                    p_o_d: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Enter purchase order number'
+                            }
+                        }
+                    },
+                }
+            });
+
+        });
+
+        $(document).ready(function () {
+            $('input[type="checkbox"]').on("change", function () {
+                if ($("#kit").is(":checked")) {
+                    $("#kitContent").show();
+                } else {
+                    $("#kitContent").hide();
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            // Hide all content sections initially
+            $("#kitContent").hide();
+
+
+            // Toggle content sections based on checkbox state
+            $("#kit").on("change", function () {
+                $("#kitContent").toggle(this.checked);
+            });
+
+            document.getElementById('purchase date').addEventListener('click', () => {
+                if ('showPicker' in HTMLInputElement.prototype) {
+                    document.getElementById('purchase date').showPicker();
+                }
+            })
+
+            document.getElementById('Expiration_date').addEventListener('click', () => {
+                if ('showPicker' in HTMLInputElement.prototype) {
+                    document.getElementById('Expiration_date').showPicker();
+                }
+            })
+
+            document.getElementById('Termination_date').addEventListener('click', () => {
+                if ('showPicker' in HTMLInputElement.prototype) {
+                    document.getElementById('Termination_date').showPicker();
+                }
+            })
+
+
+
+
+        });
+
+    </script>

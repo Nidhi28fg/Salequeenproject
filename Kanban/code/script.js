@@ -1,9 +1,36 @@
 
- document.getElementById('addNewLink').addEventListener('click', function(event) {
-  event.preventDefault(); 
-  window.location.href = "add.html?showModal=true";
-});
+//  document.getElementById('addNewLink1').addEventListener('click', function(event) {
+//   event.preventDefault(); 
+//   window.location.href = "add.html?showModal=true";
+// });
 
+let modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+let btn = document.getElementById("addNewLink1");
+
+
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("close")[0];
+
+document.getElementById("pra").innerHTML = "<iframe src='add.html?showModal=true' width=100% height=700px title='Iframe Example'></iframe>"
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+myModal.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
 
 function makeSubHeaderEditable(element) {

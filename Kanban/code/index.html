@@ -327,12 +327,18 @@
                                 </ul> 
                                
                                 <div id="mode1_container"></div>
-                                <a href="javascript: void(0);" onclick="handleAddBtn(1)" id="addNewLink" class="mt-1 btn btn-primary w-100 waves-effect waves-light"><i
+                                <a href="javascript: void(0);" onclick="handleAddBtn(1)" id="addNewLink1" class="mt-1 btn btn-primary w-100 waves-effect waves-light"><i
                                             class="mdi mdi-plus-circle"></i> Add New</a>
                             
                             </div>
                         </div>
-                    </div>                
+                    </div>  
+                    
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                          <p id="pra">Some text in the Modal..</p>
+                        </div>
+                      </div>
                     <!-- end col -->
                     <!-- seccond column -->
                     <div class="col-lg-3 col-md-4">
@@ -1693,7 +1699,7 @@
                                             <input class="form-check-input mt-3" type="checkbox">
                                         </div>
                                         <div class="d-flex align-items-center input-icon-container ms-3">
-                                            <input type="text" class="w-100 h-100 input-class listInput" readonly value="${h1}" data-index="${index}" data-id="${id}" ondblclick="changetoeditable(this)" onclick="handleTouch(this)" oninput="changeContent(this,${i},${id})">
+                                            <input type="text" class="w-100 h-100 input-class listInput" readonly value="${h1}" data-index="${index}" data-id="${id}" onclick="changetoeditable(this)" onclick="handleTouch(this)" oninput="changeContent(this,${i},${id})">
                                         </div>
                                     </div>`;
                             } else {
@@ -2014,7 +2020,7 @@ if (inputElement.hasAttribute("data-index")) {
             </div>
             <div class="d-flex align-items-center input-icon-container ms-3">
                 <input type="text" class="w-100 h-100 input-class listInput newAppend" data-index="${index}" data-id="${a}" 
-                ondblclick="changetoeditable(this)" 
+                onclick="changetoeditable(this)" 
                 oninput="changeContent(this, ${i}, ${a})" value="${value}">
             </div>
         </div>

@@ -55,7 +55,7 @@
         }
     </style>
 </head>
-<body>
+<body background="index.html">
     <div class="modal fade show" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="eventModalLabel" aria-hidden="true" style="display: block;">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -106,11 +106,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
-
-document.getElementById('closeAndNavigate').addEventListener('click', function() {
-  window.location.href = "index.html"; // Navigate to index.html
-});
-
         document.getElementById("eventForm").addEventListener("submit", function(event) {
             event.preventDefault();
             let isValid = true;

@@ -1,0 +1,346 @@
+
+.mb-0.abc2{
+    margin-top: 6px;
+    margin-right: 10px !important;
+    margin-bottom: -12px !important;
+    text-transform: uppercase;
+}
+.row.abc1 {
+    width: 100%;
+    margin-right: 1px !important;
+    margin-left: 1px !important;
+}
+.form-control.purchaseselects.abc3{
+    margin-top: 0.5px !important;
+}
+.mb-0.abc4{
+    margin-right: 1290px !important;
+    margin-top: 10px;
+    margin-bottom: -15px !important;
+}
+.me-3.abc6 {
+    margin-top: 20px !important;
+    width: 99%;
+    margin-left: 7.85px !important;
+    margin-right: 0px;
+}
+.proposaltabbtns{
+   
+    margin-top: -10px !important;
+    margin-bottom: -55px !important;
+}
+
+div.dataTables_wrapper {
+    position: relative;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    padding-top: 16px !important;
+}
+/* .pdfconbtn{
+    margin-right: 12px !important;
+} */
+.sear {
+    background-color: #727272;
+    border: 1px solid #525252;
+    border-radius: 3px;
+    padding-block: 3px;
+    margin-top: 7.9px;
+    
+}
+
+.example > tbody > tr > td {
+    padding: 20px 10px 12px 40px; 
+    line-height: 1.42857143;
+    vertical-align: top;
+}
+table.dataTable.display>tbody>tr.odd>.sorting_1, table.dataTable.order-column.stripe>tbody>tr.odd>.sorting_1 {
+    box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.054);
+    margin-top: 10px !important;
+}
+.taskfooter .taskclose1 {
+    margin-top: 16px;
+    height: 38px;
+    display: inline-block;
+    padding: 0.5rem 0.9rem !important;
+    font-size: 0.8125rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    color: #000 !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    cursor: pointer !important;
+    border: 1px solid #f3f6f9 !important;
+    border-radius: 0.25rem !important;
+    /* background-color: #f3f6f9 !important; */
+}
+.viewbtn.abc12{
+    padding-top: 10px !important;
+}
+
+@media (max-width: 411px) {
+    .dataTables_wrapper .dataTables_length select {
+        margin-top: -62px !important;
+        margin-left: +68px !important;
+        position: absolute;
+        top: 150px;
+        left: 125px;
+        /* padding: 0.2rem 0.4rem !important; */
+        /* font-size: 0.9rem; */
+    }
+}
+.example_length{
+    display: inline-block;
+    margin-right: 10px !important;
+}
+@media screen and (min-width: 768px) {
+    /* Apply for tablets and larger screens */
+    div.dataTables_wrapper {
+        position: relative;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* Apply for mobile screens */
+    div.dataTables_wrapper {
+        position: relative;
+        margin-left: 5px !important; /* Adjust for smaller screens if needed */
+        margin-right: 5px !important;
+    }
+}
+
+.abc11 {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+    gap: 10px; /* Add space between items */
+}
+
+.abc11 .radio {
+    display: flex;
+    align-items: center; /* Vertically align radio button and label */
+}
+
+.abc11 label {
+    margin-left: 5px; /* Add some space between radio button and label */
+}
+table.dataTable.abc14 {
+    padding-top: 0px;
+}
+.button_su.abcd37 {
+    margin-top: -10px;
+    margin-bottom: 4px !important;
+}
+.dataTables_wrapper .dataTables_length {
+    float: right !important;
+    margin-right: -6px;
+}
+.hrtble1.center-align{
+    padding-top: 25px !important;
+    margin-left: 10px !important;
+    padding-bottom:0px !important;
+}
+@media (max-width: 980px) {
+    .dataTables_wrapper .dataTables_length select {
+        position: absolute;
+        top: 85px;
+        left: 178px;
+    }
+}
+.abcd1 .div{
+    text-align: center;
+} 
+
+.card-body.abcd2 {
+    -webkit-box-flex: 1 !important;
+    -ms-flex: 1 1 auto !important;
+    flex: 1 1 auto !important;
+    padding: 6px !important;
+}
+.button_su.abcd{
+margin-top: 15px;
+}
+.dataTables_wrapper .dataTables_paginate {
+    font-family: var(--primary-font) !important;
+    padding-right: 0px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+}
+.form-control {
+    margin-top: 10px;
+    font-size: 0.7109375rem !important;
+    border: 1px solid #ced4da !important;
+}
+.example > tbody > tr > td {
+    padding: 10px 50px 20px 10px; 
+    line-height: 1.42857143;
+    vertical-align: top;
+}
+.example > tbody > tr > td {
+    padding: 10px 50px 20px 10px; 
+    line-height: 1.42857143;
+    vertical-align: top;
+}
+.modal-footer {
+    margin-right: -15px !important;
+    margin-top: 0px;
+    margin-bottom: -13px;
+}
+.form-control.abcd3 {
+    margin-top: 6.19px !important;
+    font-size: 0.7109375rem !important;
+    border: 1px solid #ced4da !important;
+}
+.dataTables_wrapper .dataTables_info {
+    padding-bottom: 20px;
+    padding-left: 0px;
+    font-family: var(--primary-font) !important;
+    margin-top: 4px;
+}
+.input-group {
+    margin-left: 0px; /* Adjust margin as needed */
+    width: 100%;
+}
+.dropdown-with-icon.abcd3{
+    margin-top:-4px;
+    display: flex;
+    width: 100%;
+}
+.dropdown-with-icon.dropdownalignment.abcd6{
+    margin-top: -4px;
+    height: 46px;
+}
+.purchaseselects.abcd7{
+    margin-top: 10px;
+    margin-left: 8px;
+  
+}
+.purchaseinfo.abcd9{
+    margin-left: 10px;
+    font-size: 13.5px;
+}
+.dropdown-with-icon.dropdownalignment.abcd8{
+    margin-left: 16px;
+    width: 241px;
+    margin-top: -4px;
+    height: 46px;
+   
+}
+.purchaseinfo.mb-1.abcd10{
+    margin-left: 16px;
+}
+.input-label.abcd11{
+    margin-left: 20px;
+    margin-top: 15px;
+   
+}
+.input-textarea.abcd12{
+    margin-top: 4px;
+    margin-right: 240px;
+    width: 800px;
+   
+}
+.drag-file-area {
+    margin-top: 37px;
+    border: 2px dashed #ced4da !important;
+    border-radius: 9px;
+    margin: 0px 20p;
+    /* padding: 30px 50px 0px 30px; */
+    padding: 5px 12px 0px 13px !important;
+    /* width: 100%; */
+    width: 376px !important;
+    /* height: 265px; */
+    height: 120px;
+    text-align: center !important;
+    justify-content: center !important;
+    box-shadow: 2px 5px 20px -5px rgba(0, 0, 0, 0.2);
+}
+.textdesc.abcd11{
+    margin-top: 5px;
+    box-shadow: none;
+    outline: 0;
+    border: 1px solid #b5b2b2d4;
+    width: 102%;
+    height: 120px;
+    border-radius: 4px;
+    resize: both;
+    margin-left: 20px;
+}
+.button_su.abcd13 {
+    
+    margin-right: 5px;
+    margin-top: 15px;
+}
+.dropdown-with-icon.dropdownalignment.abcd22{
+    margin-left: -4.9px;
+    width: 236px;
+}
+.dropdown-with-icon.dropdownalignment.abcd25{
+    margin-left: -4.9px;
+    width: 236px;
+}
+.form-control.purchaseselects.abcd20{
+    margin-left: -4.99px;
+    width:238px ;
+    margin-top: 12px;
+}
+.dropdown-with-icon.dropdownalignment.abcd23{
+    margin-left: -4.99px;
+    width: 238px;
+}
+.form-control.purchaseselects.abcd26{
+    margin-left: -4.99px;
+    width: 238px;
+}
+.dropdown-with-icon.dropdownalignment.abcd17{
+    margin-left: 2px;
+    
+}
+.form-control.purchaseselects.abcd21{
+    margin-left: -3px;
+    width: 236px;
+    margin-top: 12px;
+    
+}
+.dropdown-with-icon.dropdownalignment.abcd24{
+    margin-left: -3px;
+    width: 236px;
+}
+.dropdown-with-icon.dropdownalignment.abcd27{
+    margin-left: -3px;
+    width: 236px;
+}
+.purchaseinfo.mb-0.abcd28{
+    margin-top: -30px;
+
+   
+}
+.form-control.purchaseselects.abcd18{
+    margin-top: 10px;
+}
+.textdesc.abcd30{
+    margin-left: 2px;
+    margin-top: 6px;
+    height: 120px;
+}
+.button_su.abcd13 {
+    margin-right: 1px;
+}
+.emailpro.mb-2.abcd32{
+    margin-left: 2px;
+}
+.modal-footer.abcd35 {
+    margin-right: -15px !important;
+    margin-top: 0px;
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+.modal-footer.taskfooter.closebutton2.abcd36{
+    margin-right: -15px !important;
+    margin-top: -10px;
+    margin-bottom: -12px;
+}
+.form-control.purchaseselects.mb-3.abcd41{
+    margin-top: 12px;
+   
+}
