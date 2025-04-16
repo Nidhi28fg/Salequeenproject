@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8"> 
+  <title>About Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" integrity="sha512-t4GWSVZO1eC8BM339Xd7Uphw5s17a86tIZIj8qRxhnKub6WoyhnrxeCIMeAqBPgdZGlCcG2PrZjMc+Wr78+5Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/mobile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="whole-container">
+    <div id="sec_1" class="d-flex justify-content-between bg-grey py-2 px-5 w-100">
+      <p class="w-33 mb-0 fw-400">Delivery on next day from 10:00 am to 09:00 pm</p>
+      <p class="w-33 mb-0 fw-400">Need help: <span class="fw-bold">+01 888 999 7766</span></p>
+      <p class="w-33 mb-0 d-flex justify-content-end align-items-center">
+        <a href="javascript:void(0);" class="theme-link fw-400 px-3">Contact</a>
+        <a href="javascript:void(0);" class="theme-link fw-400 px-3">Blog</a>
+        <a href="javascript:void(0);" class="theme-link fw-400 px-3">Order tracking</a>
+      </p>
+    </div>
+    <div id="sec_2" class="d-flex align-items-center justify-content-between py-4 px-5 w-100">
+        <div class="part_1 w-33">
+            <img src="/assets/image/logo-16.webp" alt="logo">
+        </div>
+        <div class="part_2 w-33">
+            <div class="form-group position-relative w-100">
+                <input type="text" class="form-control w-100 h-55px ps-5" placeholder="Search your groceries items......" id="product_search" oninput="getSearchcontain(this)">
+                <button class="theme-btn-md hover position-absolute">Search</button>
+                <i class="fa-solid fa-magnifying-glass position-absolute"></i>
+            </div>
+        </div>
+        <div class="part_3 d-flex w-33 justify-content-end">
+            <p onclick="window.location.href='login.html'" class="mb-0 bg-grey br-100 cursor-pointer theme-link position-relative">
+                <i class="fa fa-user fw-light"></i>
+            </p>
+            <p onclick="window.location.href='wishlist.html'" class="mb-0 bg-grey br-100 cursor-pointer theme-link position-relative">
+                <i class="fa fa-heart fw-light"></i>
+                <span class="position-absolute theme-badge-1 theme-bg">1</span>
+            </p>
+            <p class="mb-0 bg-grey br-100 cursor-pointer theme-link position-relative" onclick="openCart()">
+                <i class="fa fa-bag-shopping"></i>
+                <span class="position-absolute theme-badge-1 theme-bg">1</span>
+            </p>
+        </div>
+    </div>
+    <!-- Mobile only -->
+    <div id="sec_2_m" class="bg-white">
+      <div class="d-flex justify-content-between px-4 py-3 align-items-center ">
+        <i class="fa fa-bars h4" onclick="opensidebar()" data-open="0"></i>
+        <div class="part_1">
+          <img src="/assets/image/logo-16.webp" alt="logo" width="150">
+        </div>
+        <p class="mb-0 bg-grey cursor-pointer theme-link position-relative">
+          <i class="fa fa-bag-shopping h4"></i>
+          <span class="position-absolute theme-badge-1 theme-bg">1</span>
+        </p>
+      </div>
+    </div>
+    <!-- sidebar -->
+    <div class="position-fixed mobile-sidebar bg-white box-shadow overflow-auto">
+      <div class="mb-0 p-3 w-100 bg-dark d-flex justify-content-between align-items-center">
+        <p class="mb-0 text-white fw-bold">Menu</p>
+        <i class="fa fa-x text-white" onclick="closeCart()"></i>
+      </div>
+      <div class="whole-menu-container">
+        <div class="mb-0 p-3 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+          <a class="mb-0" href="javascript: void(0);">Home</a>
+          <i class="fa fa-plus theme-link" onclick="sidebarmenuopen(this,0)" data-val="0"></i>
+        </div>
+        <div class="sub-menu-sidebar" id="sidebarmenuopen_0">
+          <div class="mb-0 p-3 px-4 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+            <a class="mb-0 text-grey" href="javascript: void(0);">19 earbuds</a>
+          </div>
+          <div class="mb-0 p-3 px-4 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+            <a class="mb-0 text-grey" href="javascript: void(0);">18 Jewellery store</a>
+          </div>
+          <div class="mb-0 p-3 px-4 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+            <a class="mb-0 text-grey" href="javascript: void(0);">16 Market store</a>
+          </div>
+          <div class="mb-0 p-3 px-4 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+            <a class="mb-0 text-grey" href="javascript: void(0);">17 Art store</a>
+          </div>
+        </div>
+      </div>
+      <div class="whole-menu-container">
+        <div class="mb-0 p-3 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+          <a class="mb-0" href="javascript: void(0);">Shop</a>
+          <i class="fa fa-plus theme-link" onclick="sidebarmenuopen(this,1)" data-val="0"></i>
+        </div>
+        <div class="sub-menu-sidebar" id="sidebarmenuopen_1">
+          <div class="mb-0 p-3 px-4 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+            <a class="mb-0" href="javascript: void(0);">Header & Footer</a>
+            <i class="fa fa-plus theme-link" onclick="sidebarmenuopen(this,2)" data-val="0"></i>
+          </div>
+          <div class="sub-menu-sidebar" id="sidebarmenuopen_2">
+            <div class="mb-0 p-3 px-5 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+              <a class="mb-0 text-grey" href="javascript: void(0);">Header (Transparent)</a>
+            </div>
+            <div class="mb-0 p-3 px-5 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+              <a class="mb-0 text-grey" href="javascript: void(0);">Header (Center-logo)</a>
+            </div>
+            <div class="mb-0 p-3 px-5 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+              <a class="mb-0 text-grey" href="javascript: void(0);">Header (Top link)</a>
+            </div>
+          </div>
+          <div class="mb-0 p-3 px-4 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+            <a class="mb-0" href="javascript: void(0);">Product layout</a>
+            <i class="fa fa-plus theme-link" onclick="sidebarmenuopen(this,3)" data-val="0"></i>
+          </div>
+          <div class="sub-menu-sidebar" id="sidebarmenuopen_3">
+            <div class="mb-0 p-3 px-5 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+              <a class="mb-0 text-grey" href="javascript: void(0);">Grid 1 column</a>
+            </div>
+            <div class="mb-0 p-3 px-5 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+              <a class="mb-0 text-grey" href="javascript: void(0);">Grid 2 column</a>
+            </div>
+          </div>
+          <div class="mb-0 p-3 px-4 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+            <a class="mb-0" href="javascript: void(0);">Product features</a>
+            <i class="fa fa-plus theme-link" onclick="sidebarmenuopen(this,4)" data-val="0"></i>
+          </div>
+          <div class="sub-menu-sidebar" id="sidebarmenuopen_4">
+            <div class="mb-0 p-3 px-5 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+              <a class="mb-0 text-grey" href="javascript: void(0);">Product video</a>
+            </div>
+            <div class="mb-0 p-3 px-5 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+              <a class="mb-0 text-grey" href="javascript: void(0);">Product 3D</a>
+            </div>
+          </div>
+          <div class="mb-0 p-3 px-4 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+            <a class="mb-0" href="javascript: void(0);">Shop Layout</a>
+          </div>
+        </div>
+      </div>
+      <a class="mb-0 p-3 w-100 bg-white bb-1 d-flex justify-content-between align-items-center" href="javascript: void();">
+        <span class="mb-0">Products</span>
+      </a>
+      <a class="mb-0 p-3 w-100 bg-white bb-1 d-flex justify-content-between align-items-center" href="javascript: void();">
+        <span class="mb-0">Blogs</span>
+      </a>
+      <div class="whole-menu-container">
+        <div class="mb-0 p-3 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+          <a class="mb-0" href="javascript: void(0);">Pages</a>
+          <i class="fa fa-plus theme-link" onclick="sidebarmenuopen(this,5)" data-val="0"></i>
+        </div>
+        <div class="sub-menu-sidebar" id="sidebarmenuopen_5">
+          <div class="mb-0 p-3 px-4 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+            <a class="mb-0 text-grey" href="javascript: void(0);">About us</a>
+          </div>
+          <div class="mb-0 p-3 px-4 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+            <a class="mb-0 text-grey" href="javascript: void(0);">Contact us</a>
+          </div>
+        </div>
+      </div>
+      <div class="whole-menu-container">
+        <div class="mb-0 p-3 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+          <a class="mb-0" href="javascript: void(0);">Milk anddairy products</a>
+          <i class="fa fa-plus theme-link" onclick="sidebarmenuopen(this,6)" data-val="0"></i>
+        </div>
+        <div class="sub-menu-sidebar" id="sidebarmenuopen_6">
+          <div class="mb-0 p-3 px-4 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+            <a class="mb-0 text-grey" href="javascript: void(0);">Shop layout</a>
+          </div>
+          <div class="mb-0 p-3 px-4 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+            <a class="mb-0 text-grey" href="javascript: void(0);">Product layout</a>
+          </div>
+        </div>
+      </div>
+      <div class="whole-menu-container">
+        <div class="mb-0 p-3 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+          <a class="mb-0" href="javascript: void(0);">Vegitable and fruits</a>
+          <i class="fa fa-plus theme-link" onclick="sidebarmenuopen(this,7)" data-val="0"></i>
+        </div>
+        <div class="sub-menu-sidebar" id="sidebarmenuopen_7">
+          <div class="mb-0 p-3 px-4 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+            <a class="mb-0 text-grey" href="javascript: void(0);">Shop layout</a>
+          </div>
+          <div class="mb-0 p-3 px-4 w-100 bg-white bb-1 d-flex justify-content-between align-items-center">
+            <a class="mb-0 text-grey" href="javascript: void(0);">Product layout</a>
+          </div>
+        </div>
+      </div>
+      <a class="mb-0 p-3 w-100 bg-white bb-1 d-flex justify-content-between align-items-center" href="javascript: void();">
+        <span class="mb-0">Bread, toast and biscuits</span>
+      </a>
+    </div>
+    <!-- Mobile Only -->
+    <div id="sec_3" class="d-flex align-items-center py-4 px-5 w-100 br-5">
+        <div class="h-55px w-25 mb-0 theme-bg-dark d-flex text-white align-items-center justify-content-between p-3 brl-5 cursor-pointer position-relative" data-action="0" onclick="categoryshow(this)">
+            <p class="mb-0">
+                <i class="fa fa-bars me-2"></i>
+                <span>Shop by categories</span>
+            </p>
+            <i class="fa-solid fa-chevron-down me-2"></i>
+            <!-- menu -->
+            <div class="position-absolute w-100 bg-white cate-menu z-9999">
+             <div class="mb-0 bb-1 p-3 d-flex justify-content-between theme-link align-items-center text-black position-relative single-cate-menu">
+              <div>
+                <img src="/assets/image/cate1.avif" width="25" height="25" class="me-2">
+                <span>Milk anddairy products</span>
+              </div>
+              <i class="fa fa-chevron-down"></i>
+              <div class="position-absolute content-cate p-3 bg-white">
+                <div class="d-flex">
+                  <div class="br-1 w-25 px-2">
+                    <p class="h6 mb-3 mt-3 theme-link">Shop Layout</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                  </div>
+                  <div class="br-1 w-25 px-2">
+                    <p class="h6 mb-3 mt-3 theme-link">Shop Layout</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                  </div>
+                  <div class="br-1 w-25 px-2">
+                    <p class="h6 mb-3 mt-3 theme-link">Shop Layout</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                  </div>
+                  <div class="w-25 m-auto text-center">
+                    <a href="javascript:void(0);"><img src="/assets/image/banner-cate.png" alt="offer" width="75%"></a>
+                  </div>
+                </div>
+                <div class="w-100 position-relative mt-4">
+                  <div class="swiper-container1 w-100 overflow-hidden">
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                       <div class="product-slider-container d-flex b-1 br-5">
+                        <div class="product-slider-img" style="background-image: url(/assets/image/product1-1.webp);"></div>
+                        <div class="p-2">
+                          <p class="h6 theme-link">Fresh Fruit</p>
+                          <p class="mb-0 fw-light">Rs. 5,000</p>
+                          <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                          <div class="star-div my-2">
+                            <i class="fa fa-star bg-white text-warning"></i>
+                            <i class="fa fa-star bg-white text-warning"></i>
+                            <i class="fa fa-star bg-white text-warning"></i>
+                            <i class="fa fa-star bg-white text-warning"></i>
+                            <i class="fa fa-star bg-white text-warning"></i>
+                          </div>
+                        </div>
+                       </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product-slider-container d-flex b-1 br-5">
+                         <div class="product-slider-img" style="background-image: url(/assets/image/product2-1.webp);"></div>
+                         <div class="p-2">
+                           <p class="h6 theme-link">Fresh Fruit</p>
+                           <p class="mb-0 fw-light">Rs. 5,000</p>
+                           <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                           <div class="star-div my-2">
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                           </div>
+                         </div>
+                        </div>
+                       </div>
+                       <div class="swiper-slide">
+                        <div class="product-slider-container d-flex b-1 br-5">
+                         <div class="product-slider-img" style="background-image: url(/assets/image/product3-1.webp);"></div>
+                         <div class="p-2">
+                           <p class="h6 theme-link">Fresh Fruit</p>
+                           <p class="mb-0 fw-light">Rs. 5,000</p>
+                           <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                           <div class="star-div my-2">
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                           </div>
+                         </div>
+                        </div>
+                       </div>
+                       <div class="swiper-slide">
+                        <div class="product-slider-container d-flex b-1 br-5">
+                         <div class="product-slider-img" style="background-image: url(/assets/image/product4-1.webp);"></div>
+                         <div class="p-2">
+                           <p class="h6 theme-link">Fresh Fruit</p>
+                           <p class="mb-0 fw-light">Rs. 5,000</p>
+                           <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                           <div class="star-div my-2">
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                           </div>
+                         </div>
+                        </div>
+                       </div>
+                       <div class="swiper-slide">
+                        <div class="product-slider-container d-flex b-1 br-5">
+                         <div class="product-slider-img" style="background-image: url(/assets/image/product1-2.webp);"></div>
+                         <div class="p-2">
+                           <p class="h6 theme-link">Fresh Fruit</p>
+                           <p class="mb-0 fw-light">Rs. 5,000</p>
+                           <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                           <div class="star-div my-2">
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                           </div>
+                         </div>
+                        </div>
+                       </div>
+                       <div class="swiper-slide">
+                        <div class="product-slider-container d-flex b-1 br-5">
+                         <div class="product-slider-img" style="background-image: url(/assets/image/product2-2.webp);"></div>
+                         <div class="p-2">
+                           <p class="h6 theme-link">Fresh Fruit</p>
+                           <p class="mb-0 fw-light">Rs. 5,000</p>
+                           <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                           <div class="star-div my-2">
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                           </div>
+                         </div>
+                        </div>
+                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             </div>
+             <div class="mb-0 bb-1 p-3 d-flex justify-content-between theme-link align-items-center text-black position-relative single-cate-menu">
+              <div>
+                <img src="/assets/image/cate2.avif" width="25" height="25" class="me-2">
+                <span>Vegitable and fruits</span>
+              </div>
+              <i class="fa fa-chevron-down"></i>
+              <div class="position-absolute content-cate p-3 bg-white">
+                <div class="d-flex">
+                  <div class="br-1 w-25 px-2">
+                    <p class="h6 mb-3 mt-3 theme-link">Shop Layout</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                  </div>
+                  <div class="br-1 w-25 px-2">
+                    <p class="h6 mb-3 mt-3 theme-link">Shop Layout</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                  </div>
+                  <div class="br-1 w-25 px-2">
+                    <p class="h6 mb-3 mt-3 theme-link">Shop Layout</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                  </div>
+                  <div class="w-25 m-auto text-center">
+                    <a href="javascript:void(0);"><img src="/assets/image/banner-cate.png" alt="offer" width="75%"></a>
+                  </div>
+                </div>
+                <div class="w-100 position-relative mt-4">
+                  <div class="swiper-container2 w-100 overflow-hidden">
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                       <div class="product-slider-container d-flex b-1 br-5">
+                        <div class="product-slider-img" style="background-image: url(/assets/image/product1-1.webp);"></div>
+                        <div class="p-2">
+                          <p class="h6 theme-link">Fresh Fruit</p>
+                          <p class="mb-0 fw-light">Rs. 5,000</p>
+                          <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                          <div class="star-div my-2">
+                            <i class="fa fa-star bg-white text-warning"></i>
+                            <i class="fa fa-star bg-white text-warning"></i>
+                            <i class="fa fa-star bg-white text-warning"></i>
+                            <i class="fa fa-star bg-white text-warning"></i>
+                            <i class="fa fa-star bg-white text-warning"></i>
+                          </div>
+                        </div>
+                       </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product-slider-container d-flex b-1 br-5">
+                         <div class="product-slider-img" style="background-image: url(/assets/image/product2-1.webp);"></div>
+                         <div class="p-2">
+                           <p class="h6 theme-link">Fresh Fruit</p>
+                           <p class="mb-0 fw-light">Rs. 5,000</p>
+                           <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                           <div class="star-div my-2">
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                           </div>
+                         </div>
+                        </div>
+                       </div>
+                       <div class="swiper-slide">
+                        <div class="product-slider-container d-flex b-1 br-5">
+                         <div class="product-slider-img" style="background-image: url(/assets/image/product3-1.webp);"></div>
+                         <div class="p-2">
+                           <p class="h6 theme-link">Fresh Fruit</p>
+                           <p class="mb-0 fw-light">Rs. 5,000</p>
+                           <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                           <div class="star-div my-2">
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                           </div>
+                         </div>
+                        </div>
+                       </div>
+                       <div class="swiper-slide">
+                        <div class="product-slider-container d-flex b-1 br-5">
+                         <div class="product-slider-img" style="background-image: url(/assets/image/product4-1.webp);"></div>
+                         <div class="p-2">
+                           <p class="h6 theme-link">Fresh Fruit</p>
+                           <p class="mb-0 fw-light">Rs. 5,000</p>
+                           <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                           <div class="star-div my-2">
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                           </div>
+                         </div>
+                        </div>
+                       </div>
+                       <div class="swiper-slide">
+                        <div class="product-slider-container d-flex b-1 br-5">
+                         <div class="product-slider-img" style="background-image: url(/assets/image/product1-2.webp);"></div>
+                         <div class="p-2">
+                           <p class="h6 theme-link">Fresh Fruit</p>
+                           <p class="mb-0 fw-light">Rs. 5,000</p>
+                           <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                           <div class="star-div my-2">
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                           </div>
+                         </div>
+                        </div>
+                       </div>
+                       <div class="swiper-slide">
+                        <div class="product-slider-container d-flex b-1 br-5">
+                         <div class="product-slider-img" style="background-image: url(/assets/image/product2-2.webp);"></div>
+                         <div class="p-2">
+                           <p class="h6 theme-link">Fresh Fruit</p>
+                           <p class="mb-0 fw-light">Rs. 5,000</p>
+                           <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                           <div class="star-div my-2">
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                           </div>
+                         </div>
+                        </div>
+                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             </div>
+             <div class="mb-0 bb-1 p-3 d-flex justify-content-between theme-link align-items-center text-black position-relative single-cate-menu">
+              <div>
+                <img src="/assets/image/cate3.webp" width="25" height="25" class="me-2">
+                <span>Breakfast andcereals</span>
+              </div>
+              <i class="fa fa-chevron-down"></i>
+              <div class="position-absolute content-cate p-3 bg-white">
+                <div class="d-flex">
+                  <div class="br-1 w-25 px-2">
+                    <p class="h6 mb-3 mt-3 theme-link">Shop Layout</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                  </div>
+                  <div class="br-1 w-25 px-2">
+                    <p class="h6 mb-3 mt-3 theme-link">Shop Layout</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                  </div>
+                  <div class="br-1 w-25 px-2">
+                    <p class="h6 mb-3 mt-3 theme-link">Shop Layout</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                  </div>
+                  <div class="w-25 m-auto text-center">
+                    <a href="javascript:void(0);"><img src="/assets/image/banner-cate.png" alt="offer" width="75%"></a>
+                  </div>
+                </div>
+                <div class="w-100 position-relative mt-4">
+                  <div class="swiper-container3 w-100 overflow-hidden">
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                       <div class="product-slider-container d-flex b-1 br-5">
+                        <div class="product-slider-img" style="background-image: url(/assets/image/product1-1.webp);"></div>
+                        <div class="p-2">
+                          <p class="h6 theme-link">Fresh Fruit</p>
+                          <p class="mb-0 fw-light">Rs. 5,000</p>
+                          <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                          <div class="star-div my-2">
+                            <i class="fa fa-star bg-white text-warning"></i>
+                            <i class="fa fa-star bg-white text-warning"></i>
+                            <i class="fa fa-star bg-white text-warning"></i>
+                            <i class="fa fa-star bg-white text-warning"></i>
+                            <i class="fa fa-star bg-white text-warning"></i>
+                          </div>
+                        </div>
+                       </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product-slider-container d-flex b-1 br-5">
+                         <div class="product-slider-img" style="background-image: url(/assets/image/product2-1.webp);"></div>
+                         <div class="p-2">
+                           <p class="h6 theme-link">Fresh Fruit</p>
+                           <p class="mb-0 fw-light">Rs. 5,000</p>
+                           <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                           <div class="star-div my-2">
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                           </div>
+                         </div>
+                        </div>
+                       </div>
+                       <div class="swiper-slide">
+                        <div class="product-slider-container d-flex b-1 br-5">
+                         <div class="product-slider-img" style="background-image: url(/assets/image/product3-1.webp);"></div>
+                         <div class="p-2">
+                           <p class="h6 theme-link">Fresh Fruit</p>
+                           <p class="mb-0 fw-light">Rs. 5,000</p>
+                           <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                           <div class="star-div my-2">
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                           </div>
+                         </div>
+                        </div>
+                       </div>
+                       <div class="swiper-slide">
+                        <div class="product-slider-container d-flex b-1 br-5">
+                         <div class="product-slider-img" style="background-image: url(/assets/image/product4-1.webp);"></div>
+                         <div class="p-2">
+                           <p class="h6 theme-link">Fresh Fruit</p>
+                           <p class="mb-0 fw-light">Rs. 5,000</p>
+                           <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                           <div class="star-div my-2">
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                           </div>
+                         </div>
+                        </div>
+                       </div>
+                       <div class="swiper-slide">
+                        <div class="product-slider-container d-flex b-1 br-5">
+                         <div class="product-slider-img" style="background-image: url(/assets/image/product1-2.webp);"></div>
+                         <div class="p-2">
+                           <p class="h6 theme-link">Fresh Fruit</p>
+                           <p class="mb-0 fw-light">Rs. 5,000</p>
+                           <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                           <div class="star-div my-2">
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                           </div>
+                         </div>
+                        </div>
+                       </div>
+                       <div class="swiper-slide">
+                        <div class="product-slider-container d-flex b-1 br-5">
+                         <div class="product-slider-img" style="background-image: url(/assets/image/product2-2.webp);"></div>
+                         <div class="p-2">
+                           <p class="h6 theme-link">Fresh Fruit</p>
+                           <p class="mb-0 fw-light">Rs. 5,000</p>
+                           <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                           <div class="star-div my-2">
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                           </div>
+                         </div>
+                        </div>
+                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             </div>
+             <div class="mb-0 bb-1 p-3 d-flex justify-content-between theme-link align-items-center text-black position-relative single-cate-menu">
+              <div>
+                <img src="/assets/image/cate4.avif" width="25" height="25" class="me-2">
+                <span>Animal biscuits and products</span>
+              </div>
+              <i class="fa fa-chevron-down"></i>
+              <div class="position-absolute content-cate p-3 bg-white">
+                <div class="d-flex">
+                  <div class="br-1 w-25 px-2">
+                    <p class="h6 mb-3 mt-3 theme-link">Shop Layout</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                  </div>
+                  <div class="br-1 w-25 px-2">
+                    <p class="h6 mb-3 mt-3 theme-link">Shop Layout</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                  </div>
+                  <div class="br-1 w-25 px-2">
+                    <p class="h6 mb-3 mt-3 theme-link">Shop Layout</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                    <p class="fw-light theme-link">Layout1</p>
+                  </div>
+                  <div class="w-25 m-auto text-center">
+                    <a href="javascript:void(0);"><img src="/assets/image/banner-cate.png" alt="offer" width="75%"></a>
+                  </div>
+                </div>
+                <div class="w-100 position-relative mt-4">
+                  <div class="swiper-container4 w-100 overflow-hidden">
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                       <div class="product-slider-container d-flex b-1 br-5">
+                        <div class="product-slider-img" style="background-image: url(/assets/image/product1-1.webp);"></div>
+                        <div class="p-2">
+                          <p class="h6 theme-link">Fresh Fruit</p>
+                          <p class="mb-0 fw-light">Rs. 5,000</p>
+                          <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                          <div class="star-div my-2">
+                            <i class="fa fa-star bg-white text-warning"></i>
+                            <i class="fa fa-star bg-white text-warning"></i>
+                            <i class="fa fa-star bg-white text-warning"></i>
+                            <i class="fa fa-star bg-white text-warning"></i>
+                            <i class="fa fa-star bg-white text-warning"></i>
+                          </div>
+                        </div>
+                       </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product-slider-container d-flex b-1 br-5">
+                         <div class="product-slider-img" style="background-image: url(/assets/image/product2-1.webp);"></div>
+                         <div class="p-2">
+                           <p class="h6 theme-link">Fresh Fruit</p>
+                           <p class="mb-0 fw-light">Rs. 5,000</p>
+                           <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                           <div class="star-div my-2">
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                           </div>
+                         </div>
+                        </div>
+                       </div>
+                       <div class="swiper-slide">
+                        <div class="product-slider-container d-flex b-1 br-5">
+                         <div class="product-slider-img" style="background-image: url(/assets/image/product3-1.webp);"></div>
+                         <div class="p-2">
+                           <p class="h6 theme-link">Fresh Fruit</p>
+                           <p class="mb-0 fw-light">Rs. 5,000</p>
+                           <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                           <div class="star-div my-2">
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                           </div>
+                         </div>
+                        </div>
+                       </div>
+                       <div class="swiper-slide">
+                        <div class="product-slider-container d-flex b-1 br-5">
+                         <div class="product-slider-img" style="background-image: url(/assets/image/product4-1.webp);"></div>
+                         <div class="p-2">
+                           <p class="h6 theme-link">Fresh Fruit</p>
+                           <p class="mb-0 fw-light">Rs. 5,000</p>
+                           <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                           <div class="star-div my-2">
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                           </div>
+                         </div>
+                        </div>
+                       </div>
+                       <div class="swiper-slide">
+                        <div class="product-slider-container d-flex b-1 br-5">
+                         <div class="product-slider-img" style="background-image: url(/assets/image/product1-2.webp);"></div>
+                         <div class="p-2">
+                           <p class="h6 theme-link">Fresh Fruit</p>
+                           <p class="mb-0 fw-light">Rs. 5,000</p>
+                           <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                           <div class="star-div my-2">
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                           </div>
+                         </div>
+                        </div>
+                       </div>
+                       <div class="swiper-slide">
+                        <div class="product-slider-container d-flex b-1 br-5">
+                         <div class="product-slider-img" style="background-image: url(/assets/image/product2-2.webp);"></div>
+                         <div class="p-2">
+                           <p class="h6 theme-link">Fresh Fruit</p>
+                           <p class="mb-0 fw-light">Rs. 5,000</p>
+                           <p class="mb-0 fw-light line_th">Rs. 6,000</p>
+                           <div class="star-div my-2">
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                             <i class="fa fa-star bg-white text-warning"></i>
+                           </div>
+                         </div>
+                        </div>
+                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             </div>
+             <div class="mb-0 bb-1 p-3 d-flex justify-content-between theme-link align-items-center text-black position-relative single-cate-menu">
+              <div>
+                <img src="/assets/image/cate5.avif" width="25" height="25" class="me-2">
+                <span>Bread, toast and biscuits</span>
+              </div>
+             </div>
+             <div class="mb-0 bb-1 p-3 d-flex justify-content-between theme-link align-items-center text-black position-relative single-cate-menu">
+              <div>
+                <img src="/assets/image/cate5.avif" width="25" height="25" class="me-2">
+                <span>Chicken, meat and Fish</span>
+              </div>
+             </div>
+            </div>
+        </div>
+        <div class="part_2 d-flex justify-content-between align-items-center w-45 px-5 theme-bg py-3 h-55px">
+          <p class="mb-0" id="home_menu"><a class="fw-500 text-white py-20px" href="index.html">Home <i class="fa-solid fa-chevron-down"></i></a></p>
+          <p class="mb-0 position-relative" id="shop_menu"><a class="fw-500 text-white py-20px" href="javascript:void(0);">Shop <i class="fa-solid fa-chevron-down"></i></a> <span class="position-absolute upper-tag">Sale</span></p>
+          <p class="mb-0"><a class="fw-500 text-white py-20px" href="javascript:void(0);">Products</i></a></p>
+          <p class="mb-0"><a class="fw-500 text-white py-20px" href="javascript:void(0);">Blog</i></a></p>
+          <p class="mb-0 position-relative" id="pages_menu" >
+            <a class="fw-500 text-white py-20px" href="javascript:void(0);">Pages <i class="fa-solid fa-chevron-down"></i></a>
+            <span id="pages_menu_container" class="position-absolute bg-white p-3 submenu-container1 justify-content-between flex-column w-50px">
+              <a href="about_us.html" class="b-none">About Us</a>
+              <a href="javascript: void(0);" class="b-none">Contact Us</a>
+              <a href="faq.html" class="b-none">Faq's</a>
+              <a href="javascript: void(0);" class="b-none">Refund Policy</a>
+              <a href="javascript: void(0);" class="b-none">Shipping & Return</a>
+              <a href="javascript: void(0);" class="b-none">Store Location</a>
+              <a href="javascript: void(0);" class="b-none">Privacy Policy</a>
+              <a href="tandc.html" class="b-none">Terms And Condition</a>
+             </span>
+          </p>
+        </div>
+        <div class="part_3 w-30 theme-bg h-55px d-flex align-items-center justify-content-end pe-3 brr-5">
+            <button class="theme-btn-1-md me-2"><i class="fa fa-bookmark me-1"></i>Deals Today</button>
+            <button class="theme-btn-2-md"><i class="fa fa-tag me-1"></i>Special Price</button>
+        </div>
+        <!-- Home -->
+        <div id="home_menu_container" class="w-100 position-absolute bg-white py-3 px-5 submenu-container1 justify-content-between flex-wrap">
+          <div class="home_div_tem me-4 mb-2 position-relative">
+            <div class="image_part" style="background-image: url('/assets/image/home1.webp');"></div>
+            <p class="mb-0 text-center mt-2">19 earbuds</p>
+            <span class="img-tag-home bg-danger text-white fw-bold">New</span>
+          </div>
+          <div class="home_div_tem me-4 mb-2 position-relative">
+            <div class="image_part" style="background-image: url('/assets/image/home2.webp');"></div>
+            <p class="mb-0 text-center mt-2">18 Jewellery store</p>
+            <span class="img-tag-home bg-danger text-white fw-bold">New</span>
+          </div>
+          <div class="home_div_tem me-4 mb-2 position-relative">
+            <div class="image_part" style="background-image: url('/assets/image/home3.webp');"></div>
+            <p class="mb-0 text-center mt-2">16 Market store</p>
+            <span class="img-tag-home bg-danger text-white fw-bold">New</span>
+          </div>
+          <div class="home_div_tem me-4 mb-2 position-relative">
+            <div class="image_part" style="background-image: url('/assets/image/home4.webp');"></div>
+            <p class="mb-0 text-center mt-2">17 Art store</p>
+          </div>
+          <div class="home_div_tem me-4 mb-2 position-relative">
+            <div class="image_part" style="background-image: url('/assets/image/home5.webp');"></div>
+            <p class="mb-0 text-center mt-2">01 Fashion</p>
+          </div>
+          <div class="home_div_tem me-4 mb-2 position-relative">
+            <div class="image_part" style="background-image: url('/assets/image/home6.webp');"></div>
+            <p class="mb-0 text-center mt-2">02 Furniture</p>
+          </div>
+          <div class="home_div_tem me-4 mb-2 position-relative">
+            <div class="image_part" style="background-image: url('/assets/image/home1.webp');"></div>
+            <p class="mb-0 text-center mt-2">19 earbuds</p>
+          </div>
+          <div class="home_div_tem me-4 mb-2 position-relative">
+            <div class="image_part" style="background-image: url('/assets/image/home2.webp');"></div>
+            <p class="mb-0 text-center mt-2">18 Jewellery store</p>
+          </div>
+          <div class="home_div_tem me-4 mb-2 position-relative">
+            <div class="image_part" style="background-image: url('/assets/image/home3.webp');"></div>
+            <p class="mb-0 text-center mt-2">16 Market store</p>
+          </div>
+          <div class="home_div_tem me-4 mb-2 position-relative">
+            <div class="image_part" style="background-image: url('/assets/image/home4.webp');"></div>
+            <p class="mb-0 text-center mt-2">17 Art store</p>
+          </div>
+        </div>
+        <div id="shop_menu_container" class="w-100 position-absolute bg-white py-3 px-5 submenu-container1 justify-content-between flex-wrap">
+          <div class="br-1 w-20">
+            <h5 class="mb-2">Header & Footer</h5>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Header (Transparent)</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Header (Center-logo)</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Header (Top link)</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Header (Bottom menu)</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Header (bottom menu 2)</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Footer (Newsletter)</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Footer (Food menu)</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Footer (Without menu)</a></p>
+          </div>
+          <div class="br-1 w-20 ps-4">
+            <h5 class="mb-2">Product layout</h5>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Grid 1 column</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Grid 2 column</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Left thumbanails</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Bottom thumbnails</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Horizontal slider</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Tab horizontal</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Tab verticle</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Tab collapsible</a></p>
+          </div>
+          <div class="br-1 w-20 ps-4">
+            <h5 class="mb-2">Product features</h5>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Product video</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Product 3d</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Swatch (Custom)</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Swatch (Dropdown)</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Swatch (Image)</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Countdown</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Ask a question</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Estimated delivery</a></p>
+          </div>
+          <div class="br-1 w-20 ps-4">
+            <h5 class="mb-2">Shop layout</h5>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Left sidebar</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">List right sidebar</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">List full</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">List left sidebar</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Grid right sidebar</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Grid full</a></p>
+            <p class="mb-1 fw-light"><a href="javascript:void(0);">Filter sidebar (drawer)</a></p>
+          </div>
+          <div class="w-20 ps-4 overflow-hidden">
+            <a href="javascript:void(0);"><img src="/assets/image/offer.webp" alt="offer" width="75%"></a>
+          </div>
+        </div>
+        <div id="search_menu_container" class="w-100 position-absolute bg-white py-3 px-5 submenu-container2 flex-wrap flex-column">
+          <div class="d-flex justify-content-center">
+            <div class="w-75">
+              <p class="mb-2 mt-2"><span class="fw-bold">Suggestions:</span> armchair apple airdopes Animal biscuits and productsAccesories</p>
+              <p class="mb-4 mt-0"><span class="fw-bold">Pages:</span> Store location Terms & condition</p>
+            </div>
+          </div>
+          <div class="d-flex">
+            <div class="fea_list_container d-flex justify-content-start flex-column align-items-center position-relative">
+              <!-- one -->
+              <a href="javascript: void(0);" class="set_of_img_0 img_part active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+              <a href="javascript: void(0);" class="set_of_img_0 img_part1 active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+              <div class="detail_part py-3">
+                <p class="mb-1 h6 theme-link cursor-pointer">Color print t-shirt</p>
+                <p class="mb-1"><span>Rs. 1,800.00</span> <span class="line_th">Rs. 3,800.00</span></p>
+              </div>
+            </div>
+            <div class="fea_list_container d-flex justify-content-start flex-column align-items-center position-relative">
+              <!-- one -->
+              <a href="javascript: void(0);" class="set_of_img_0 img_part active" style="background-image: url(/assets/image/product2-1.webp);"></a>
+              <a href="javascript: void(0);" class="set_of_img_0 img_part1 active" style="background-image: url(/assets/image/product2-2.webp);"></a>
+              <div class="detail_part py-3">
+                <p class="mb-1 h6 theme-link cursor-pointer">Color print t-shirt</p>
+                <p class="mb-1"><span>Rs. 1,800.00</span> <span class="line_th">Rs. 3,800.00</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- Check out -->
+    <div id="section_16" style="background-image: url(/assets/image/banner_login.webp);" class="d-flex justify-content-center align-items-center flex-column">
+        <p class="text-white fw-bold mb-2"><a href="index.html" class="text-white">Home</a> - About us</p>
+        <p class="h3 text-white fw-bold">About us</p>
+    </div>
+    <div id="about_us_page" class="w-100 py-5 bg-white px-4">
+        <p class="theme-text text-center h6">Since 1982 our story</p>
+        <p class="h2 text-center mb-3">Our story</p>
+        <!-- image container -->
+        <div class="d-flex justify-content-center">
+          <div class="w-85 overflow-hidden h-400px">
+            <div class="about_us_image w-100 h-100" style="background-image: url(/assets/image/about_us1.webp);"></div>
+          </div>
+        </div>
+        <!-- image container -->
+        <div class="d-flex w-100 justify-content-center mt-5 m-f-d-c">
+          <div class="w-25 mw-100 text-center">
+            <p class="h5">5,000+ Happy customer</p>
+            <p class="text-grey">The customer's perception is your reality. Your most unhappy customers are your greatest source of learning</p>
+          </div>
+          <div class="w-25 mw-100 text-center">
+            <p class="h5">5,000+ Happy customer</p>
+            <p class="text-grey">The customer's perception is your reality. Your most unhappy customers are your greatest source of learning</p>
+          </div>
+          <div class="w-25 mw-100 text-center">
+            <p class="h5">5,000+ Happy customer</p>
+            <p class="text-grey">The customer's perception is your reality. Your most unhappy customers are your greatest source of learning</p>
+          </div>
+        </div>
+        <!-- Slider -->
+        <div class="w-100 position-relative bg-white px-4 mt-5 mp-0">
+          <div class="swiper-container15 w-100 bg-whtie overflow-hidden position-relative">
+            <div class="swiper-wrapper bg-white pt-5">
+              <!-- Slides -->
+              <div class="swiper-slide flex-column align-items-center bg-grey">
+                <!-- image -->
+                <div class="testi-image position-absolute" style="background-image: url(/assets/image/person1.webp);"></div>
+                <div class="w-50 mw-100 my-5">
+                  <p class="h5 text-center mt-5">We love our clients</p>
+                  <p class="h4 text-grey text-center my-4 px-2">The best thing about shopping is that one can return the purchase if something does not work the way it should.</p>
+                  <p class="text-center h4 mb-5">Miranda joy</p>
+                </div>
+              </div>
+              <div class="swiper-slide flex-column align-items-center bg-grey">
+                <!-- image -->
+                <div class="testi-image position-absolute" style="background-image: url(/assets/image/person2.webp);"></div>
+                <div class="w-50 mw-100 my-5">
+                  <p class="h5 text-center mt-5">We love our clients</p>
+                  <p class="h4 text-grey text-center my-4 px-2">The best thing about shopping is that one can return the purchase if something does not work the way it should.</p>
+                  <p class="text-center h4 mb-5">Miranda joy</p>
+                </div>
+              </div>
+              <div class="swiper-slide flex-column align-items-center bg-grey">
+                <!-- image -->
+                <div class="testi-image position-absolute" style="background-image: url(/assets/image/person3.jpg);"></div>
+                <div class="w-50 mw-100 my-5">
+                  <p class="h5 text-center mt-5">We love our clients</p>
+                  <p class="h4 text-grey text-center my-4 px-2">The best thing about shopping is that one can return the purchase if something does not work the way it should.</p>
+                  <p class="text-center h4 mb-5">Miranda joy</p>
+                </div>
+              </div>
+            </div>
+            <div class="md-none position-absolute br-100 bg-white w-55px theme-link cursor-pointer  h-55px  d-flex align-items-center justify-content-center left-about-page"><i class="fa fa-arrow-left"></i></div>
+            <div class="md-none position-absolute br-100 bg-white w-55px theme-link cursor-pointer  h-55px  d-flex align-items-center justify-content-center right-about-page"><i class="fa fa-arrow-right"></i></div>
+          </div>
+        </div>
+         <!-- image container -->
+         <div class="d-flex justify-content-center mt-5">
+          <div class="w-85 overflow-hidden h-400px">
+            <div class="about_us_image w-100 h-100" style="background-image: url(/assets/image/about_us2.webp);"></div>
+          </div>
+        </div>
+        <!-- image container -->
+        <div class="d-flex w-100 justify-content-center mt-5 m-f-d-c px-5 ple-20px">
+          <div class="w-50 mw-100 text-center px-5 mp-0">
+            <p class="h5">Fashion is what you’re offered four times a yea by designers fashions fade</p>
+            <p class="text-grey">In early 1982, founder and creative direct or had the idea to design a bag collection where comfort, fashion, and distinction are key.</p>
+          </div>
+          <div class="w-50 mw-100 text-center px-5 mp-0">
+            <p class="h5">I prefer to shock rather than to bore through repetition style is eternal</p>
+            <p class="text-grey">In early 1982, founder and creative direct or had the idea to design a bag collection where comfort, fashion, and distinction are key.</p>
+          </div>
+        </div>
+        <!-- Profiles -->
+        <div class="mt-5 row px-5 ple-20px">
+          <div class="col-12 col-lg-3 col-md-4 col-sm-2">
+            <div class="overflow-hidden h-300px">
+              <div class="about_us_image h-100" style="background-image: url(/assets/image/person4.webp);"></div>
+            </div>
+            <div class="text-center">
+              <p class="h6 mb-1 mt-3">Harvey jones</p>
+              <p class="h6 mb-1 text-grey">Ceo & founder</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 col-md-4 col-sm-2">
+            <div class="overflow-hidden h-300px">
+              <div class="about_us_image h-100" style="background-image: url(/assets/image/person5.webp);"></div>
+            </div>
+            <div class="text-center">
+              <p class="h6 mb-1 mt-3">Harvey jones</p>
+              <p class="h6 mb-1 text-grey">Ceo & founder</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 col-md-4 col-sm-2">
+            <div class="overflow-hidden h-300px">
+              <div class="about_us_image h-100" style="background-image: url(/assets/image/person6.webp);"></div>
+            </div>
+            <div class="text-center">
+              <p class="h6 mb-1 mt-3">mory Orlandos</p>
+              <p class="h6 mb-1 text-grey">Ceo & founder</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 col-md-4 col-sm-2">
+            <div class="overflow-hidden h-300px">
+              <div class="about_us_image h-100" style="background-image: url(/assets/image/person7.webp);"></div>
+            </div>
+            <div class="text-center">
+              <p class="h6 mb-1 mt-3">Harvey jones</p>
+              <p class="h6 mb-1 text-grey">Ceo & founder</p>
+            </div>
+          </div>
+        </div>
+        <div class="py-5 px-5 mt-5 ple-20px">
+          <div class="row">
+            <div class="col-12 col-lg-4 col-md-4 d-flex align-items-center justify-content-center flex-column mb-3">
+              <div class="br-100 bg-grey h-135px w-135px d-flex align-items-center justify-content-center">
+                <i class="fa fa-truck theme-text h2"></i>
+              </div>
+              <p class="h6 text-center mt-3 mb-0">FAST SHIPPING</p>
+              <p class="h6 text-center mt-3 mb-0 text-grey">Free Shipping starts now! No minimums. No coupon required.</p>
+            </div>
+            <div class="col-12 col-lg-4 col-md-4 d-flex align-items-center justify-content-center flex-column mb-3">
+              <div class="br-100 bg-grey h-135px w-135px d-flex align-items-center justify-content-center">
+                <i class="fa fa-refresh theme-text h2"></i>
+              </div>
+              <p class="h6 text-center mt-3 mb-0">EASY RETURNS</p>
+              <p class="h6 text-center mt-3 mb-0 text-grey">Do everything with a good heart and expect nothhing in return</p>
+            </div>
+            <div class="col-12 col-lg-4 col-md-4 d-flex align-items-center justify-content-center flex-column mb-3">
+              <div class="br-100 bg-grey h-135px w-135px d-flex align-items-center justify-content-center">
+                <i class="fa fa-dollar theme-text h2"></i>
+              </div>
+              <p class="h6 text-center mt-3 mb-0">100% MONEY SECURE</p>
+              <p class="h6 text-center mt-3 mb-0 text-grey">Free Shipping starts now! No minimums. No coupon required.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- Check out page -->
+    <div id="sec_14" class="w-100 py-5 overflow-hidden px-5 d-flex bg-grey m-f-d-c mmb-15px justify-content-between" style="background-image: url(/assets/image/footer.png);">
+      <div class="pe-5">
+        <img src="/assets/image/logo-16.webp" alt="logo" width="175">
+        <p class="my-3 text-grey fw-bold">Lorem Ipsum simply dummy text of the printing typese.</p>
+        <p class="text-grey fw-bold">© 2024 by spacingtech</p>
+      </div>
+      <div class="pe-5">
+        <p class="h5 mb-3 fw-bold">My account</p>
+        <a href="login.html" class="d-block mb-2 text-grey theme-link fw-bold">My account</a>
+        <a href="cart.html" class="d-block mb-2 text-grey theme-link fw-bold">My cart</a>
+        <a href="wishlist.html" class="d-block mb-2 text-grey theme-link fw-bold">Wishlist</a>
+        <a href="javascript: void(0);" class="d-block mb-2 text-grey theme-link fw-bold">Order history</a>
+        <a href="javascript: void(0);" class="d-block mb-2 text-grey theme-link fw-bold">Return policy</a>
+      </div>
+      <div class="pe-5">
+        <p class="h5 mb-3 fw-bold">Our legal</p>
+        <a href="tandc.html" class="d-block mb-2 text-grey theme-link fw-bold">Terms & condition</a>
+        <a href="javascript: void(0);" class="d-block mb-2 text-grey theme-link fw-bold">Accessibility</a>
+        <a href="about_us.html" class="d-block mb-2 text-grey theme-link fw-bold">About us</a>
+        <a href="javascript: void(0);" class="d-block mb-2 text-grey theme-link fw-bold">Track order</a>
+        <a href="javascript: void(0);" class="d-block mb-2 text-grey theme-link fw-bold">Store location</a>
+      </div>
+      <div class="pe-5">
+        <p class="h5 mb-3 fw-bold">Information</p>
+        <a href="javascript: void(0);" class="d-block mb-2 text-grey theme-link fw-bold">Our story</a>
+        <a href="javascript: void(0);" class="d-block mb-2 text-grey theme-link fw-bold">Keep in touch</a>
+        <a href="javascript: void(0);" class="d-block mb-2 text-grey theme-link fw-bold">Privacy policy</a>
+        <a href="javascript: void(0);" class="d-block mb-2 text-grey theme-link fw-bold">Refund policy</a>
+        <a href="faq.html" class="d-block mb-2 text-grey theme-link fw-bold">Faq's</a>
+      </div>
+      <div class="pe-5">
+        <p class="h5 mb-3 fw-bold">Contact us</p>
+        <a href="javascript: void(0);" class="d-block mb-2 text-grey fw-bold">+1234 567 890</a>
+        <a href="javascript: void(0);" class="d-block mb-2 text-grey fw-bold">info@domain.com</a>
+        <a href="javascript: void(0);" class="d-block mb-0 text-grey fw-bold">401 BROADWAY, 24TH FLOOR,</a>
+        <a href="javascript: void(0);" class="d-block mb-0 text-grey fw-bold">ORCHARD VIEW, LONDON,</a>
+        <a href="javascript: void(0);" class="d-block mb-2 text-grey fw-bold">UK</a>
+      </div>
+    </div>
+    <!-- Modal Box -->
+    <div class="modal fade" id="modal_lg" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-none">
+            <button type="button" class="btn-close closebtn" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Parts -->
+  <div class="common_cart_section position-fixed hider h-100 overflow-auto">
+    <div class="d-flex justify-content-between align-items-center mt-3 bb-1">
+      <h6 class="mb-3">My shopping cart</h6>
+      <i class="fa fa-x cursor-pointer h6" onclick="closeCart()"></i>
+    </div>
+    <div class="align-items-center justify-content-center flex-column w-100 h-100 no_product">
+      <i class="fa-solid fa-bag-shopping mb-2 h3"></i>
+      <p class="mb-2">Your cart is empty</p>
+      <button class="btn btn-theme b-1 px-5 py-3">Continue Shopping</button>
+    </div>
+    <div class="mt-3 content_have">
+      <p>Congratulations , you've got free shipping!</p>
+      <figure class="position-relative">
+        <div class="progress">
+          <div class="progress-bar progress-bar-success progress-bar-striped active w-100"></div>
+        </div>
+        <i class="fa fa-van-shuttle position-absolute ship-van-acc"></i>
+      </figure>
+      <div class="product_list_container_acc py-3">
+        <div class="d-flex bb-1 single_product_list">
+          <div class="img_part_acc w-25" style="background-image: url(/assets/image/product1-1.webp);"></div>
+          <div class="product_details_container px-3 w-75 pb-4">
+            <p class="h6">Leather shoes</p>
+            <p class="mb-1"><span class="fw-light">Rs. 3,700.00</span></p>
+            <p class="mb-1 fw-bold">Size: <span class="fw-light">S,</span></p>
+            <p class="mb-2 fw-bold">Color: <span class="fw-light">Brandy rose</span></p>
+            <div class="d-flex align-items-center">
+              <div class="b-1 h-55px d-flex align-items-center justify-content-between whole_container_qty me-4 w-50 p-2">
+                  <span class="minus-button h2 cursor-pointer" onclick="qtyIncreDecreacc(1)">-</span>
+                  <input type="number" class="qty_input acc" value="1">
+                  <span class="plus-button h2 cursor-pointer" onclick="qtyIncreDecreacc(2)">+</span>
+              </div>
+              <i class="fa fa-trash h5 cursor-pointer" onclick="deleteCart(this)"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="accordionExample" class="accordion shadow">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Order special instructions
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
+            <div class="accordion-body">
+              <textarea id="order" rows="2" class="form-control" placeholder="Order special instructions"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>  
+      <div class="d-flex align-items-center justify-content-between my-3">
+        <span class="fw-bold">Subtotal</span>
+        <span>Rs. 3,700.00</span>
+      </div>     
+      <div class="form-group">
+        <input type="checkbox" class="form-control-checkbox me-2" id="tandc"> <label for="tandc" class="vatb">I have read and agree with the <a href="tandc.html" class="fw-bold">terms & condition.</a></label>
+      </div> 
+      <div class="d-flex w-100 justify-content-between">
+        <button class="theme-btn-md hover px-5 py-3 w-45" onclick="window.location.href='cart.html'">View Cart</button>
+        <button class="theme-btn-1-md hover px-5 py-3 w-45" onclick="window.location.href='checkout.html'">Check Out</button>
+      </div>    
+    </div>
+  </div>
+</div>
+<div class="shadow-cover position-fixed w-100 h-100 top-0 left-0" onclick="closeCart()"></div>
+<!-- mobile view -->
+<div class="position-fixed menu-footer bottom-0 left-0 w-100 bg-white bt-1 z-9999">
+  <div class="d-flex w-100">
+    <a href="javascript: void(0);" class="py-2 br-1 text-center w-20">
+      <i class="fa fa-home"></i><br>
+      <span>Home</span>
+    </a>
+    <a href="javascript: void(0);" class="py-2 br-1 text-center w-20">
+      <i class="fa fa-magnifying-glass"></i><br>
+      <span>Search</span>
+    </a>
+    <a href="javascript: void(0);" class="py-2 br-1 text-center w-20">
+      <i class="fa fa-cart-shopping"></i><br>
+      <span>Shop</span>
+    </a>
+    <a href="javascript: void(0);" class="py-2 br-1 text-center w-20">
+      <i class="fa-regular fa-heart"></i><br>
+      <span>Wishlist</span>
+    </a>
+    <a href="javascript: void(0);" class="py-2 br-1 text-center w-20">
+      <i class="fa fa-user"></i><br>
+      <span>Account</span>
+    </a>
+  </div>
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" integrity="sha512-VK2zcvntEufaimc+efOYi622VN5ZacdnufnmX7zIhCPmjhKnOi9ZDMtg1/ug5l183f19gG1/cBstPO4D8N/Img==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/assets/js/mobile.js"></script>
+  <script>
+    function qtyIncreDecre(val,id)
+    {
+        inval = $('.qty_input_'+id).val();
+        if(val==1)
+        {
+            if(inval>=2)
+            {
+                acval = Number(inval) - 1;
+            }
+        }else{
+            acval = Number(inval) + 1;
+        }
+        $('.qty_input_'+id).val(acval);
+    }
+    function openCart()
+    {
+      $('.common_cart_section').removeClass('hider');
+      $('.shadow-cover').show();
+    }
+    function closeCart()
+      {
+        $('.common_cart_section').addClass('hider');
+        $('.shadow-cover').hide();
+        $('.mobile-sidebar').hide(500);
+      }
+    function deleteCart(a)
+    {
+      $(a).closest('.single_product_list').remove();
+      countCheck();
+    }
+    function countCheck()
+    {
+      count = $('.single_product_list').length;
+      if(count==0)
+      {
+        $('.content_have').hide();
+        $('.no_product').css("display","flex");
+      }else{
+        $('.content_have').show();
+        $('.no_product').css("display","none");
+      }
+    }
+    countCheck();
+    function qtyIncreDecreacc(val)
+    {
+        inval = $('.qty_input.acc').val();
+        if(val==1)
+        {
+            if(inval>=2)
+            {
+                acval = Number(inval) - 1;
+            }
+        }else{
+            acval = Number(inval) + 1;
+        }
+        $('.qty_input.acc').val(acval);
+    }
+    function deleteCartMain(id)
+{
+    $('#row_cart_'+id).remove();
+    checkCartCount();
+}
+function checkCartCount()
+{
+    count = $('.row_cart').length;
+    if(count==0)
+    {
+      $('#have_cart').hide();
+      $('#empty_cart').css("display","flex");
+    }else{
+      $('#have_cart').show();
+      $('#empty_cart').css("display","none");
+    }
+}
+checkCartCount();
+      //Home container
+      $('#home_menu a').hover(function(){
+       $('#home_menu_container').css("display","flex");
+      });
+      $('#home_menu').mouseleave(function(){
+       $('#home_menu_container').css("display","none");
+      });
+      $('#home_menu_container').hover(function(){
+        $('#home_menu_container').css("display","flex");
+      });
+      $('#home_menu_container').mouseleave(function(){
+        $('#home_menu_container').css("display","none");
+      });
+      //Home container
+      //Shop container
+      $('#shop_menu a').hover(function(){
+       $('#shop_menu_container').css("display","flex");
+      });
+      $('#shop_menu').mouseleave(function(){
+       $('#shop_menu_container').css("display","none");
+      });
+      $('#shop_menu_container').hover(function(){
+        $('#shop_menu_container').css("display","flex");
+      });
+      $('#shop_menu_container').mouseleave(function(){
+        $('#shop_menu_container').css("display","none");
+      });
+      //Shop container
+      //pPages container
+      $('#pages_menu a').hover(function(){
+       $('#pages_menu_container').css("display","flex");
+      });
+      $('#pages_menu').mouseleave(function(){
+       $('#pages_menu_container').css("display","none");
+      });
+      $('#pages_menu_container').hover(function(){
+        $('#pages_menu_container').css("display","flex");
+      });
+      $('#pages_menu_container').mouseleave(function(){
+        $('#pages_menu_container').css("display","none");
+      });
+      //Pages container
+      // Swiper
+      var mySwiper = new Swiper ('.swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          renderBullet: function (index, className) {
+          return `<span class="outer-dot swiper-pagination-bullet"><span class="inner-dot"></span></span>`;
+        },
+        },
+      });
+      var mySwiper = new Swiper ('.swiper-container1', {
+        loop: true,
+        slidesPerView: 5,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+            1920: {
+                slidesPerView: 4,
+                spaceBetween: 30
+            },
+            1028: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 10
+            }
+        }
+      });
+      var mySwiper = new Swiper ('.swiper-container2', {
+        loop: true,
+        slidesPerView: 5,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+            1920: {
+                slidesPerView: 4,
+                spaceBetween: 30
+            },
+            1028: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 10
+            }
+        }
+      });
+      var mySwiper = new Swiper ('.swiper-container3', {
+        loop: true,
+        slidesPerView: 5,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+            1920: {
+                slidesPerView: 4,
+                spaceBetween: 30
+            },
+            1028: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 10
+            }
+        }
+      });
+      var mySwiper = new Swiper ('.swiper-container4', {
+        loop: true,
+        slidesPerView: 5,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+            1920: {
+                slidesPerView: 4,
+                spaceBetween: 30
+            },
+            1028: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 10
+            }
+        }
+      });
+      var mySwiper = new Swiper ('.swiper-container5', {
+        loop: true,
+        slidesPerView: 7,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+            1920: {
+                slidesPerView: 7,
+                spaceBetween: 30
+            },
+            1028: {
+                slidesPerView: 5,
+                spaceBetween: 30
+            },
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 10
+            }
+        },
+        navigation: {
+            nextEl: '.swiper-button-nexts',
+            prevEl: '.swiper-button-prevs',
+        }
+      });
+      var mySwiper = new Swiper ('.swiper-container6', {
+        loop: true,
+        slidesPerView: 7,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+            1920: {
+                slidesPerView: 7,
+                spaceBetween: 30
+            },
+            1028: {
+                slidesPerView: 5,
+                spaceBetween: 30
+            },
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 10
+            }
+        },
+        navigation: {
+            nextEl: '.swiper-button-nexts',
+            prevEl: '.swiper-button-prevs',
+        }
+      });
+      var mySwiper = new Swiper ('.swiper-container7', {
+        loop: true,
+        slidesPerView: 7,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+            1920: {
+                slidesPerView: 7,
+                spaceBetween: 30
+            },
+            1028: {
+                slidesPerView: 5,
+                spaceBetween: 30
+            },
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 10
+            }
+        },
+        navigation: {
+            nextEl: '.swiper-button-nexts',
+            prevEl: '.swiper-button-prevs',
+        }
+      });
+      var mySwiper = new Swiper ('.swiper-container8', {
+        loop: true,
+        slidesPerView: 7,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+            1920: {
+                slidesPerView: 4,
+                spaceBetween: 30
+            },
+            1028: {
+                slidesPerView: 4,
+                spaceBetween: 30
+            },
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 10
+            }
+        },
+        navigation: {
+            nextEl: '.swiper-button-nextss',
+            prevEl: '.swiper-button-prevss',
+        }
+      });
+      var mySwiper = new Swiper ('.swiper-container9', {
+        loop: true,
+        slidesPerView: 7,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+            1920: {
+                slidesPerView: 7,
+                spaceBetween: 30
+            },
+            1028: {
+                slidesPerView: 5,
+                spaceBetween: 30
+            },
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 10
+            }
+        },
+        navigation: {
+            nextEl: '.swiper-button-nextsss',
+            prevEl: '.swiper-button-prevsss',
+        }
+      });
+      var mySwiper = new Swiper ('.swiper-container10', {
+        loop: true,
+        slidesPerView: 1,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+            1920: {
+              slidesPerView: 1,
+            },
+            1028: {
+              slidesPerView: 1,
+            },
+            480: {
+              slidesPerView: 1,
+            }
+        },
+        navigation: {
+            nextEl: '.swiper-button-nextss1',
+            prevEl: '.swiper-button-prevss1',
+        }
+      });
+      var mySwiper = new Swiper ('.swiper-container11', {
+        loop: true,
+        slidesPerView: 1,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+            1920: {
+              slidesPerView: 1,
+            },
+            1028: {
+              slidesPerView: 1,
+            },
+            480: {
+              slidesPerView: 1,
+            }
+        },
+        navigation: {
+            nextEl: '.swiper-button-nextss2',
+            prevEl: '.swiper-button-prevss2',
+        }
+      });
+      var mySwiper = new Swiper ('.swiper-container12', {
+        loop: true,
+        slidesPerView: 1,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+            1920: {
+              slidesPerView: 1,
+            },
+            1028: {
+              slidesPerView: 1,
+            },
+            480: {
+              slidesPerView: 1,
+            }
+        },
+        navigation: {
+            nextEl: '.swiper-button-nextss3',
+            prevEl: '.swiper-button-prevss3',
+        }
+      });
+      new Swiper('.swiper-container13', {
+          loop: true,
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev',
+          slidesPerView: 5,
+          paginationClickable: true,
+          spaceBetween: 20,
+          autoplay: {
+              delay: 5000,
+              disableOnInteraction: false,
+          },
+          breakpoints: {
+              1920: {
+                  slidesPerView: 5,
+                  spaceBetween: 30
+              },
+              1028: {
+                  slidesPerView: 5,
+                  spaceBetween: 30
+              },
+              480: {
+                  slidesPerView: 5,
+                  spaceBetween: 10
+              }
+          }
+      });
+      var mySwiper = new Swiper ('.swiper-container14', {
+        loop: true,
+        slidesPerView: 3,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+            1920: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            1028: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            }
+        },
+        navigation: {
+            nextEl: '.swiper-button-nextinfo',
+            prevEl: '.swiper-button-previnfo',
+        }
+      });
+      // About us
+      var mySwiper = new Swiper ('.swiper-container15', {
+        loop: true,
+        slidesPerView: 1,
+        breakpoints: {
+            1920: {
+                slidesPerView: 1,
+                spaceBetween: 30
+            },
+            1028: {
+                slidesPerView: 1,
+                spaceBetween: 30
+            },
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            }
+        },
+        navigation: {
+            nextEl: '.right-about-page',
+            prevEl: '.left-about-page',
+        }
+      });
+      function getSearchcontain(a)
+      {
+        if(a.value=='')
+        {
+          $('#search_menu_container').css("display","none");
+        }else{
+          $('#search_menu_container').css("display","flex");
+        }
+      }
+      function categoryshow(a)
+      {
+       val = $(a).attr('data-action');
+        if(val==0)
+        {
+          $('.cate-menu').show(500);
+          $(a).attr('data-action',1);
+        }else{
+          $('.cate-menu').hide(500);
+          $(a).attr('data-action',0);
+        }
+      }
+      function showModal(url) {
+        $('#modal_lg').modal('show', { backdrop: 'true' });
+        $.ajax({
+          url: url,
+          success: function (response) {
+            $('#modal_lg .modal-body').html(response);
+          }
+        });
+      }
+  </script>
+  <!-- mobile script -->
+  <script>
+    function opensidebar()
+    {
+      $('.mobile-sidebar').show(500);
+      $('.shadow-cover').show();
+    }
+    function sidebarmenuopen(a,id)
+    {
+      attr = $(a).attr('data-val');
+      if(attr==0)
+      {
+        $(a).removeClass('fa-plus');
+        $(a).addClass('fa-minus');
+        $('#sidebarmenuopen_'+id).addClass('show');
+        $(a).attr('data-val',1);
+      }else{
+        $(a).removeClass('fa-minus');
+        $(a).addClass('fa-plus');
+        $('#sidebarmenuopen_'+id).removeClass('show');
+        $(a).attr('data-val',0);
+      }
+    }
+  </script>
+</body>
+</html>

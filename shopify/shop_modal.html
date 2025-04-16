@@ -1,0 +1,122 @@
+<div class="d-flex m-f-d-c">
+    <div class="gallery position-relative">                
+        <div class="swiper-container gallery-slider overflow-hidden">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./assets/image/product1-1.webp" alt=""></div>
+                <div class="swiper-slide"><img src="./assets/image/product1-2.webp" alt=""></div>
+                <div class="swiper-slide"><img src="./assets/image/product2-1.webp" alt=""></div>
+                <div class="swiper-slide"><img src="./assets/image/product2-2.webp" alt=""></div>
+                <div class="swiper-slide"><img src="./assets/image/product3-1.webp" alt=""></div>
+                <div class="swiper-slide"><img src="./assets/image/product3-2.webp" alt=""></div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <div class="swiper-container gallery-thumbs">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./assets/image/product1-1.webp" alt=""></div>
+                <div class="swiper-slide"><img src="./assets/image/product1-2.webp" alt=""></div>
+                <div class="swiper-slide"><img src="./assets/image/product2-1.webp" alt=""></div>
+                <div class="swiper-slide"><img src="./assets/image/product2-2.webp" alt=""></div>
+                <div class="swiper-slide"><img src="./assets/image/product3-1.webp" alt=""></div>
+                <div class="swiper-slide"><img src="./assets/image/product3-2.webp" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div class="content-area-modal-box px-3 mmt-15px">
+        <h3>Fresh Wateremlon</h3>
+        <div class="star-div my-2">
+          <i class="fa fa-star bg-white text-warning"></i>
+          <i class="fa fa-star bg-white text-warning"></i>
+          <i class="fa fa-star bg-white text-warning"></i>
+          <i class="fa fa-star bg-white text-warning"></i>
+          <i class="fa fa-star bg-white text-warning"></i>
+          <span class="mx-2">/</span>
+          <span class="text-danger">10 sold in last 2 hours</span>
+        </div>
+        <h2 class="fw-lignt my-3">Rs. 2,600.00</h2>
+        <div class="d-flex my-3">
+            <span class="fw-bold theme-text">Availability:</span> 
+            <div class="whole-picker cursor-pointer mx-3 position-relative">
+              <div class="color_picker" style="border: 2px solid yellow;"></div>
+              <div class="inner-color_picker" style="background-color: yellow;"></div>
+            </div>Low stock: 10 left
+        </div>
+        <hr>
+        <p class="my-3 fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptates quia ex ea numquam quibusdam eligendi optio hic dolore culpa.</p>
+        <p><span class="fw-bold h5">Size</span> : <span class="fw-light h6 text-uppercase selected_size">s</span></p>
+        <div class="whole_size_container d-flex my-3">
+            <div class="size_single_container me-2 cursor-pointer active" onclick="changeSize('s',this)">S</div>
+            <div class="size_single_container me-2 cursor-pointer" onclick="changeSize('m',this)">M</div>
+            <div class="size_single_container me-2 cursor-pointer" onclick="changeSize('l',this)">L</div>
+            <div class="size_single_container me-2 cursor-pointer" onclick="changeSize('xl',this)">XL</div>
+        </div>
+        <p><span class="fw-bold h5">Color</span> : <span class="fw-light h6 text-uppercase selected_color">red</span></p>
+        <div class="whole_size_container d-flex my-3">
+            <div style="background-image: url(./assets/image/product1-1.webp);" class="size_single_container_color me-2 cursor-pointer active" onclick="changeColor('red',this)"></div>
+            <div style="background-image: url(./assets/image/product1-2.webp);" class="size_single_container_color me-2 cursor-pointer" onclick="changeColor('green',this)"></div>
+            <div style="background-image: url(./assets/image/product2-1.webp);" class="size_single_container_color me-2 cursor-pointer" onclick="changeColor('blue',this)"></div>
+            <div style="background-image: url(./assets/image/product2-2.webp);" class="size_single_container_color me-2 cursor-pointer" onclick="changeColor('orange',this)"></div>
+        </div>
+        <div class="d-flex justify-content-between w-100 m-f-d-c">
+            <div class="b-1 h-55px d-flex align-items-center justify-content-between whole_container_qty me-2 w-30 p-2 mw-100">
+                <span class="minus-button h2 cursor-pointer" onclick="qtyIncreDecre(1)">-</span>
+                <input type="number" class="qty_input" value="1">
+                <span class="plus-button h2 cursor-pointer" onclick="qtyIncreDecre(2)">+</span>
+            </div>
+            <button class="btn btn-theme-hover b-1 px-5 py-3 w-65 mw-100 mmt-15px" onclick="window.location.href='cart.html'">Add to Cart</button>
+        </div>
+        <button class="btn btn-theme px-5 py-3 mt-3 w-100" onclick="window.location.href='checkout.html'">Buy it Now</button>
+    </div>
+</div>
+<script>
+    function qtyIncreDecre(val)
+    {
+        inval = $('.qty_input').val();
+        if(val==1)
+        {
+            if(inval>=2)
+            {
+                acval = Number(inval) - 1;
+            }
+        }else{
+            acval = Number(inval) + 1;
+        }
+        $('.qty_input').val(acval);
+    }
+    function changeSize(val,a)
+    {
+        $('.size_single_container').removeClass('active');
+        $(a).addClass('active');
+        $('.selected_size').html(val);
+    }
+    function changeColor(val,a)
+    {
+        $('.size_single_container_color').removeClass('active');
+        $(a).addClass('active');
+        $('.selected_color').html(val);
+    }
+    var slider = new Swiper ('.gallery-slider', {
+        slidesPerView: 1,
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: 6, // Match the number of slides
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    var thumbs = new Swiper ('.gallery-thumbs', {
+        slidesPerView: 1,
+        centeredSlides: true,
+        spaceBetween: 10,
+        loop: true,
+        loopedSlides: 6, // Ensure this matches the main slider
+        slideToClickedSlide: true,
+    });
+
+    slider.controller.control = thumbs;
+    thumbs.controller.control = slider;
+</script>

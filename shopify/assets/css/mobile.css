@@ -1,0 +1,163 @@
+@media only screen and (max-width: 1150px) {
+    #sec_1 {
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        white-space: nowrap;
+    }
+    #sec_1 p {
+        flex: 0 0 auto;
+        width: auto;
+        margin-right: 15px;
+    }
+    #sec_2,#sec_3,.bottom-cart
+    {
+        display: none !important;
+    }
+    #sec_2_m,#sec_3_m
+    {
+        display: block;
+    }
+    #sec_2_m p
+    {
+        background-color: white;
+    }
+    #sec_2_m p span
+    {
+        width: 15px;
+        font-size: 10px;
+        height: 15px;
+    }
+    .mobile-sidebar
+    {
+        height: 100vh;
+        width: 75vw;
+        left: 0px;
+        top: 0px;
+        z-index: 9999999;
+    }
+    .sub-menu-sidebar
+    {
+        display: none;
+        transition: .7s;
+    }
+    .sub-menu-sidebar.show
+    {
+        display: block;
+        transition: .7s;
+    }
+    #sec_4,#sec_5,#sec_6,#sec_7,#sec_8,#sec_9,#sec_10,#sec_11,#sec_12,#sec_13,#sec_14,.add_m_p,.ple-20px,#about_us_page
+    {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .m-f-d-c
+    {
+        flex-direction: column !important;
+    }
+    .m-j-c-c
+    {
+        justify-content: center !important;
+    }
+    #sec_4 div
+    {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+    .orderminusone
+    {
+        order: -1;
+        margin-bottom: 0px  !important;
+    }
+    #sec_5 div div p, #sec_6 div div p, #sec_7 div div p, #sec_9 div div p, #sec_12 div div p
+    {
+        text-align: center;
+    }
+    .mmb-15px
+    {
+        margin-bottom: 15px !important;
+    }
+    .mw-100
+    {
+        width: 100% !important;
+    }
+    #sec_11 div div 
+    {
+        margin-bottom: 10px;
+    }
+    .m-h-150px
+    {
+        height: 150px !important;
+    }
+    .mw-650px
+    {
+        width: 650px;
+    }
+    .mp-0
+    {
+        padding: 0px !important;
+    }
+    #sec_13 input
+    {
+        width: 57% !important;
+    }
+    .menu-footer
+    {
+        display: block;
+    }
+    .gallery
+    {
+        width: 100% !important;
+    }
+    .mxpx-0px20px
+    {
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .mme-0
+    {
+        margin-right: 0px !important;
+    }
+    .mmt-15px
+    {
+        margin-top: 15px;
+    }
+    .md-none
+    {
+        display: none !important;
+    }
+    .mobile-filter,.mv-p-fixed-filtersx
+    {
+        display: block;
+    }
+    .mv-p-fixed-filters
+    {
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        background-color: white;
+        overflow: auto;
+        z-index: 99999999;
+        height: 100vh;
+        padding: 25px 15px;
+    }
+    .mend-15px
+    {
+        right: 15px;
+    }
+    .goinsidex
+    {
+        left: -2000px;
+        transition: 5s;
+    }
+    #first_cat_list,#sec_cat_list
+    {
+        padding: 0px !important;
+    }
+    .mb-0
+    {
+        border: none;
+    }
+}

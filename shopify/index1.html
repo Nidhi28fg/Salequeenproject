@@ -1,0 +1,2118 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" integrity="sha512-t4GWSVZO1eC8BM339Xd7Uphw5s17a86tIZIj8qRxhnKub6WoyhnrxeCIMeAqBPgdZGlCcG2PrZjMc+Wr78+5Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+  h1{
+    margin-left: -380px;
+    font-size: 60px;
+    font-weight: bold;
+  }
+  .h4{
+    margin-left: -380px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .btn{
+    margin-left: -380px;
+  }
+
+  body {
+            font-family: Arial, sans-serif;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-button {
+            background-color: white;
+            border:none;
+            padding: 10px;
+            cursor: pointer;
+            width: 180px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;  /* Ensures dropdown appears below button */
+            left: 0;
+            background-color: white;
+            min-width: 200px;
+            border: 1px solid #ccc;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+</style>
+<body>
+  <div class="whole-container">
+    <div id="section_1" class="d-flex justify-content-between bg-white py-2 px-5 w-100">
+      <p class="w-33 mb-0">Order Online Call Us +90 8765 3214</p>
+      <p class="w-33 mb-0">Summer sale discount 70% up to off.</p>
+      <p class="w-33 mb-0">
+        <div class="dropdown">
+          <button class="dropdown-button" onclick="toggleDropdown()">INR ₹ ▼</button>
+          <div class="dropdown-content">
+              <a href="#">CNY ¥ | China</a>
+              <a href="#" style="color: blue;">INR ₹ | India</a>
+              <a href="#">ILS ₪ | Israel</a>
+              <a href="#">MYR RM | Malaysia</a>
+              <a href="#">AED د.إ | United Arab Emirates</a>
+              <a href="#">GBP £ | United Kingdom</a>
+              <a href="#">USD $ | United States</a>
+              <a href="#">VND ₫ | Vietnam</a>
+          </div>
+      </div>
+      
+      <script>
+          function toggleDropdown() {
+              document.querySelector('.dropdown').classList.toggle('active');
+          }
+          
+          // Close dropdown when clicking outside
+          window.onclick = function(event) {
+              if (!event.target.matches('.dropdown-button')) {
+                  document.querySelector('.dropdown').classList.remove('active');
+              }
+          };
+      </script>
+      
+      </p>
+    </div>
+    <div id="section_2" class="position-relative">
+      <div class="header-menu px-5 py-4 d-flex justify-content-between align-items-center w-100">
+        <div class="part_1">
+          <img src="/assets/image/logo.webp" alt="logo">
+        </div>
+        <div class="part_2 d-flex justify-content-between align-items-center">
+          <p class="mb-0" id="home_menu"><a class="fw-500" href="index.html">Home <i class="fa-solid fa-chevron-down"></i></a></p>
+          <p class="mb-0 position-relative" id="shop_menu"><a class="fw-500" href="javascript:void(0);">Shop <i class="fa-solid fa-chevron-down"></i></a> <span class="position-absolute upper-tag">Sale</span></p>
+          <p class="mb-0"><a class="fw-500" href="javascript:void(0);">Products</i></a></p>
+          <p class="mb-0"><a class="fw-500" href="javascript:void(0);">Blog</i></a></p>
+          <p class="mb-0 position-relative" id="pages_menu" >
+            <a class="fw-500" href="javascript:void(0);">Pages <i class="fa-solid fa-chevron-down"></i></a>
+            <span id="pages_menu_container" class="position-absolute bg-white p-3 submenu-container justify-content-between flex-column w-50px">
+             <a href="javascript: void(0);" class="b-none">About Us</a>
+             <a href="javascript: void(0);" class="b-none">Contact Us</a>
+             <a href="javascript: void(0);" class="b-none">Faq's</a>
+             <a href="javascript: void(0);" class="b-none">Refund Policy</a>
+             <a href="javascript: void(0);" class="b-none">Shipping & Return</a>
+             <a href="javascript: void(0);" class="b-none">Store Location</a>
+             <a href="javascript: void(0);" class="b-none">Privacy Policy</a>
+             <a href="javascript: void(0);" class="b-none">Terms And Condition</a>
+            </span>
+          </p>
+        </div>
+        <div class="part_3 d-flex justify-content-between align-items-center">
+          <p class="mb-0"><a href="javascript: void(0);" onclick="openSearch()"><i class="fa-solid fa-magnifying-glass"></i></a></p>
+          <p class="mb-0"><a href="login.html"><i class="fa fa-user"></i></a></p>
+          <p class="mb-0"><a href="javascript: void(0);"><i class="fa fa-heart"></i> 0</a></p>
+          <p class="mb-0"><a href="javascript: void(0);" onclick="openCart()"><i class="fa-solid fa-bag-shopping"></i> 0</a></p>
+        </div>
+      </div>
+      <div>   
+        <div class="swiper-container">
+            <div class="swiper-wrapper swiper-wrapper0">
+              <div class="swiper-slide d-flex align-items-center swiper-slide0" style="background-image:url('/assets/image/slider-1.webp');">
+                <div class="px-5 w-50">
+                  <p class="h4">Discover collection</p>
+                  <h1>
+                   New Women<br> Fashion Arrivals
+                  </h1>
+                  <button class="btn btn-theme px-5 py-3 mt-2">COLLECTIONS<i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></button>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide0 d-flex align-items-center" style="background-image:url('/assets/image/slider-2.webp');">
+                <div class="px-5 w-50">
+                  <p class="h4">In a world full of trends</p>
+                  <h1>
+                    Fashions fade<br> style is eternal.
+                  </h1>
+                  <button class="btn btn-theme px-5 py-3 mt-2">COLLECTIONS<i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></button>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide0 d-flex align-items-center" style="background-image:url('/assets/image/slider-3.webp');">
+                <div class="px-5 w-50">
+                  <p class="h4">Elegance is elimination.</p>
+                  <h1>
+                    I Make Cloths<br> Make Fashion.
+                  </h1>
+                  <button class="btn btn-theme px-5 py-3 mt-2">COLLECTIONS<i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div> 
+      <!-- Home -->
+      <div id="home_menu_container" class="w-100 position-absolute bg-white py-3 px-5 submenu-container justify-content-between flex-wrap">
+        <div class="home_div_tem me-4 mb-2 position-relative">
+          <div class="image_part" style="background-image: url('/assets/image/home1.webp');"></div>
+          <p class="mb-0 text-center mt-2">19 earbuds</p>
+          <span class="img-tag-home bg-danger text-white fw-bold">New</span>
+        </div>
+        <div class="home_div_tem me-4 mb-2 position-relative">
+          <div class="image_part" style="background-image: url('/assets/image/home2.webp');"></div>
+          <p class="mb-0 text-center mt-2">18 Jewellery store</p>
+          <span class="img-tag-home bg-danger text-white fw-bold">New</span>
+        </div>
+        <div class="home_div_tem me-4 mb-2 position-relative">
+          <div class="image_part" style="background-image: url('/assets/image/home3.webp');"></div>
+          <p class="mb-0 text-center mt-2">16 Market store</p>
+          <span class="img-tag-home bg-danger text-white fw-bold">New</span>
+        </div>
+        <div class="home_div_tem me-4 mb-2 position-relative">
+          <div class="image_part" style="background-image: url('/assets/image/home4.webp');"></div>
+          <p class="mb-0 text-center mt-2">17 Art store</p>
+        </div>
+        <div class="home_div_tem me-4 mb-2 position-relative">
+          <div class="image_part" style="background-image: url('/assets/image/home5.webp');"></div>
+          <p class="mb-0 text-center mt-2">01 Fashion</p>
+        </div>
+        <div class="home_div_tem me-4 mb-2 position-relative">
+          <div class="image_part" style="background-image: url('/assets/image/home6.webp');"></div>
+          <p class="mb-0 text-center mt-2">02 Furniture</p>
+        </div>
+        <div class="home_div_tem me-4 mb-2 position-relative">
+          <div class="image_part" style="background-image: url('/assets/image/home1.webp');"></div>
+          <p class="mb-0 text-center mt-2">19 earbuds</p>
+        </div>
+        <div class="home_div_tem me-4 mb-2 position-relative">
+          <div class="image_part" style="background-image: url('/assets/image/home2.webp');"></div>
+          <p class="mb-0 text-center mt-2">18 Jewellery store</p>
+        </div>
+        <div class="home_div_tem me-4 mb-2 position-relative">
+          <div class="image_part" style="background-image: url('/assets/image/home3.webp');"></div>
+          <p class="mb-0 text-center mt-2">16 Market store</p>
+        </div>
+        <div class="home_div_tem me-4 mb-2 position-relative">
+          <div class="image_part" style="background-image: url('/assets/image/home4.webp');"></div>
+          <p class="mb-0 text-center mt-2">17 Art store</p>
+        </div>
+      </div>
+      <div id="shop_menu_container" class="w-100 position-absolute bg-white py-3 px-5 submenu-container justify-content-between flex-wrap">
+        <div class="br-1 w-20">
+          <h5 class="mb-2">Header & Footer</h5>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Header (Transparent)</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Header (Center-logo)</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Header (Top link)</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Header (Bottom menu)</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Header (bottom menu 2)</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Footer (Newsletter)</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Footer (Food menu)</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Footer (Without menu)</a></p>
+        </div>
+        <div class="br-1 w-20 ps-4">
+          <h5 class="mb-2">Product layout</h5>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Grid 1 column</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Grid 2 column</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Left thumbanails</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Bottom thumbnails</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Horizontal slider</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Tab horizontal</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Tab verticle</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Tab collapsible</a></p>
+        </div>
+        <div class="br-1 w-20 ps-4">
+          <h5 class="mb-2">Product features</h5>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Product video</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Product 3d</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Swatch (Custom)</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Swatch (Dropdown)</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Swatch (Image)</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Countdown</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Ask a question</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Estimated delivery</a></p>
+        </div>
+        <div class="br-1 w-20 ps-4">
+          <h5 class="mb-2">Shop layout</h5>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Left sidebar</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">List right sidebar</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">List full</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">List left sidebar</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Grid right sidebar</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Grid full</a></p>
+          <p class="mb-1 fw-light"><a href="javascript:void(0);">Filter sidebar (drawer)</a></p>
+        </div>
+        <div class="w-20 ps-4 overflow-hidden">
+          <a href="javascript:void(0);"><img src="/assets/image/offer.webp" alt="offer" width="75%"></a>
+        </div>
+      </div>
+    </div>
+    <div id="section_3" class="d-flex align-items-center justify-content-between bg-white py-5 px-5 w-100">
+      <div class="part_1 w-30">
+        <p class="mb-0 h3">Latest shopping related <span class="bb-2 h2 fw-bold">offers</span></p>
+      </div>
+      <div class="part_2 w-20 section_3_box p-3">
+        <p class="h5">Season Sale</p>
+        <p class="h6 fw-light">Popular collection</p>
+        <button class="btn btn-theme py-2 px-4 mt-2">Shop Now</button>
+      </div>
+      <div class="part_3 w-20 section_3_box p-3">
+        <p class="h5">Hot Under ₹ 500</p>
+        <p class="h6 fw-light">Trending this week</p>
+        <button class="btn btn-theme py-2 px-4 mt-2">Shop Now</button>
+      </div>
+      <div class="part_4 w-20 section_3_box p-3">
+        <p class="h5">Flat 50% off</p>
+        <p class="h6 fw-light">Season collection</p>
+        <button class="btn btn-theme py-2 px-4 mt-2">Shop Now</button>
+      </div>
+    </div>
+    <div id="section_4" class="bg-white py-5 px-5 w-100">
+      <p class="h5 text-center fw-light">Follow the most popular trends</p>
+      <p class="h1 text-center">Explore top categories</p>
+      <div class="fea_list my-5 d-flex justify-content-between w-100">
+        <a href="javascript: void(0);" class="w-23 img_part_fea p-4 align-items-start" style="background-image: url('/assets/image/fea1.webp');">
+          <p class="d-flex justify-content-between align-items-center w-100">
+            <span>
+              <span class="h3 fw-bold">SHIRT</span><br>
+              <span>12 Items</span>
+            </span>
+            <span class="arrow-border">
+              <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+            </span>
+          </p>
+        </a>
+        <a href="javascript: void(0);" class="w-23 img_part_fea p-4 align-items-end" style="background-image: url('/assets/image/fea2.webp');">
+          <p class="d-flex justify-content-between align-items-center w-100">
+            <span>
+              <span class="h3 fw-bold">SHIRT</span><br>
+              <span>12 Items</span>
+            </span>
+            <span class="arrow-border">
+              <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+            </span>
+          </p>
+        </a>
+        <a href="javascript: void(0);" class="w-23 img_part_fea p-4 align-items-start" style="background-image: url('/assets/image/fea3.webp');">
+          <p class="d-flex justify-content-between align-items-center w-100">
+            <span>
+              <span class="h3 fw-bold">SHIRT</span><br>
+              <span>12 Items</span>
+            </span>
+            <span class="arrow-border">
+              <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+            </span>
+          </p>
+        </a>
+        <a href="javascript: void(0);" class="w-23 img_part_fea p-4 align-items-end" style="background-image: url('/assets/image/fea4.webp');">
+          <p class="d-flex justify-content-between align-items-center w-100">
+            <span>
+              <span class="h3 fw-bold">SHIRT</span><br>
+              <span>12 Items</span>
+            </span>
+            <span class="arrow-border">
+              <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+            </span>
+          </p>
+        </a>
+      </div>
+    </div>
+    <div id="section_5" class="py-5 px-5 w-100 d-flex justify-content-between align-items-center">
+      <div class="part_1">
+        <p class="fw-light fs-5 mb-1">We have your occasion covered</p>
+        <h1>Featured products</h1>
+      </div>
+      <div class="part_2 d-flex align-items-center justify-content-between">
+        <div class="count_box">
+          <p class="h4 fw-bolder">400</p>
+          <span class="fw-lignt">DAY</span>
+        </div>
+        <div class="count_box">
+          <p class="h4 fw-bolder">10</p>
+          <span class="fw-lignt">HRS</span>
+        </div>
+        <div class="count_box">
+          <p class="h4 fw-bolder">20</p>
+          <span class="fw-lignt">MIN</span>
+        </div>
+        <div class="count_box">
+          <p class="h4 fw-bolder">1</p>
+          <span class="fw-lignt">SEC</span>
+        </div>
+      </div>
+    </div>
+    <div id="section_6" class="py-5 px-5 w-100">
+      <div class="swiper-container1">
+          <div class="swiper-wrapper swiper-wrapper1">
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between flex-column align-items-center position-relative" id="image_change_id_0">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="action-box justify-content-center w-100">
+                  <div class="action-box-ele"><i class="fa fa-heart cursor-pointer"></i></div>
+                  <div class="action-box-ele" onclick="showModal('shop_modal.html')"><i class="fa fa-bag-shopping cursor-pointer"></i></div>
+                  <div class="action-box-ele"><i class="fa fa-eye cursor-pointer"></i></div>
+                </div>
+                <div class="detail_part py-3">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span> <span class="line_th">Rs. 3,800.00</span></p>
+                  <div class="mb-1 d-flex justify-content-center conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,0)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,0)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,0)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,0)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between flex-column align-items-center position-relative" id="image_change_id_1">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="action-box justify-content-center w-100">
+                  <div class="action-box-ele"><i class="fa fa-heart cursor-pointer"></i></div>
+                  <div class="action-box-ele" onclick="showModal('shop_modal.html')"><i class="fa fa-bag-shopping cursor-pointer"></i></div>
+                  <div class="action-box-ele"><i class="fa fa-eye cursor-pointer"></i></div>
+                </div>
+                <div class="detail_part py-3">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span> <span class="line_th">Rs. 3,800.00</span></p>
+                  <div class="mb-1 d-flex justify-content-center conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,1)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,1)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,1)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,1)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between flex-column align-items-center position-relative" id="image_change_id_2">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="action-box justify-content-center w-100">
+                  <div class="action-box-ele"><i class="fa fa-heart cursor-pointer"></i></div>
+                  <div class="action-box-ele" onclick="showModal('shop_modal.html')"><i class="fa fa-bag-shopping cursor-pointer"></i></div>
+                  <div class="action-box-ele"><i class="fa fa-eye cursor-pointer"></i></div>
+                </div>
+                <div class="detail_part py-3">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span> <span class="line_th">Rs. 3,800.00</span></p>
+                  <div class="mb-1 d-flex justify-content-center conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,2)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,2)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,2)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,2)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between flex-column align-items-center position-relative" id="image_change_id_3">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="action-box justify-content-center w-100">
+                  <div class="action-box-ele"><i class="fa fa-heart cursor-pointer"></i></div>
+                  <div class="action-box-ele" onclick="showModal('shop_modal.html')"><i class="fa fa-bag-shopping cursor-pointer"></i></div>
+                  <div class="action-box-ele"><i class="fa fa-eye cursor-pointer"></i></div>
+                </div>
+                <div class="detail_part py-3">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span> <span class="line_th">Rs. 3,800.00</span></p>
+                  <div class="mb-1 d-flex justify-content-center conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,3)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,3)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,3)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,3)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between flex-column align-items-center position-relative" id="image_change_id_4">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="action-box justify-content-center w-100">
+                  <div class="action-box-ele"><i class="fa fa-heart cursor-pointer"></i></div>
+                  <div class="action-box-ele" onclick="showModal('shop_modal.html')"><i class="fa fa-bag-shopping cursor-pointer"></i></div>
+                  <div class="action-box-ele"><i class="fa fa-eye cursor-pointer"></i></div>
+                </div>
+                <div class="detail_part py-3">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span> <span class="line_th">Rs. 3,800.00</span></p>
+                  <div class="mb-1 d-flex justify-content-center conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,4)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,4)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,4)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,4)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between flex-column align-items-center position-relative" id="image_change_id_5">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="action-box justify-content-center w-100">
+                  <div class="action-box-ele"><i class="fa fa-heart cursor-pointer"></i></div>
+                  <div class="action-box-ele" onclick="showModal('shop_modal.html')"><i class="fa fa-bag-shopping cursor-pointer"></i></div>
+                  <div class="action-box-ele"><i class="fa fa-eye cursor-pointer"></i></div>
+                </div>
+                <div class="detail_part py-3">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span> <span class="line_th">Rs. 3,800.00</span></p>
+                  <div class="mb-1 d-flex justify-content-center conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,5)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,5)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,5)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,5)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="swiper-container2 mt-3">
+          <div class="swiper-wrapper swiper-wrapper1">
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between flex-column align-items-center position-relative" id="image_change_id_6">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="action-box justify-content-center w-100">
+                  <div class="action-box-ele"><i class="fa fa-heart cursor-pointer"></i></div>
+                  <div class="action-box-ele" onclick="showModal('shop_modal.html')"><i class="fa fa-bag-shopping cursor-pointer"></i></div>
+                  <div class="action-box-ele"><i class="fa fa-eye cursor-pointer"></i></div>
+                </div>
+                <div class="detail_part py-3">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span> <span class="line_th">Rs. 3,800.00</span></p>
+                  <div class="mb-1 d-flex justify-content-center conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,6)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,6)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,6)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,6)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between flex-column align-items-center position-relative" id="image_change_id_7">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="action-box justify-content-center w-100">
+                  <div class="action-box-ele"><i class="fa fa-heart cursor-pointer"></i></div>
+                  <div class="action-box-ele" onclick="showModal('shop_modal.html')"><i class="fa fa-bag-shopping cursor-pointer"></i></div>
+                  <div class="action-box-ele"><i class="fa fa-eye cursor-pointer"></i></div>
+                </div>
+                <div class="detail_part py-3">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span> <span class="line_th">Rs. 3,800.00</span></p>
+                  <div class="mb-1 d-flex justify-content-center conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,7)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,7)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,7)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,7)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between flex-column align-items-center position-relative" id="image_change_id_8">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="action-box justify-content-center w-100">
+                  <div class="action-box-ele"><i class="fa fa-heart cursor-pointer"></i></div>
+                  <div class="action-box-ele" onclick="showModal('shop_modal.html')"><i class="fa fa-bag-shopping cursor-pointer"></i></div>
+                  <div class="action-box-ele"><i class="fa fa-eye cursor-pointer"></i></div>
+                </div>
+                <div class="detail_part py-3">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span> <span class="line_th">Rs. 3,800.00</span></p>
+                  <div class="mb-1 d-flex justify-content-center conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,8)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,8)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,8)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,8)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between flex-column align-items-center position-relative" id="image_change_id_9">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="action-box justify-content-center w-100">
+                  <div class="action-box-ele"><i class="fa fa-heart cursor-pointer"></i></div>
+                  <div class="action-box-ele" onclick="showModal('shop_modal.html')"><i class="fa fa-bag-shopping cursor-pointer"></i></div>
+                  <div class="action-box-ele"><i class="fa fa-eye cursor-pointer"></i></div>
+                </div>
+                <div class="detail_part py-3">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span> <span class="line_th">Rs. 3,800.00</span></p>
+                  <div class="mb-1 d-flex justify-content-center conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,9)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,9)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,9)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,9)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between flex-column align-items-center position-relative" id="image_change_id_10">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="action-box justify-content-center w-100">
+                  <div class="action-box-ele"><i class="fa fa-heart cursor-pointer"></i></div>
+                  <div class="action-box-ele" onclick="showModal('shop_modal.html')"><i class="fa fa-bag-shopping cursor-pointer"></i></div>
+                  <div class="action-box-ele"><i class="fa fa-eye cursor-pointer"></i></div>
+                </div>
+                <div class="detail_part py-3">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span> <span class="line_th">Rs. 3,800.00</span></p>
+                  <div class="mb-1 d-flex justify-content-center conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,10)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,10)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,10)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,10)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between flex-column align-items-center position-relative" id="image_change_id_11">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="action-box justify-content-center w-100">
+                  <div class="action-box-ele"><i class="fa fa-heart cursor-pointer"></i></div>
+                  <div class="action-box-ele" onclick="showModal('shop_modal.html')"><i class="fa fa-bag-shopping cursor-pointer"></i></div>
+                  <div class="action-box-ele"><i class="fa fa-eye cursor-pointer"></i></div>
+                </div>
+                <div class="detail_part py-3">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span> <span class="line_th">Rs. 3,800.00</span></p>
+                  <div class="mb-1 d-flex justify-content-center conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,11)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,11)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,11)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,11)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="button-part text-center my-4">
+        <button class="btn btn-theme-hover b-1 px-5 py-3 mt-2">VIEW COLLECTIONS<i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></button>
+      </div>
+    </div>
+    <div id="section_7" class="py-4 px-5 w-100 bg-white bb-1">
+      <marquee direction="left" scrollamount="10" onmouseover="this.stop();" onmouseout="this.start();">
+        <a href="javascript:void(0);" class="h4">Designer winter collection</a> <span class="mx-3 h4 va-m">*</span> 
+        <a href="javascript:void(0);" class="h4">Limited time - Price will increase soon</a> <span class="mx-3 h4 va-m">*</span> 
+        <a href="javascript:void(0);" class="h4">Bold look of the week - Week collection</a> <span class="mx-3 h4 va-m">*</span>
+        <a href="javascript:void(0);" class="h4">New arrival winter collections</a> 
+      </marquee>
+    </div>
+    <div id="section_8" class="py-4 px-5 w-100 bg-white">
+      <div class="banner w-100 d-flex">
+        <div class="w-50 p-5">
+          <p class="mb-5 h4 bb-3 pb-1 wfc">Feel pretty, Feel classy</p>
+          <p class="mb-5 h0">30% OFF</p>
+          <button class="btn btn-theme-hover b-1 px-5 py-3 mt-2">VIEW COLLECTIONS<i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></button>
+        </div>
+        <a href="javascript:void(0);" class="w-50 banner-img" style="background-image: url('/assets/image/banner.webp');"></a>
+      </div>
+    </div>
+    <div id="section_9" class="py-5 px-5 w-100 bg-white">
+      <div class="swiper-container3 mt-3">
+          <div class="swiper-wrapper swiper-wrapper1">
+            <div class="swiper-slide swiper-slide1">
+              <div class="logo-img-slider" style="background-image: url('/assets/image/logolist1.webp');"></div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="logo-img-slider" style="background-image: url('/assets/image/logolist2.avif');"></div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="logo-img-slider" style="background-image: url('/assets/image/logolist3.webp');"></div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="logo-img-slider" style="background-image: url('/assets/image/logolist4.webp');"></div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="logo-img-slider" style="background-image: url('/assets/image/logolist5.webp');"></div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="logo-img-slider" style="background-image: url('/assets/image/logolist6.webp');"></div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div id="section_10" class="py-5 px-5 w-100 d-flex justify-content-between align-items-center">
+      <div class="part_1">
+        <p class="fw-light fs-5 mb-1">Deal of the day</p>
+        <h1>Explore collection</h1>
+      </div>
+      <div class="part_2 d-flex align-items-center justify-content-between">
+        <div class="count_box">
+          <p class="h4 fw-bolder">400</p>
+          <span class="fw-lignt">DAY</span>
+        </div>
+        <div class="count_box">
+          <p class="h4 fw-bolder">10</p>
+          <span class="fw-lignt">HRS</span>
+        </div>
+        <div class="count_box">
+          <p class="h4 fw-bolder">20</p>
+          <span class="fw-lignt">MIN</span>
+        </div>
+        <div class="count_box">
+          <p class="h4 fw-bolder">1</p>
+          <span class="fw-lignt">SEC</span>
+        </div>
+      </div>
+    </div>
+    <div id="section_11" class="pb-5 pt-0 px-5 w-100">
+      <div class="swiper-container4 mt-3 overflow-hidden">
+          <div class="swiper-wrapper swiper-wrapper1">
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between align-items-center position-relative bg-white b-1" id="image_change_id_12">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part img_part_bottom active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 img_part_bottom active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part_bottom img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part_bottom img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part_bottom img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part_bottom img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part_bottom img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part_bottom img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="detail_part py-3 bg-white px-3 text-left">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span>
+                  <div class="star-div my-2">
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                  </div>
+                  <div class="mb-1 d-flex justify-content-start conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,12)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,12)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,12)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,12)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="fea_list_container d-flex justify-content-between align-items-center position-relative bg-white b-1" id="image_change_id_13">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part img_part_bottom active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 img_part_bottom active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part_bottom img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part_bottom img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part_bottom img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part_bottom img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part_bottom img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part_bottom img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="detail_part py-3 bg-white px-3 text-left">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span>
+                  <div class="star-div my-2">
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                  </div>
+                  <div class="mb-1 d-flex justify-content-start conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,13)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,13)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,13)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,13)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between align-items-center position-relative bg-white b-1" id="image_change_id_14">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part img_part_bottom active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 img_part_bottom active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part_bottom img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part_bottom img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part_bottom img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part_bottom img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part_bottom img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part_bottom img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="detail_part py-3 bg-white px-3 text-left">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span>
+                  <div class="star-div my-2">
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                  </div>
+                  <div class="mb-1 d-flex justify-content-start conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,14)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,14)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,14)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,14)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="fea_list_container d-flex justify-content-between align-items-center position-relative bg-white b-1" id="image_change_id_15">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part img_part_bottom active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 img_part_bottom active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part_bottom img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part_bottom img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part_bottom img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part_bottom img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part_bottom img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part_bottom img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="detail_part py-3 bg-white px-3 text-left">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span>
+                  <div class="star-div my-2">
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                  </div>
+                  <div class="mb-1 d-flex justify-content-start conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,15)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,15)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,15)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,15)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between align-items-center position-relative bg-white b-1" id="image_change_id_16">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part img_part_bottom active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 img_part_bottom active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part_bottom img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part_bottom img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part_bottom img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part_bottom img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part_bottom img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part_bottom img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="detail_part py-3 bg-white px-3 text-left">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span>
+                  <div class="star-div my-2">
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                  </div>
+                  <div class="mb-1 d-flex justify-content-start conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,16)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,16)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,16)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,16)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="fea_list_container d-flex justify-content-between align-items-center position-relative bg-white b-1" id="image_change_id_17">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part img_part_bottom active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 img_part_bottom active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part_bottom img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part_bottom img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part_bottom img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part_bottom img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part_bottom img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part_bottom img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="detail_part py-3 bg-white px-3 text-left">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span>
+                  <div class="star-div my-2">
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                  </div>
+                  <div class="mb-1 d-flex justify-content-start conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,17)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,17)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,17)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,17)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between align-items-center position-relative bg-white b-1" id="image_change_id_18">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part img_part_bottom active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 img_part_bottom active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part_bottom img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part_bottom img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part_bottom img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part_bottom img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part_bottom img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part_bottom img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="detail_part py-3 bg-white px-3 text-left">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span>
+                  <div class="star-div my-2">
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                  </div>
+                  <div class="mb-1 d-flex justify-content-start conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,18)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,18)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,18)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,18)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="fea_list_container d-flex justify-content-between align-items-center position-relative bg-white b-1" id="image_change_id_19">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part img_part_bottom active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 img_part_bottom active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part_bottom img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part_bottom img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part_bottom img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part_bottom img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part_bottom img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part_bottom img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="detail_part py-3 bg-white px-3 text-left">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span>
+                  <div class="star-div my-2">
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                  </div>
+                  <div class="mb-1 d-flex justify-content-start conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,19)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,19)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,19)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,19)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between align-items-center position-relative bg-white b-1" id="image_change_id_20">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part img_part_bottom active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 img_part_bottom active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part_bottom img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part_bottom img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part_bottom img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part_bottom img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part_bottom img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part_bottom img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="detail_part py-3 bg-white px-3 text-left">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span>
+                  <div class="star-div my-2">
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                  </div>
+                  <div class="mb-1 d-flex justify-content-start conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,20)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,20)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,20)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,20)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="fea_list_container d-flex justify-content-between align-items-center position-relative bg-white b-1" id="image_change_id_21">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part img_part_bottom active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 img_part_bottom active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part_bottom img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part_bottom img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part_bottom img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part_bottom img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part_bottom img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part_bottom img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="detail_part py-3 bg-white px-3 text-left">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span>
+                  <div class="star-div my-2">
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                    <i class="fa fa-star bg-white text-warning"></i>
+                  </div>
+                  <div class="mb-1 d-flex justify-content-start conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,21)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,21)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,21)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,21)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div id="section_12" class="py-5 px-5 w-100 bg-white">
+      <p class="mb-2 text-center fw-light h4">Ubone blog news</p>
+      <p class="mb-2 text-center fw-bold h2">Blog of fashion</p>
+      <div class="d-flex justify-content-between align-items-center my-4">
+        <div class="blog-box-container">
+          <div class="position-relative blog-box-img-container">
+            <div class="blog-box-img h-100 w-100" style="background-image: url('/assets/image/blog1.webp');"></div>
+            <a href="javascript:void(0);" class="blog-box-dark position-absolute h-100 w-100 left-0 top-0"></a>
+          </div>
+          <div class="py-3">
+            <p class="text-center mb-1 h6"><a href="javascript: void(0);">Every style is something each of us already has, all we need.</a></p>
+            <p class="fw-light text-center">04 JUN, 2022</p>
+          </div>
+        </div>
+        <div class="blog-box-container">
+          <div class="position-relative blog-box-img-container">
+            <div class="blog-box-img h-100 w-100" style="background-image: url('/assets/image/blog2.webp');"></div>
+            <a href="javascript:void(0);" class="blog-box-dark position-absolute h-100 w-100 left-0 top-0"></a>
+          </div>
+          <div class="py-3">
+            <p class="text-center mb-1 h6"><a href="javascript: void(0);">Every style is something each of us already has, all we need.</a></p>
+            <p class="fw-light text-center">04 JUN, 2022</p>
+          </div>
+        </div>
+        <div class="blog-box-container">
+          <div class="position-relative blog-box-img-container">
+            <div class="blog-box-img h-100 w-100" style="background-image: url('/assets/image/blog1.webp');"></div>
+            <a href="javascript:void(0);" class="blog-box-dark position-absolute h-100 w-100 left-0 top-0"></a>
+          </div>
+          <div class="py-3">
+            <p class="text-center mb-1 h6"><a href="javascript: void(0);">Every style is something each of us already has, all we need.</a></p>
+            <p class="fw-light text-center">04 JUN, 2022</p>
+          </div>
+        </div>
+        <div class="blog-box-container">
+          <div class="position-relative blog-box-img-container">
+            <div class="blog-box-img h-100 w-100" style="background-image: url('/assets/image/blog2.webp');"></div>
+            <a href="javascript:void(0);" class="blog-box-dark position-absolute h-100 w-100 left-0 top-0"></a>
+          </div>
+          <div class="py-3">
+            <p class="text-center mb-1 h6"><a href="javascript: void(0);">Every style is something each of us already has, all we need.</a></p>
+            <p class="fw-light text-center">04 JUN, 2022</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="section_12" class="pt-0 pb-0 px-5 w-100 bg-white w-100 d-flex justify-content-center flex-column align-items-center">
+      <p class="h1 text-center mb-4">Subscribe to get 10% discount!</p>
+      <div class="py-3 bbt-1 position-relative w-50">
+        <input type="text" class="b-none" placeholder="Enter Your Email">
+        <button class="position-absolute theme-sub" type="button">SUBSCRIBE <i class="fa fa-envelope"></i></button>
+      </div>
+    </div>
+    <div id="section_13" class="py-5 px-5 w-100 bg-white w-100 d-flex justify-content-between align-items-center">
+      <div class="icon-container text-center cursor-pointer">
+        <i class="fa fa-location-dot flip-icon h1"></i>
+        <p class="h5">Order tracking</p>
+        <p class="fw-light">Lorem ipsum dolor sit</p>
+      </div>
+      <div class="icon-container text-center cursor-pointer">
+        <i class="fa fa-rotate-right flip-icon h1"></i>
+        <p class="h5">90 days return</p>
+        <p class="fw-light">Lorem ipsum dolor sit</p>
+      </div>
+      <div class="icon-container text-center cursor-pointer">
+        <i class="fa fa-dollar-sign flip-icon h1"></i>
+        <p class="h5">Money guarantee</p>
+        <p class="fw-light">Lorem ipsum dolor sit</p>
+      </div>
+      <div class="icon-container text-center cursor-pointer">
+        <i class="fa fa-credit-card flip-icon h1"></i>
+        <p class="h5">Flexible payment</p>
+        <p class="fw-light">Lorem ipsum dolor sit</p>
+      </div>
+      <div class="icon-container text-center cursor-pointer">
+        <i class="fa fa-shield flip-icon h1"></i>
+        <p class="h5">Secure checkout</p>
+        <p class="fw-light">Lorem ipsum dolor sit</p>
+      </div>
+    </div>
+    <div id="section_14" class="py-5 px-5 w-100 bg-white w-100 d-flex justify-content-between">
+      <div>
+        <p class="h5 mb-3">My Account</p>
+        <a href="login.html" class="d-block mb-1 fw-light">My Account</a>
+        <a href="cart.html" class="d-block mb-1 fw-light">My Cart</a>
+        <a href="javascript: void(0);" class="d-block mb-1 fw-light">Wishlist</a>
+        <a href="javascript: void(0);" class="d-block mb-1 fw-light">Order history</a>
+        <a href="javascript: void(0);" class="d-block mb-1 fw-light">Return Policy</a>
+      </div>
+      <div>
+        <p class="h5 mb-3">Our Legal</p>
+        <a href="javascript: void(0);" class="d-block mb-1 fw-light">Terms & Condition</a>
+        <a href="javascript: void(0);" class="d-block mb-1 fw-light">Accessibility</a>
+        <a href="javascript: void(0);" class="d-block mb-1 fw-light">About Us</a>
+        <a href="javascript: void(0);" class="d-block mb-1 fw-light">Track Order</a>
+        <a href="javascript: void(0);" class="d-block mb-1 fw-light">Store Location</a>
+      </div>
+      <div>
+        <p class="h5 mb-3">Information</p>
+        <a href="javascript: void(0);" class="d-block mb-1 fw-light">Our Store</a>
+        <a href="javascript: void(0);" class="d-block mb-1 fw-light">Keep IN Touch</a>
+        <a href="javascript: void(0);" class="d-block mb-1 fw-light">Privacy Policy</a>
+        <a href="javascript: void(0);" class="d-block mb-1 fw-light">Refund Policy</a>
+        <a href="javascript: void(0);" class="d-block mb-1 fw-light">Faq's</a>
+      </div>
+      <div>
+        <p class="h5 mb-3">Contact Us</p>
+        <a href="javascript: void(0);" class="d-block mb-1 fw-light">+1234 567 890</a>
+        <a href="javascript: void(0);" class="d-block mb-1 fw-light">info@domain.com</a>
+        <a href="javascript: void(0);" class="d-block mb-1 fw-bold">We're located in Australia</a>
+        <a href="javascript: void(0);" class="d-block mb-1 fw-light">Custom care hours</a>
+        <a href="javascript: void(0);" class="d-block mb-1 fw-light">3:00 PM - 11:30 PM</a>
+      </div>
+      <div>
+        <p class="h5 mb-3">Our Instagram</p>
+        <div class="d-flex justify-content-between">
+          <div class="footer-img-container m-1 position-relative" style="background-image: url('/assets/image/fea1.webp');">
+            <a href="javascript:void(0);" class="blog-box-dark position-absolute h-100 w-100 left-0 top-0 justify-content-center align-items-center">
+              <i class="fa-brands fa-instagram text-white"></i>          
+            </a>
+          </div>
+          <div class="footer-img-container m-1 position-relative" style="background-image: url('/assets/image/fea2.webp');">
+            <a href="javascript:void(0);" class="blog-box-dark position-absolute h-100 w-100 left-0 top-0 justify-content-center align-items-center">
+              <i class="fa-brands fa-instagram text-white"></i>          
+            </a>
+          </div>
+          <div class="footer-img-container m-1 position-relative" style="background-image: url('/assets/image/fea3.webp');">
+            <a href="javascript:void(0);" class="blog-box-dark position-absolute h-100 w-100 left-0 top-0 justify-content-center align-items-center">
+              <i class="fa-brands fa-instagram text-white"></i>          
+            </a>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="footer-img-container m-1 position-relative" style="background-image: url('/assets/image/fea4.webp');">
+            <a href="javascript:void(0);" class="blog-box-dark position-absolute h-100 w-100 left-0 top-0 justify-content-center align-items-center">
+              <i class="fa-brands fa-instagram text-white"></i>          
+            </a>
+          </div>
+          <div class="footer-img-container m-1 position-relative" style="background-image: url('/assets/image/product1-1.webp');">
+            <a href="javascript:void(0);" class="blog-box-dark position-absolute h-100 w-100 left-0 top-0 justify-content-center align-items-center">
+              <i class="fa-brands fa-instagram text-white"></i>          
+            </a>
+          </div>
+          <div class="footer-img-container m-1 position-relative" style="background-image: url('/assets/image/product1-2.webp');">
+            <a href="javascript:void(0);" class="blog-box-dark position-absolute h-100 w-100 left-0 top-0 justify-content-center align-items-center">
+              <i class="fa-brands fa-instagram text-white"></i>          
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="section_15" class="py-3 px-5 w-100 bg-white w-100">
+      <div class="d-flex justify-content-between align-items-center">
+        <p>Copyright © 2024 by spacingtech</p>
+        <a href="" class="payment-icon">
+          <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24" aria-labelledby="pi-visa"><title id="pi-visa">Visa</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z" fill="#142688"></path></svg>
+          <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24" aria-labelledby="pi-master"><title id="pi-master">Mastercard</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><circle fill="#EB001B" cx="15" cy="12" r="7"></circle><circle fill="#F79E1B" cx="23" cy="12" r="7"></circle><path fill="#FF5F00" d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pi-american_express" viewBox="0 0 38 24" width="38" height="24"><title id="pi-american_express">American Express</title><path fill="#000" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z" opacity=".07"></path><path fill="#006FCF" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z"></path><path fill="#FFF" d="M22.012 19.936v-8.421L37 11.528v2.326l-1.732 1.852L37 17.573v2.375h-2.766l-1.47-1.622-1.46 1.628-9.292-.02Z"></path><path fill="#006FCF" d="M23.013 19.012v-6.57h5.572v1.513h-3.768v1.028h3.678v1.488h-3.678v1.01h3.768v1.531h-5.572Z"></path><path fill="#006FCF" d="m28.557 19.012 3.083-3.289-3.083-3.282h2.386l1.884 2.083 1.89-2.082H37v.051l-3.017 3.23L37 18.92v.093h-2.307l-1.917-2.103-1.898 2.104h-2.321Z"></path><path fill="#FFF" d="M22.71 4.04h3.614l1.269 2.881V4.04h4.46l.77 2.159.771-2.159H37v8.421H19l3.71-8.421Z"></path><path fill="#006FCF" d="m23.395 4.955-2.916 6.566h2l.55-1.315h2.98l.55 1.315h2.05l-2.904-6.566h-2.31Zm.25 3.777.875-2.09.873 2.09h-1.748Z"></path><path fill="#006FCF" d="M28.581 11.52V4.953l2.811.01L32.84 9l1.456-4.046H37v6.565l-1.74.016v-4.51l-1.644 4.494h-1.59L30.35 7.01v4.51h-1.768Z"></path></svg>
+          <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24" aria-labelledby="pi-diners_club"><title id="pi-diners_club">Diners Club</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path d="M12 12v3.7c0 .3-.2.3-.5.2-1.9-.8-3-3.3-2.3-5.4.4-1.1 1.2-2 2.3-2.4.4-.2.5-.1.5.2V12zm2 0V8.3c0-.3 0-.3.3-.2 2.1.8 3.2 3.3 2.4 5.4-.4 1.1-1.2 2-2.3 2.4-.4.2-.4.1-.4-.2V12zm7.2-7H13c3.8 0 6.8 3.1 6.8 7s-3 7-6.8 7h8.2c3.8 0 6.8-3.1 6.8-7s-3-7-6.8-7z" fill="#3086C8"></path></svg>
+          <svg viewBox="0 0 38 24" width="38" height="24" role="img" aria-labelledby="pi-discover" fill="none" xmlns="http://www.w3.org/2000/svg"><title id="pi-discover">Discover</title><path fill="#000" opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32z" fill="#fff"></path><path d="M3.57 7.16H2v5.5h1.57c.83 0 1.43-.2 1.96-.63.63-.52 1-1.3 1-2.11-.01-1.63-1.22-2.76-2.96-2.76zm1.26 4.14c-.34.3-.77.44-1.47.44h-.29V8.1h.29c.69 0 1.11.12 1.47.44.37.33.59.84.59 1.37 0 .53-.22 1.06-.59 1.39zm2.19-4.14h1.07v5.5H7.02v-5.5zm3.69 2.11c-.64-.24-.83-.4-.83-.69 0-.35.34-.61.8-.61.32 0 .59.13.86.45l.56-.73c-.46-.4-1.01-.61-1.62-.61-.97 0-1.72.68-1.72 1.58 0 .76.35 1.15 1.35 1.51.42.15.63.25.74.31.21.14.32.34.32.57 0 .45-.35.78-.83.78-.51 0-.92-.26-1.17-.73l-.69.67c.49.73 1.09 1.05 1.9 1.05 1.11 0 1.9-.74 1.9-1.81.02-.89-.35-1.29-1.57-1.74zm1.92.65c0 1.62 1.27 2.87 2.9 2.87.46 0 .86-.09 1.34-.32v-1.26c-.43.43-.81.6-1.29.6-1.08 0-1.85-.78-1.85-1.9 0-1.06.79-1.89 1.8-1.89.51 0 .9.18 1.34.62V7.38c-.47-.24-.86-.34-1.32-.34-1.61 0-2.92 1.28-2.92 2.88zm12.76.94l-1.47-3.7h-1.17l2.33 5.64h.58l2.37-5.64h-1.16l-1.48 3.7zm3.13 1.8h3.04v-.93h-1.97v-1.48h1.9v-.93h-1.9V8.1h1.97v-.94h-3.04v5.5zm7.29-3.87c0-1.03-.71-1.62-1.95-1.62h-1.59v5.5h1.07v-2.21h.14l1.48 2.21h1.32l-1.73-2.32c.81-.17 1.26-.72 1.26-1.56zm-2.16.91h-.31V8.03h.33c.67 0 1.03.28 1.03.82 0 .55-.36.85-1.05.85z" fill="#231F20"></path><path d="M20.16 12.86a2.931 2.931 0 100-5.862 2.931 2.931 0 000 5.862z" fill="url(#pi-paint0_linear)"></path><path opacity=".65" d="M20.16 12.86a2.931 2.931 0 100-5.862 2.931 2.931 0 000 5.862z" fill="url(#pi-paint1_linear)"></path><path d="M36.57 7.506c0-.1-.07-.15-.18-.15h-.16v.48h.12v-.19l.14.19h.14l-.16-.2c.06-.01.1-.06.1-.13zm-.2.07h-.02v-.13h.02c.06 0 .09.02.09.06 0 .05-.03.07-.09.07z" fill="#231F20"></path><path d="M36.41 7.176c-.23 0-.42.19-.42.42 0 .23.19.42.42.42.23 0 .42-.19.42-.42 0-.23-.19-.42-.42-.42zm0 .77c-.18 0-.34-.15-.34-.35 0-.19.15-.35.34-.35.18 0 .33.16.33.35 0 .19-.15.35-.33.35z" fill="#231F20"></path><path d="M37 12.984S27.09 19.873 8.976 23h26.023a2 2 0 002-1.984l.024-3.02L37 12.985z" fill="#F48120"></path><defs><linearGradient id="pi-paint0_linear" x1="21.657" y1="12.275" x2="19.632" y2="9.104" gradientUnits="userSpaceOnUse"><stop stop-color="#F89F20"></stop><stop offset=".25" stop-color="#F79A20"></stop><stop offset=".533" stop-color="#F68D20"></stop><stop offset=".62" stop-color="#F58720"></stop><stop offset=".723" stop-color="#F48120"></stop><stop offset="1" stop-color="#F37521"></stop></linearGradient><linearGradient id="pi-paint1_linear" x1="21.338" y1="12.232" x2="18.378" y2="6.446" gradientUnits="userSpaceOnUse"><stop stop-color="#F58720"></stop><stop offset=".359" stop-color="#E16F27"></stop><stop offset=".703" stop-color="#D4602C"></stop><stop offset=".982" stop-color="#D05B2E"></stop></linearGradient></defs></svg>
+        </a>
+      </div>
+    </div>
+    <!-- Modal Box -->
+    <div class="modal fade" id="modal_lg" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-none">
+            <button type="button" class="btn-close closebtn" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Parts -->
+  <div class="common_cart_section position-fixed hider h-100 overflow-auto">
+    <div class="d-flex justify-content-between align-items-center mt-3 bb-1">
+      <h6 class="mb-3">My shopping cart</h6>
+      <i class="fa fa-x cursor-pointer h6" onclick="closeCart()"></i>
+    </div>
+    <div class="align-items-center justify-content-center flex-column w-100 h-100 no_product">
+      <i class="fa-solid fa-bag-shopping mb-2 h3"></i>
+      <p class="mb-2">Your cart is empty</p>
+      <button class="btn btn-theme b-1 px-5 py-3">Continue Shopping</button>
+    </div>
+    <div class="mt-3 content_have">
+      <p>Congratulations , you've got free shipping!</p>
+      <figure class="position-relative">
+        <div class="progress">
+          <div class="progress-bar progress-bar-success progress-bar-striped active w-100"></div>
+        </div>
+        <i class="fa fa-van-shuttle position-absolute ship-van-acc"></i>
+      </figure>
+      <div class="product_list_container_acc py-3">
+        <div class="d-flex bb-1 single_product_list">
+          <div class="img_part_acc w-25" style="background-image: url(/assets/image/product1-1.webp);"></div>
+          <div class="product_details_container px-3 w-75 pb-4">
+            <p class="h6">Leather shoes</p>
+            <p class="mb-1"><span class="fw-light">Rs. 3,700.00</span></p>
+            <p class="mb-1 fw-bold">Size: <span class="fw-light">S,</span></p>
+            <p class="mb-2 fw-bold">Color: <span class="fw-light">Brandy rose</span></p>
+            <div class="d-flex align-items-center">
+              <div class="b-1 h-55px d-flex align-items-center justify-content-between whole_container_qty me-4 w-50 p-2">
+                  <span class="minus-button h2 cursor-pointer" onclick="qtyIncreDecreacc(1)">-</span>
+                  <input type="number" class="qty_input acc" value="1">
+                  <span class="plus-button h2 cursor-pointer" onclick="qtyIncreDecreacc(2)">+</span>
+              </div>
+              <i class="fa fa-trash h5 cursor-pointer" onclick="deleteCart(this)"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="accordionExample" class="accordion shadow">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Order special instructions
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
+            <div class="accordion-body">
+              <textarea id="order" rows="2" class="form-control" placeholder="Order special instructions"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>  
+      <div class="d-flex align-items-center justify-content-between my-3">
+        <span class="fw-bold">Subtotal</span>
+        <span>Rs. 3,700.00</span>
+      </div>     
+      <div class="form-group">
+        <input type="checkbox" class="form-control-checkbox me-2" id="tandc"> <label for="tandc" class="vatb">I have read and agree with the <a href="tandc.html" class="fw-bold">terms & condition.</a></label>
+      </div> 
+      <div class="d-flex w-100 justify-content-between">
+        <button class="btn btn-theme px-5 py-3 w-45" onclick="window.location.href='cart.html'">View Cart</button>
+        <button class="btn btn-theme-hover px-5 py-3 w-45" onclick="window.location.href='checkout.html'">Check Out</button>
+      </div>    
+    </div>
+  </div>
+  <div class="common_search_section position-fixed hiders overflow-auto">
+    <div class="d-flex justify-content-end align-items-center mt-3">
+      <i class="fa fa-x cursor-pointer h6" onclick="closeCart()"></i>
+    </div>
+    <div class="d-flex justify-content-center align-items-center flex-column w-100">
+      <h1>What are you looking for?</h1>
+      <div class="form-group w-100 d-flex justify-content-center">
+        <input type="search" class="form-control w-75" placeholder="Search Our Store">
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="w-75">
+        <p class="mb-2 mt-2"><span class="fw-bold">Suggestions:</span> armchair apple airdopes Animal biscuits and productsAccesories</p>
+        <p class="mb-4 mt-0"><span class="fw-bold">Pages:</span> Store location Terms & condition</p>
+      </div>
+    </div>
+    <div class="overflow-hidden mb-5">
+      <div class="swiper-container5">
+          <div class="swiper-wrapper swiper-wrapper1">
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between flex-column align-items-center position-relative" id="image_change_id_22">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="action-box justify-content-center w-100">
+                  <div class="action-box-ele"><i class="fa fa-heart cursor-pointer"></i></div>
+                  <div class="action-box-ele" onclick="showModal('shop_modal.html')"><i class="fa fa-bag-shopping cursor-pointer"></i></div>
+                  <div class="action-box-ele"><i class="fa fa-eye cursor-pointer"></i></div>
+                </div>
+                <div class="detail_part py-3">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span> <span class="line_th">Rs. 3,800.00</span></p>
+                  <div class="mb-1 d-flex justify-content-center conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,22)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,22)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,22)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,22)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between flex-column align-items-center position-relative" id="image_change_id_23">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="action-box justify-content-center w-100">
+                  <div class="action-box-ele"><i class="fa fa-heart cursor-pointer"></i></div>
+                  <div class="action-box-ele" onclick="showModal('shop_modal.html')"><i class="fa fa-bag-shopping cursor-pointer"></i></div>
+                  <div class="action-box-ele"><i class="fa fa-eye cursor-pointer"></i></div>
+                </div>
+                <div class="detail_part py-3">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span> <span class="line_th">Rs. 3,800.00</span></p>
+                  <div class="mb-1 d-flex justify-content-center conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,23)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,23)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,23)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,23)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between flex-column align-items-center position-relative" id="image_change_id_24">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="action-box justify-content-center w-100">
+                  <div class="action-box-ele"><i class="fa fa-heart cursor-pointer"></i></div>
+                  <div class="action-box-ele" onclick="showModal('shop_modal.html')"><i class="fa fa-bag-shopping cursor-pointer"></i></div>
+                  <div class="action-box-ele"><i class="fa fa-eye cursor-pointer"></i></div>
+                </div>
+                <div class="detail_part py-3">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span> <span class="line_th">Rs. 3,800.00</span></p>
+                  <div class="mb-1 d-flex justify-content-center conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,24)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,24)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,24)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,24)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide1">
+              <div class="fea_list_container d-flex justify-content-between flex-column align-items-center position-relative" id="image_change_id_25">
+                <!-- one -->
+                <a href="javascript: void(0);" class="set_of_img_0 img_part active" style="background-image: url(/assets/image/product1-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_0 img_part1 active" style="background-image: url(/assets/image/product1-2.webp);"></a>
+                <!-- two -->
+                <a href="javascript: void(0);" class="set_of_img_1 img_part" style="background-image: url(/assets/image/product2-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_1 img_part1" style="background-image: url(/assets/image/product2-2.webp);"></a>
+                <!-- three -->
+                <a href="javascript: void(0);" class="set_of_img_2 img_part" style="background-image: url(/assets/image/product3-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_2 img_part1" style="background-image: url(/assets/image/product3-2.webp);"></a>
+                <!-- four -->
+                <a href="javascript: void(0);" class="set_of_img_3 img_part" style="background-image: url(/assets/image/product4-1.webp);"></a>
+                <a href="javascript: void(0);" class="set_of_img_3 img_part1" style="background-image: url(/assets/image/product4-2.webp);"></a>
+                <div class="action-box justify-content-center w-100">
+                  <div class="action-box-ele"><i class="fa fa-heart cursor-pointer"></i></div>
+                  <div class="action-box-ele" onclick="showModal('shop_modal.html')"><i class="fa fa-bag-shopping cursor-pointer"></i></div>
+                  <div class="action-box-ele"><i class="fa fa-eye cursor-pointer"></i></div>
+                </div>
+                <div class="detail_part py-3">
+                  <p class="mb-1 h6">Color print t-shirt</p>
+                  <p class="mb-1"><span>Rs. 1,800.00</span> <span class="line_th">Rs. 3,800.00</span></p>
+                  <div class="mb-1 d-flex justify-content-center conductor-add_class">
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(0,25)" >
+                      <div class="color_picker color_picker_0" style="border: 2px solid aqua;"></div>
+                      <div class="inner-color_picker" style="background-color: aqua;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(1,25)">
+                      <div class="color_picker color_picker_1 border-none" style="border: 2px solid red;"></div>
+                      <div class="inner-color_picker" style="background-color: red;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(2,25)">
+                      <div class="color_picker color_picker_2 border-none" style="border: 2px solid yellow;"></div>
+                      <div class="inner-color_picker" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="whole-picker cursor-pointer mx-1 position-relative" onclick="changeProduct(3,25)">
+                      <div class="color_picker color_picker_3 border-none" style="border: 2px solid green;"></div>
+                      <div class="inner-color_picker" style="background-color: green;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="shadow-cover position-fixed w-100 h-100 top-0 left-0" onclick="closeCart()"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" integrity="sha512-VK2zcvntEufaimc+efOYi622VN5ZacdnufnmX7zIhCPmjhKnOi9ZDMtg1/ug5l183f19gG1/cBstPO4D8N/Img==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+  // parts
+  function deleteCart(a)
+  {
+    $(a).closest('.single_product_list').remove();
+    countCheck();
+  }
+  function countCheck()
+  {
+    count = $('.single_product_list').length;
+    if(count==0)
+    {
+      $('.content_have').hide();
+      $('.no_product').css("display","flex");
+    }else{
+      $('.content_have').show();
+      $('.no_product').css("display","none");
+    }
+  }
+  countCheck();
+  function openCart()
+  {
+    $('.common_cart_section').removeClass('hider');
+    $('.shadow-cover').show();
+  }
+  function openSearch()
+  {
+    $('.common_search_section').removeClass('hiders');
+    $('.shadow-cover').show();
+  }
+  function closeCart()
+  {
+    $('.common_cart_section').addClass('hider');
+    $('.common_search_section').addClass('hiders')
+    $('.shadow-cover').hide();
+  }
+  function qtyIncreDecreacc(val)
+  {
+      inval = $('.qty_input.acc').val();
+      if(val==1)
+      {
+          if(inval>=2)
+          {
+              acval = Number(inval) - 1;
+          }
+      }else{
+          acval = Number(inval) + 1;
+      }
+      $('.qty_input.acc').val(acval);
+  }
+  // parts
+$(document).ready(function() {
+    new Swiper('.swiper-container', {
+        loop: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            1920: {
+                slidesPerView: 1,
+                spaceBetween: 30
+            },
+            1028: {
+                slidesPerView: 1,
+                spaceBetween: 30
+            },
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            }
+        }
+    });
+    //Feature Product
+    new Swiper('.swiper-container1', {
+        loop: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 5,
+        paginationClickable: true,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            1920: {
+                slidesPerView: 5,
+                spaceBetween: 30
+            },
+            1028: {
+                slidesPerView: 5,
+                spaceBetween: 30
+            },
+            480: {
+                slidesPerView: 5,
+                spaceBetween: 10
+            }
+        }
+    });
+    //Feature Product two
+    new Swiper('.swiper-container2', {
+        loop: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 5,
+        paginationClickable: true,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            1920: {
+                slidesPerView: 5,
+                spaceBetween: 30
+            },
+            1028: {
+                slidesPerView: 5,
+                spaceBetween: 30
+            },
+            480: {
+                slidesPerView: 5,
+                spaceBetween: 10
+            }
+        }
+    });
+    //logo
+    new Swiper('.swiper-container3', {
+        loop: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 5,
+        paginationClickable: true,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            1920: {
+                slidesPerView: 5,
+                spaceBetween: 30
+            },
+            1028: {
+                slidesPerView: 5,
+                spaceBetween: 30
+            },
+            480: {
+                slidesPerView: 5,
+                spaceBetween: 10
+            }
+        }
+    });
+    //Product List
+    new Swiper('.swiper-container4', {
+        loop: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 4,
+        paginationClickable: true,
+        spaceBetween: 0,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            1920: {
+                slidesPerView: 4,
+                spaceBetween: 0
+            },
+            1028: {
+                slidesPerView: 4,
+                spaceBetween: 0
+            },
+            480: {
+                slidesPerView: 4,
+                spaceBetween: 0
+            }
+        }
+    });
+    new Swiper('.swiper-container5', {
+        loop: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 5,
+        paginationClickable: true,
+        spaceBetween: 20,
+        breakpoints: {
+            1920: {
+                slidesPerView: 5,
+                spaceBetween: 30
+            },
+            1028: {
+                slidesPerView: 5,
+                spaceBetween: 30
+            },
+            480: {
+                slidesPerView: 5,
+                spaceBetween: 10
+            }
+        }
+    });
+});
+
+//Home container
+$('#home_menu a').hover(function(){
+ $('#home_menu_container').css("display","flex");
+});
+$('#home_menu').mouseleave(function(){
+ $('#home_menu_container').css("display","none");
+});
+$('#home_menu_container').hover(function(){
+  $('#home_menu_container').css("display","flex");
+});
+$('#home_menu_container').mouseleave(function(){
+  $('#home_menu_container').css("display","none");
+});
+//Home container
+//Shop container
+$('#shop_menu a').hover(function(){
+ $('#shop_menu_container').css("display","flex");
+});
+$('#shop_menu').mouseleave(function(){
+ $('#shop_menu_container').css("display","none");
+});
+$('#shop_menu_container').hover(function(){
+  $('#shop_menu_container').css("display","flex");
+});
+$('#shop_menu_container').mouseleave(function(){
+  $('#shop_menu_container').css("display","none");
+});
+//Shop container
+//pPages container
+$('#pages_menu a').hover(function(){
+ $('#pages_menu_container').css("display","flex");
+});
+$('#pages_menu').mouseleave(function(){
+ $('#pages_menu_container').css("display","none");
+});
+$('#pages_menu_container').hover(function(){
+  $('#pages_menu_container').css("display","flex");
+});
+$('#pages_menu_container').mouseleave(function(){
+  $('#pages_menu_container').css("display","none");
+});
+//Pages container
+// Change Product
+function changeProduct(id,locate)
+{
+  //Remove
+  $('#image_change_id_'+locate+' .img_part').removeClass("active");
+  $('#image_change_id_'+locate+' .img_part1').removeClass("active");
+  $('#image_change_id_'+locate+' .color_picker').addClass('border-none');
+  //Add
+  $('#image_change_id_'+locate+' .set_of_img_'+id).addClass("active");
+  $('#image_change_id_'+locate+' .color_picker_'+id).removeClass("border-none");
+}
+// Change Product
+function showModal(url) {
+  $('#modal_lg').modal('show', { backdrop: 'true' });
+  $.ajax({
+    url: url,
+    success: function (response) {
+      $('#modal_lg .modal-body').html(response);
+    }
+  });
+}
+  </script>
+</body>
+</html>
